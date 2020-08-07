@@ -1,0 +1,47 @@
+# Fees and the anatomy of partially signed bitcoin transactions
+
+### Research
+
+Investigate the impact of Bitcoin’s Fee on the decisions of users who are deciding to make on-chain transactions.
+
+### Canceling transactions
+
+- How is this handled in non-bitcoin payment services?
+
+- e.g. [Mpesa’s Hakikisha](https://niabusiness.com/safaricom-hakikisha/)
+
+### Slowing down to speed up
+
+- Should long to confirm/unconfirmed transactions be encouraged?
+- How does this get impacted by Replace by Fee
+- The appearance of speed can be achieved if wallets show incoming mempool transactions.
+- Scheduling transactions when fee’s reach a certain amount?
+- Estimations/countdowns using block time
+
+### Fee Awareness
+
+How might we make users more aware of the current transaction fees in the UI
+
+- Estimating Transaction Size
+- How persistent should the fee be in the UI?
+
+- Typically the fee is shown at the point a transaction is made. It’s unpredictable — and can be surprising.
+
+- Fee Forecasting
+
+- https://twitter.com/RajarshiMaitra/status/1263498559179063298
+
+### Signature Aggregation Across devices
+
+Unifying on-chain/off-chain payments using using Bolt11 as the payment request standard —  
+
+### Adaptations
+
+- How to handle payment requests communication across applications?
+- Implications for users with non-lightning enabled wallets
+- Privacy by default — how is the lightning wallet going to sign a fall back PayJoin transaction?
+- Developer Experience / How can it be implemented without significant developer overhead to support these micro interactions / features?
+- Opening and Balancing Payment Channels by hooking onto Payment Requests
+- RPC combinepsbt
+
+##### [Extending with Scripts](smart-contracts.md)
