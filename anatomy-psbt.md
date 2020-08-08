@@ -45,3 +45,15 @@ Unifying on-chain/off-chain payments using using Bolt11 as the payment request s
 - RPC combinepsbt
 
 ##### [Extending with Scripts](smart-contracts.md)
+
+#### REF
+
+- https://blockstream.com/2018/08/08/improving-privacy-using-pay-to-endpoint/
+- https://medium.com/@nopara73/pay-to-endpoint-56eb05d3cac6
+- https://samouraiwallet.com/stowaway - A smartphone wallet which implements payjoin.
+- https://joinmarket.me/blog/blog/payjoin/
+- https://gist.github.com/AdamISZ/4551b947789d3216bacfcb7af25e029e
+- https://arkafrica.com/article/m-pesa-press-cancel-to-send/
+- https://uxdesign.cc/minimizing-interactions-to-improve-customer-experience-ac6600daa4a7
+- **Cost of sending money internationally from the UK** https://builtformars.co.uk/banks/international/
+- https://twitter.com/murchandamus/status/1263496761106026497
