@@ -42,3 +42,4 @@
 ### User Research
 
 - Are there any use cases that simple smart contract logic can be applied to.
+- Is this useful?
