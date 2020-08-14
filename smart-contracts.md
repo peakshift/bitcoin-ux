@@ -8,36 +8,41 @@
 - Pooling Funds (susu)?
 - Too much power for the user? No recorse if a user creates a time lock of 100 years
 
-#### Multi Party Money
+## Use Cases
+
+### Multi Party Money
 
 - Supporting ways people use money in groups,
 - Susu (informal lending club)
 - P2P Investments (multi signature)
 
-#### Payment Groups
+### Payment Groups
 
 - Who decides the order for money to be delivered
 - Paying for dinner or trips
 - Fundraising
   - Payment conditions if a balance reaches a certain amount by a certain time
 
-#### Multi Sigs
+### Multi Sigs
 
 - have a very distinct footprint
 - Lots of complexity
 - P2P Trades use multisig escrow
 
-#### Signature Aggregation Across devices
+### Signature Aggregation Across devices
 
 - User Experience implications of Schnorr Signatures and multi sigs, how to some of the other proposed patterns make this easier to interact with
 
-#### Recovery & Security
+### Recovery & Security
 
 - [5$ Wrench Attack](https://www.google.com/url?q=https://cryptosec.info/wrench-attack/&sa=D&ust=1596843563686000&usg=AOvVaw1N4A7C9BsU0JV3D6WZmri2)
 
 - Timelocks
 
 ### Streaming Payments
+
+- Time locks
+- Multi Sig
 
 ### User Research
 
