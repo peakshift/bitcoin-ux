@@ -8,6 +8,10 @@
 
 ...
 
+### Channel Capacity
+
+...
+
 ### Coinswap
 
 ...
@@ -15,6 +19,10 @@
 ### Coinjoin
 
 ...
+
+### Contact
+
+- Known
 
 ### Decentralised Identity (DID)
 
@@ -54,16 +62,23 @@ This interaction makes it difficult to fingerprint the transaction and determine
 
 ### Payment
 
-A payment is ...
+- What is a payment?
+- Kinds of Payments?
+  - Merchant
+  - P2P
+  - Self
+- How is it different from a transaction?
+- What about a transfer?
 
 ### Payment Request
 
 ```
- bitcoin:<address>[?amount=<amount>][?label=<label>][?message=<message>]
+bitcoin:<address>[?amount=<amount>][?label=<label>][?message=<message>]
 ```
 
 - [BIP21](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki#Simpler_syntax)
 - BIP70
+- BOLT11
 
 BIP21 URL
 
@@ -111,6 +126,8 @@ Bitcoin Scrypt ...
 ### Transaction
 
 - State difference between transaction and a payment
-- A transaction can include multisple payments
+- A transaction can include multiple payments
 
 ### Watchtower
+
+...
