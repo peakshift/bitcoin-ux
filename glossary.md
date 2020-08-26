@@ -22,7 +22,7 @@
 
 ### Contact
 
-- Known
+...
 
 ### Decentralised Identity (DID)
 
@@ -61,6 +61,10 @@ A type of Coinjoin which is just between 2 parties. The sender and receiver both
 This interaction makes it difficult to fingerprint the transaction and determine which direction the payment is being made.
 
 ### Payment
+
+A payment on Bitcoin is simply the moving of a balance from one user to another. A payment is part of a transaction, and at the minimum is made up of at least one input and output.
+
+Note: A transaction can contain multiple payments and other kinds of operations.
 
 - What is a payment?
 - Kinds of Payments?
