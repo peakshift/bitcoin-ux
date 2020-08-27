@@ -1,6 +1,18 @@
-# Projects
+# Bitcoin UX / Payments
 
-### [Consistent Push & Pull Payments on and off-chain](README.md)
+## Motivation
+
+There are limitations in the current system that make payment services inaccessible in many places in the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial services like Cash App, Strike, Monzo, Visa, etc.
+
+The objective is to expose Bitcoin designers and wallet developers to use cases, user patterns, data structures and communication relating to payments — focusing on users in frontier and developing markets.
+
+The process will include exploring what takes to make a complete end-to-end payment experience on Bitcoin and Lightning in a way that is familiar and seamless between the two networks, while finding ways to use these UX patterns as hooks that can maximise the use of transactions; and improve the privacy of the payment. An example would be using payment requests for Payjoins, or redirecting the change outputs to refill a lightning channel.
+
+The output, is documentation and tools that is between technical and visual — which aims to bridge the divide between design and developers. Work here will be contributed back to [@BitcoinDesign/Guide](https://github.com/BitcoinDesign/Guide).
+
+## Projects
+
+### [Consistent Push & Pull Payments on and off-chain](consistent-payment-flow.md)
 
 `bip21`, `psbt`,`bolt11`
 
@@ -9,11 +21,6 @@ Default User Flows for payments when switching between On/Offchain payments is i
 - Current and Ideal User Flows
 - Interactive Reference for Push & Pull Payments
 - Technical Considerations
-
-#### REF
-
-- [ ] Bitcoin URI Scheme - [BIP21](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) 
-- [ ] Invoices - [BOLT11](https://github.com/lightningnetwork/lightning-rfc/blob/master/11-payment-encoding.md)
 
 ### [bed.money](https://bed.money)
 
