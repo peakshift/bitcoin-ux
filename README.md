@@ -14,9 +14,9 @@ The output, is documentation and tools that is between technical and visual — 
 
 ### [Consistent Push & Pull Payments on and off-chain](consistent-payment-flow.md)
 
-`bip21`, `psbt`,`bolt11`
+`bip21`, `psbt`,`bolt11`, `payment-request`, `keysend`
 
-Default User Flows for payments when switching between On/Offchain payments is inconsistent, this leads to users having to learn new behaviours and terminology between which does not lend itself to a seamless user experience.
+Default user flows for payments when switching between On/Offchain payments is inconsistent, this leads to users having to learn new behaviours and terminology between which does not lend itself to a seamless user experience.
 
 - Current and Ideal User Flows
 - Interactive Reference for Push & Pull Payments
@@ -24,9 +24,9 @@ Default User Flows for payments when switching between On/Offchain payments is i
 
 ### [bed.money](https://bed.money)
 
-`user-research`, `payments`
+`user-research`, `user-personas`, `payments`
 
-When building, its offen we miss the cultural and environmental aspect of the audience that ends up using what we build. Research on Mobile Payments, Storage, Usage and Management of Money, focusing on fronteir and developing countries as they are often left out in design considerations.
+When building, its offen we miss the cultural and environmental aspect of the audience that ends up using what we build. Research on Mobile Payments, Storage, Usage and Management of Money, focusing on fronteir and developing countries as they are often left out in design considerations. This project is to create an opensource repository of user personas and country specific information on bitcoin usage as well as problems with existing payment services available in those countries.
 
 - Local Adoption of Mobile Payments
 - Local Access to Bitcoin & P2P Trade Volumes
@@ -41,12 +41,6 @@ Together with [@nothingmuch](https://github.com/nothingmuch) we explore onchain 
 - User Journey
 - User Flows
 - Sketches
-
-## 💡 Other Initiatives
-
-- Coinswap UX Assessment (TBD)
-
-### REF
 
 [USECASE1]: https://twitter.com/MattAhlborg/status/1293309087946506241	"LN wallet for family"
 
