@@ -1,4 +1,4 @@
-# Simplifiying Payjoin for a Social Use Case
+# Adapting Payjoin for a Social Use Case
 
 ## Abstract
 
