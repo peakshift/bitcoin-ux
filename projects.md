@@ -1,20 +1,23 @@
-# Tips & BIPs to replicate a familiar payment experience on and off-chain
+# Projects
 
-`account-identification`, `transaction-anonymity`, `fee-reductions`, `payment-requests`, `smart-contracts`, `mini-scripts`, `web3`, `schnorr-signatures`
+### [Consistent Push & Pull Payments on and off-chain](README.md)
 
-## Abstract
+`bip21`, `psbt`,`bolt11`
 
-The objective is to expose Bitcoin designers and wallet developers to use cases, user patterns, data structures and communication relating to payments — focusing on users in frontier and developing markets.
+Default User Flows for payments when switching between On/Offchain payments is inconsistent, this leads to users having to learn new behaviours and terminology between which does not lend itself to a seamless user experience.
 
-There are limitations in the current system that block payments — not everyone has access to bank accounts to use modern financial services like Cash App, Strike, Monzo, Visa, etc.
+- Current and Ideal User Flows
+- Interactive Reference for Push & Pull Payments
+- Technical Considerations
 
-The process will include exploring what takes to make a complete end-to-end payment experience on Bitcoin and Lightning in a way that is familiar and seamless between the two networks, while finding ways to use these UX patterns as hooks that can maximise the use of transactions; and improve the privacy of the payment. An example would be using payment requests for Payjoins, or redirecting the change outputs to refill a lightning channel.
+#### REF
 
-The output will be documentation that is between technical and visual — that aims to bridge the divide between design and developers.
-
-## Projects
+- [ ] Bitcoin URI Scheme - [BIP21](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) 
+- [ ] Invoices - [BOLT11](https://github.com/lightningnetwork/lightning-rfc/blob/master/11-payment-encoding.md)
 
 ### [bed.money](https://bed.money)
+
+`user-research`, `payments`
 
 When building, its offen we miss the cultural and environmental aspect of the audience that ends up using what we build. Research on Mobile Payments, Storage, Usage and Management of Money, focusing on fronteir and developing countries as they are often left out in design considerations.
 
@@ -23,21 +26,18 @@ When building, its offen we miss the cultural and environmental aspect of the au
 - User Flows of Local Mobile Payments Services
 - Personas
 
-### anatomy of a transaction
+### [WabiSabi: Design Sprints for Coinjoins and Privacy](https://miro.com/app/board/o9J_knmJ_C0=/)
 
-- [ ] Tripple Entry Accounting
-- [ ] UTXO / Coin Selection
-- [ ] Partially Signed Bitcoin Transaction — BIP0174
+Together with [@nothingmuch](https://github.com/nothingmuch) we explore onchain payments and privacy through the lense of [WabiSabi](https://github.com/zkSNACKs/WabiSabi/blob/master/explainer.md) a coinjoin protocol in Design Sprint inspired sessions every week. The sessions aim to create Resources that allow designers to explore creative solutions of these technical topics, and are centered around a persona who realises their mental model is incomplete and is also concerned for their privacy.
 
-### payment requests
+- Problem Statements
+- User Journey
+- User Flows
+- Sketches
 
-- [ ] Payment Requests - BIP21 
-- [ ] Invoices - BOLT11
+## 💡 Other Initiatives
 
-### 💡 Project Ideas
-
-- Wabisabi UX Guide
-- Coinswap UX assessment
+- Coinswap UX Assessment (TBD)
 
 ### REF
 

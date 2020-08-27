@@ -4,6 +4,16 @@
 
 Investigate the impact of Bitcoin’s Fee on the decisions of users who are deciding to make on-chain transactions.
 
+### Anatomy of a Transaction
+
+`utxo`, `psbt`
+
+A transaction can not only contain multiple payments but also other kinds of operations.
+
+- [ ] Tripple Entry Accounting
+- [ ] UTXO / Coin Selection UI
+- [ ] Partially Signed Bitcoin Transaction Format — [BIP0174](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki)
+
 ### Canceling transactions
 
 - How is this handled in non-bitcoin payment services?

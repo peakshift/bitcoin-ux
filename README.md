@@ -10,7 +10,7 @@ There are specifications that can make some of this possible already.
 
 Bitcoin
 
-1. Bitcoin URI — BIP0021
+1. Bitcoin URI — `BIP0021`
 2. Partially Signed Bitcoin Transaction — `BIP0174`
 
 Lightning
@@ -30,6 +30,6 @@ Focused is placed on the user flow of requesting, sending and receiving a paymen
 
 There are some additional areas that can be explored.
 
-- Account Identification / Contact List
+- Account Identification / Contact Lists
 - Extending On-chain Pull Payments with Payjoin
 
