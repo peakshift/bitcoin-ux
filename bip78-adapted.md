@@ -3,19 +3,20 @@
 ## Abstract
 
 - Payjoin has mostly been demonstrated with a merchant use case.
-  - Merchant sets up a P2EP 
+  - How can it be applied in a more social P2P use case?
+  - Currently merchant sets up a P2EP url
   - Why not use a tipin.me like page that you can provide senders?
     - is a hosted service
     - possibilitiy to leak IP address
-- How can it be applied in a more social P2P use case vs Business to Consumer
-- Receiver needs to be running some online service. For example BTC PayServer which added support for Payjoins in ___. This is yet another online service that needs to be 
-  - Are there any other lighter weight options?
-  - Wallet needs to be hot?
-- Signing servers, watch towers, provide another layer of complexity to adotion of the protocol.
-- Setting up a BTCPay Server may not be a viable option for casual users of mobile wallets.
-- Reduce the interactions
 - Payjoin is an interactive protocol. The receiver creates a payment request via BIP21 with a P2EP parameter (pj=https://...).
-  - For increased privacy it would be receomended that this url is behind a TOR hidden service (another piece of infrastrcture that engineers)
+  - Challenge: Reduce the amount of interactions
+  - For increased privacy it would be receomended that this url is behind a TOR hidden service (another piece of infrastrcture that needs to be provisioned)
+- Receiver needs to be running some online service. For example BTC PayServer which added support for Payjoins in ___. This is yet another always online service that needs to be provisioned.
+  - Additional maintaince cost
+  - Are there any other lighter weight options that is only online during the time the payment is made.
+  - Wallet needs to be hot?
+  - Signing servers, watch towers, provide another layer of complexity to adotion of the protocol.
+  - Setting up a BTCPay Server may not be a viable option for casual users of mobile wallets.
 ## Motivation
 
   - To describe a PayJoin interaction without the need for a P2EP signing server in order to promote more casual use cases of PayJoin.
@@ -70,11 +71,11 @@ sequenceDiagram
 
 - What if recevier does not have any coins, is a pay join possible / does it even make sense if it is?
   - Assumes reciever has the amount of coins getting paid
-  - How realistic is the application of payjoin in non merchant use cases? e.g. What if I am getting angel investment into my new startup, or a grant?
+  - How realistic is the application of payjoin in non merchant use cases? e.g. What if I am getting angel investment into my new startup, or a grant? I'm not able to cover the amount I'm receiving for the payjoin.
 - What if the receiver does not have exactly the amount they are requesting? 
 - Can CoinSwap be an alternative to solve some of these problems?
 
 > *another possibiility is for the receiver to pre-fill their input(s) in the first stage, and save on the last interaction, but that's not how bip 78 is specified, there the initiator is the sender and you don't wan to reveal UTXOs to fake senders*
-> -- Nothing much
+> -- @nothingmuch
 
 This may be so in an online shopping scenario when you are interacting with a merchant, but i think this would be different for a more social use case.
