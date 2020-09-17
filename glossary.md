@@ -6,7 +6,7 @@
 
 ### Channel
 
-...
+- Payment Channel ...
 
 ### Channel Capacity
 
@@ -14,15 +14,23 @@
 
 ### Coin Control
 
+`privacy`
+
 ...
 
 ### Coinswap
+
+`privacy`
 
 ...
 
 ### Coinjoin
 
-...
+`privacy`
+
+What ...
+
+Why ...
 
 ### Contact
 
@@ -42,27 +50,39 @@
 
 ### Merchant
 
-### Onchain
+### On-chain
 
 ...
 
-### Offchain
+### Off-chain
 
 ...
 
 ### Pay To End Point (P2EP)
 
+`privacy`
+
 ...
 
 ### Partially Signed Bitcoin Transaction (PSBT)
 
-A portable transaction format ...
+What...
+
+- A portable transaction format ...
+
+Why...
+
+- Since a transaction can contain multiple operations, and those operations can be between multiple parties ...
 
 ### Payjoin
+
+`privacy`
 
 A type of Coinjoin which is just between 2 parties. The sender and receiver both add their inputs and outputs and sign the transaction.
 
 This interaction makes it difficult to fingerprint the transaction and determine which direction the payment is being made.
+
+- Explain privacy implications of using bitcoin.
 
 ### Payment
 
@@ -99,6 +119,8 @@ Person to Person.
 
 ### Reusable Payment Code (BIP47)
 
+`privacy`
+
 ### Open Channel (lightning network)
 
 - 
@@ -114,6 +136,8 @@ A unit of bitcoin, 1 bitcoin is equivalent to 100,000,000 Satoshis.
 ### Signature
 
 ### Signature Aggregation
+
+`privacy`
 
 ### Signing Server
 
