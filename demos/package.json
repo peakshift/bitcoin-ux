@@ -1,0 +1,52 @@
+{
+	"name": "bitcoin-ux",
+	"version": "0.1.0",
+	"description": "Tips & BIPs to replicate a familiar payment experience on and off-chain",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc -p ./src",
+		"start": "npm run build -- -w",
+		"test": "jest;"
+	},
+	"compilerOptions": {
+		"sourceMap": true,
+		"outDir": "./dist"
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "node"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/johnsbeharry/chains-sdk.git"
+	},
+	"keywords": [
+		"bitcoin",
+		"payments",
+		"bitcoin-design",
+		"user-experience"
+	],
+	"author": "Johns Beharry <johns@peakshift.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/peakshift/bitcoin-ux/issues"
+	},
+	"homepage": "https://github.com/peakshift/bitcoin-ux#readme",
+	"devDependencies": {
+		"@types/bip39": "^2.4.2",
+		"@types/jest": "^26.0.0",
+		"chai": "^4.2.0",
+		"cucumber": "^5.1.0",
+		"ts-jest": "^26.1.0",
+		"typescript": "^3.9.5"
+	},
+	"dependencies": {
+		"@lntools/invoice": "^0.7.1",
+		"bip32": "^2.0.5",
+		"bip39": "^2.6.0",
+		"bip44": "0.0.1",
+		"bip44-constants": "^8.0.0",
+		"bolt11": "^1.2.7",
+		"jest": "^26.0.1"
+	}
+}
