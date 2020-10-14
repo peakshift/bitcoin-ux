@@ -8,4 +8,5 @@ We need to design an ecosystem that doesn’t lock the user in. This will be mad
 2. Sending a payment from desktop to mobile
 3. Sending a payment between mobile wallets
 4. Migrating lightning wallets
+5. Multi Party Signing and PSBT handoff
 

@@ -13,6 +13,7 @@ A transaction can not only contain multiple payments but also other kinds of ope
 - [ ] Tripple Entry Accounting
 - [ ] UTXO / Coin Selection UI
 - [ ] Partially Signed Bitcoin Transaction Format — [BIP0174](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki)
+- [ ] [Ordering of Inputs and Outputs][^tx_ordering]
 
 ### Canceling transactions
 
@@ -67,3 +68,6 @@ Unifying on-chain/off-chain payments using using Bolt11 as the payment request s
 - https://uxdesign.cc/minimizing-interactions-to-improve-customer-experience-ac6600daa4a7
 - **Cost of sending money internationally from the UK** https://builtformars.co.uk/banks/international/
 - https://twitter.com/murchandamus/status/1263496761106026497
+
+[^tx_ordering]: https://github.com/bitcoin/bips/blob/master/bip-0069.mediawiki	"Lexicographical Indexing of Transaction Inputs and Outputs"
+
