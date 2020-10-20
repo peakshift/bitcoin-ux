@@ -8,10 +8,10 @@ Interacting with bitcoin privately at this point in time demands a large amount 
 
 The challenge became to explore solutions to aid the transition form early adopters, and technical folks to a wider mainstream user base. How might we increase adoption of bitcoin, in a safe way?
 
-## Pricipals
+## Principals
 
-### Famarilitiy
-Using familliar patterns and anaologies we can allow new users to begin interacting faster, and gradually grow their bitcoin knowledge — not having to learn too many things upfront and risk being overwhelmed and eventually give up before they even start.
+### Familiarity
+Using familiar patterns and analogies we can allow new users to begin interacting faster, and gradually grow their bitcoin knowledge — not having to learn too many things upfront and risk being overwhelmed and eventually give up before they even start.
 
 ### Empathy
 
@@ -19,7 +19,7 @@ Using familliar patterns and anaologies we can allow new users to begin interact
 - Be against dumbing things down, instead aim to make bitcoin understandable.
 - Grow with the user. Not everyone is an expert, and even experts at one point in time are beginners.
 
-### Truthful
+### Truthfulness
 
 Be truthful to bitcoin.
 
