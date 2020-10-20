@@ -6,7 +6,7 @@
 
 ## Introduction
 
-We started with a question @nothingmuch posted about amount organisation in the Bitcoin Design Slack - and it has lead us down its own rabbit hole of exploring use cases and user flows private payments together.
+This all started with a question @nothingmuch posted about amount organisation in the Bitcoin Design Slack - and it has lead us down its own rabbit hole of exploring use cases and user flows private payments together.
 
 Interacting with bitcoin privately at this point in time demands a large amount of technical know how. The interfaces and design patterns used are also technically driven, causing a steep learning curve for users.
 
@@ -42,6 +42,8 @@ Create a consistent visual language for simmilar objects, especially in the case
 ## Concepts
 
 ### Transaction Fragements
+
+### Output Descriptors
 
 ### Labels
 
