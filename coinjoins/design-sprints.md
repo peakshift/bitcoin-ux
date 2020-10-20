@@ -6,7 +6,7 @@ We started with a question @nothingmuch posted about amount organisation in the 
 
 Interacting with bitcoin privately at this point in time demands a large amount of technical know how. The interfaces and design patterns used are also technically driven, causing a steep learning curve for users.
 
-The challenge became to think of solutions to aid the transition form a early adopter, technical user base to a wider mainstream user base. How might we increase adoption of bitcoin, in a safe way?
+The challenge became to explore solutions to aid the transition form early adopters, and technical folks to a wider mainstream user base. How might we increase adoption of bitcoin, in a safe way?
 
 ## Pricipals
 
@@ -38,10 +38,15 @@ Create a consistent visual language for simmilar objects, especially in the case
 ## Concepts
 
 ### Transaction Fragements
+
+### Labels
+
+### Coin Control
+
 ### Batching
 
 ## User Facing
-### Contacts as Labels
+### Contacts
 
 ### Payment Request
 
