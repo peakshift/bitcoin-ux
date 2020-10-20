@@ -33,7 +33,7 @@ When building, its offen we miss the cultural and environmental aspect of the au
 - User Flows of Local Mobile Payments Services
 - Personas
 
-### [WabiSabi: Design Sprints for Coinjoins and Privacy](https://miro.com/app/board/o9J_knmJ_C0=/)
+### [WabiSabi: Design Sprints for Coinjoins and Privacy](coinjoins/design-sprints.md)
 
 Together with [@nothingmuch](https://github.com/nothingmuch) we explore onchain payments and privacy through the lense of [WabiSabi](https://github.com/zkSNACKs/WabiSabi/blob/master/explainer.md) a coinjoin protocol in Design Sprint inspired sessions every week. The sessions aim to create Resources that allow designers to explore creative solutions of these technical topics, and are centered around a persona who realises their mental model is incomplete and is also concerned for their privacy.
 
