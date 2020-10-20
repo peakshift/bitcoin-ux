@@ -1,5 +1,9 @@
 # Design Sprints for Coinjoins and Privacy
 
+![design-sprint-0](assets/img/design-sprint-0.jpg)
+
+— [view live version](https://miro.com/app/board/o9J_knmJ_C0=/)
+
 ## Introduction
 
 We started with a question @nothingmuch posted about amount organisation in the Bitcoin Design Slack - and it has lead us down its own rabbit hole of exploring use cases and user flows private payments together.
