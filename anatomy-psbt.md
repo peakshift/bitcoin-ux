@@ -18,8 +18,10 @@ A transaction can not only contain multiple payments but also other kinds of ope
 ### Canceling transactions
 
 - How is this handled in non-bitcoin payment services?
-
-- e.g. [Mpesa’s Hakikisha](https://niabusiness.com/safaricom-hakikisha/)
+  - e.g. [Mpesa’s Hakikisha](https://niabusiness.com/safaricom-hakikisha/)
+- RBF (Replace by fee)
+  - https://twitter.com/blockonomics_co/status/1318540752360648704
+  - https://github.com/spesmilo/electrum/pull/6641#issuecomment-712689820
 
 ### Slowing down to speed up
 
