@@ -88,4 +88,4 @@ Present the documentation for consideration to be included in the Bitcoin Design
 The discussions and explorations should continue and hopefully live on without the facilitator — 
 
 - [ ] EXPLAIN HOW THIS CAN BE DONE
-  *Trying to figure this out now, the summary can storyboards can be what is necessary to get the conversation going in the Bitcoin Design Community Slack.*
+  *Trying to figure this out now, the summary document and storyboards can be what is necessary to get the conversation going in the Bitcoin Design Community Slack.*
