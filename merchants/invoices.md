@@ -107,6 +107,8 @@ Buyer paying from multiple outputs means that the fee for a merchant who needs t
 
 ### Support tickets
 
+The following is an example of a real-world support ticket, separated by payment processors, since some queries may differ depending on processor's checkout experience.
+
 #### BTCPay Server
 
 * "What is the payment link" / "Do I use the address or the payment link" 
