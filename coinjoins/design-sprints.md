@@ -10,7 +10,15 @@ This all started with a question @nothingmuch posted about amount organisation i
 
 Interacting with bitcoin privately at this point in time demands a large amount of technical know how. The interfaces and design patterns used are also technically driven, causing a steep learning curve for users.
 
-The challenge became to explore solutions to aid the transition form early adopters, and technical folks to a wider mainstream user base. How might we increase adoption of bitcoin, in a safe way?
+Coinjoins are also a heavily technical topic for designers right now, and its taken a lot to gain just a rudimentary understanding of the UI components that are necessary for users to interact with it.
+
+The challenge became to explore solutions to aid the transition form early adopters, and technical folks to a wider mainstream user base.
+
+Sprint Question: *How might we increase adoption of bitcoin, in a safe way?*
+
+The output is NOT a set of recommendations, none of this has been tested with users. The aim is to deconstruct the technical and user facing aspects of coinjoins for designers so that they can come up with their own design solutions while understanding the privacy implications.
+
+- [ ] *Create 10 min video walkthrough of the miro.*
 
 ## Principals
 
@@ -39,15 +47,52 @@ Be true to the principals of bitcoin and display that honestly. Be truthful to t
 
 Create a consistent visual language for simmilar objects, especially in the case when new concepts are being introduced to the user (*e.g. UTXOs*).
 
-## Concepts
+## Persona
+
+As this was an exploritory process which relied on expert interviews, we did not set time for user research (which would always be ideal).
+
+| Casual User                                                  |
+| ------------------------------------------------------------ |
+| Has bitcoin                                                  |
+| Buys bitcoin and spends it but doesn't often receive it except exchange withdrawals |
+| Does not understand UTXOs, thinks they just have a balance   |
+| Realises their mental model is incomplete and is concerned for their privacy |
+| Willing to spend time and money to improve their privacy     |
+| Not technical but motivated to learn                         |
+| Does not know what a coinjoin is                             |
+| Just got a ColdCard hardware wallet and wants to move funds to it |
+
+👆 *feedback from Wasabi*
+
+- [INSERT HERE]
+
+## Happy Path
+
+- [ ] INSERT USER FLOW
+
+## Technical Concepts
 
 ### Transaction Fragements
 
+- What is a transaction fragment?
+- What parts are relevant to designers?
+- Actions
+  - Add Inputs
+  - Add Outputs
+  - Sign
+  - Replace by fee
+
 ### Output Descriptors
+
+[focus on xpriv]
 
 ### Labels
 
+### Coin Custers
+
 ### Coin Control
+
+- Spending should only be from confirmed coins (see [../anatomy-psbt.md#spending])
 
 ### Batching
 
@@ -56,6 +101,17 @@ Create a consistent visual language for simmilar objects, especially in the case
 
 ### Payment Request
 
+- Amount from memo
+- Schedule for mixing
+  - Defaults should be looked at
+
 ### Send Payment
+
+- Coin control is too complex for users 
+
+### Coins
+
+- ...
+
 ### Pending Items
 

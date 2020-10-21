@@ -1,9 +1,5 @@
 # Fees and the anatomy of partially signed bitcoin transactions
 
-### Research
-
-Investigate the impact of Bitcoin’s Fee on the decisions of users who are deciding to make on-chain transactions.
-
 ### Anatomy of a Transaction
 
 `utxo`, `psbt`
@@ -28,6 +24,8 @@ A transaction can not only contain multiple payments but also other kinds of ope
 - Should long to confirm/unconfirmed transactions be encouraged?
 - How does this get impacted by Replace by Fee
 - The appearance of speed can be achieved if wallets show incoming mempool transactions.
+  - UTXO should not be spendable until it is confirmed.
+    - see 
 - Scheduling transactions when fee’s reach a certain amount?
 - Estimations/countdowns using block time
 
@@ -47,6 +45,10 @@ How might we make users more aware of the current transaction fees in the UI
 ### Signature Aggregation Across devices
 
 Unifying on-chain/off-chain payments using using Bolt11 as the payment request standard —  
+
+### Research
+
+Investigate the impact of Bitcoin’s Fee on the decisions of users who are deciding to make on-chain transactions.
 
 ### Adaptations
 
