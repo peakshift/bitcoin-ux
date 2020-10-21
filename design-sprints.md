@@ -4,7 +4,7 @@
 
 While running [Design Sprints for Coinjoins and Privacy](https://github.com/peakshift/bitcoin-ux/blob/master/coinjoins/design-sprints.md) with @nothingmuch who is one of the authors of WabiSabi its apparent that such deep dives into a protocol with an expert, and having the process be open and transparent can help both parties.
 
-The protocol benefits from someone available to apply Design Thinking methods to some idea, while the designer is able to gain deep understanding of the protocol, and the layer that it is built upon. In the chain of WabiSabi, Coinjoins and on-chain transactions.
+The protocol benefits from someone available to apply Design Thinking methods to some idea, while the designer is able to gain deep understanding of the protocol, and the layer that it is built upon. In the case of WabiSabi, Coinjoins and on-chain transactions.
 
 We utilised some methods from the Design Sprint process such as Expert Interviews, How Might We, Affinity Clustering, User Journey Mapping, Rapid Sketching (Crazy 8s). 
 
