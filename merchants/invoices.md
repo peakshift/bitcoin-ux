@@ -87,7 +87,6 @@ Here's an overview of typical data structure on an invoice on the receiver's (me
 
 ![CryptoWoo, Blockonomics](./img/ComparisonInvoices3.png)
 
-
 Additional resource: [A list of awesome payment processors](https://github.com/alexk111/awesome-bitcoin-payment-processors).
 
 This document should serve as a reference only. It us a set of best practices in the industry and it is meant to help and inspire.
