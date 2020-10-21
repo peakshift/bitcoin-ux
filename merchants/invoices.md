@@ -8,7 +8,7 @@ The document is targeted towards designers and developers working on designing o
 
 The goal is to compare and showcase essential components used by various payment gateways, understand how they interact with one another and present them in an easy-to-understand way. 
 
-### Invoice
+## Invoice
 
 Bitcoin invoice used in commerce tools, doesn’t usually differ from a regular invoice one may come across when doing a checkout at a website. It is important to note the distinction between an **invoice seen on the sender's end**, sometimes referred to as the “checkout page/invoice” and the **invoice on receiver's end**
 
@@ -17,7 +17,7 @@ On the other hand, the *invoice on the receiving side* is usually used to fulfil
 
 Majority of cryptocurrency payment processors and gateways provide standard components of an invoice, which will be dissected below.
 
-#### Components of a buyer's invoice (checkout page)
+### Components of a buyer's invoice (checkout page)
 
 ![](./img/InvoicesViewBuyerSide.png)
 
@@ -29,7 +29,7 @@ The basic components of an invoice visible to the buyer are:
 * D) Total amount and an address that can be copied separately (for wallet desktop users)
 * E) Open in a wallet (Pay in a wallet) a button that opens and auto-populates sender's wallet fields
 
-#### Components of a merchant's invoice
+### Components of a merchant's invoice
 
 The invoice that’s appearing on merchant end needs to provide data relevant for:
 
@@ -43,7 +43,7 @@ The invoice that’s appearing on merchant end needs to provide data relevant fo
 
 **Troubleshooting an issue** happens when usually there’s a problem with the payment or retroactively if there’s a need for a refund. Centralized payment processors have their support departments that handle this type of queries for merchants, especially processors that are custodial and convert funds instantly to fiat. The essential data needed here needs to provide information about the payment which would allow merchants an easy way to detect an issue and take action. This usually contains a transaction ID, the amount, the invoice (transaction/transactions) status.
 
-##### Data Structure of an invoice
+#### Data Structure of an invoice
 
 ![](./img/MerchantInvoiceData.png)
 
@@ -55,7 +55,7 @@ Here's an overview of typical data structure on an invoice on the receiver's (me
 * D) Invoice summary – provides quick information to quickly troubleshoot an issue or verify the payment manually if that’s needed
 * E) Event logs – provide in-depth information about the status of the invoice and it’s transaction on the blockchain.
 
-###### Data Structure - Code examples
+##### Data Structure - Code examples
 
 ```json
 {
@@ -87,6 +87,29 @@ Here's an overview of typical data structure on an invoice on the receiver's (me
 
 ![CryptoWoo, Blockonomics](./img/ComparisonInvoices3.png)
 
-Additional resource: [A list of awesome payment processors](https://github.com/alexk111/awesome-bitcoin-payment-processors).
+## Common problems buyers have at a checkout 
 
-This document should serve as a reference only. It us a set of best practices in the industry and it is meant to help and inspire.
+Regardless of the payment gateway used, there are some common problems that buyers have when they're preforming a checkout.
+
+### Paying from an exchange (underpaid invoice)
+
+**Problem**: Oftentimes, the buyer pays an invoice from an exchange. Unfortunately, some exchanges consider that a withdrawal, deducting usually a small fee from the total, without communicating that in the UI. That means that once the payment reaches the merchant, it becomes underpaid. Majority of payment processors would then notify via the invoice that there’s a due amount. 
+However, even when the user buyer pays, due, the will again be deducted and invoice – underpaid. This not only causes frustration on the buyer’s end, but also increases the cost for the merchant. 
+Buyer paying from multiple outputs means that the fee for a merchant who needs to move those funds later will be higher.
+
+**Solution**: Educating both users and exchanges about the potential setbacks when paying directly from an exchange. Exchanges should communicate more transparently and clearer in their UI if they’re deducting a fee from the total.
+
+### Invalid address (Legacy to Bech32)
+
+**Problem**: When a sender is using a legacy wallet and paying to a receiver using Bech32, the majority of wallets provide a poor warning saying that the address is invalid. This causes confusion on the sender's end, leading them to think that the receiver provided an incorrect address.
+
+**Solution**: Besides pushing wallets to adopt Bech32, wallets should provide better and clearer error messages to the end-user. Merchants could use P2SH to mitigate.In my opinion P2SH is just a patch not a solution.  A solution where Bech32 invoice can fallback to P2SH would be a good balance.
+
+### Support tickets
+
+#### BTCPay Server
+
+* "What is the payment link" / "Do I use the address or the payment link" 
+* QR Code related: "What is this square thing, don't you take debit/visa/paypal?"
+
+Additional resource: [A list of awesome payment processors](https://github.com/alexk111/awesome-bitcoin-payment-processors).
