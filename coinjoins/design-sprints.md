@@ -18,8 +18,6 @@ Sprint Question: *How might we increase adoption of bitcoin, in a safe way?*
 
 The output is NOT a set of recommendations, none of this has been tested with users. The aim is to deconstruct the technical and user facing aspects of coinjoins for designers so that they can come up with their own design solutions while understanding the privacy implications.
 
-- [ ] *Create 10 min video walkthrough of the miro.*
-
 ## Principals
 
 ### Familiarity
@@ -84,7 +82,9 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 ### Output Descriptors
 
-[focus on xpriv]
+- [ ] [focus on xpub output descriptors, e.g. from hardware wallets]
+- [ ] Introduction to bip32
+- [ ] Obtaining an xpub
 
 ### Labels
 
@@ -115,3 +115,23 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 ### Pending Items
 
+- ...
+
+### Wallet Defaults
+
+- Auto Coin Join
+
+## Continuity Plan
+
+- Reach out to Max, Magnus, and others interested in coin control
+
+---
+
+## TODO
+
+- [x] State the Design Principals
+- [ ] Explain the Technical Concepts
+- [ ] Explain the User Facing design discoveries
+- [ ] Design visual prototypes to illustrate some of the learnings
+- [ ] Continuity Plan
+- [ ] 10min video walk-through of Miro board
