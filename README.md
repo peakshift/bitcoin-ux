@@ -42,5 +42,9 @@ Together with [@nothingmuch](https://github.com/nothingmuch) we explore onchain 
 - User Flows
 - Sketches
 
+### Bitcoin Accepted Here: Design Sprints for Merchants
+
+Another [Design Sprint](design-sprint.md) for Bitcoin with [@pavlenex](https://github.com/pavlenex) to explore the merchant side of payments.
+
 [USECASE1]: https://twitter.com/MattAhlborg/status/1293309087946506241	"LN wallet for family"
 
