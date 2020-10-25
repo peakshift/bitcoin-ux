@@ -16,10 +16,6 @@ Practicality
 
 - How do you adverise an address to be paid in a video?
 
-## Tainted Coins
-
-- Adding hops see samurai's ricochet
-
 ## Wallet Fingerprinting
 
 The way the transaction is constructed can give chain analysts an idea of which wallet was used.
@@ -44,6 +40,11 @@ Privacy through a swap for another users coin history.
 ### Coinjoins
 
 Privacy by combining of coin history.
+
+#### Tainted by Coinjoins
+
+- Some exchanges may not accept deposits from coinjoins
+- Adding hops — *see Samourai Wallet's Ricochet*
 
 #### Components
 
