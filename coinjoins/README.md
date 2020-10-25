@@ -41,7 +41,7 @@ Privacy through a swap for another users coin history.
 
 Privacy by combining of coin history.
 
-#### Tainted by Coinjoins
+#### Censoring
 
 - Some exchanges may not accept deposits from coinjoins
 - Adding hops — *see Samourai Wallet's Ricochet*
