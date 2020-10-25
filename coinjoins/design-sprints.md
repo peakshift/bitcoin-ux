@@ -72,6 +72,7 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 ### Transaction Fragements
 
+- Data Structure for a Transaction Fragment (PSBT)
 - What is a transaction fragment?
 - What parts are relevant to designers?
 - Actions
@@ -82,11 +83,18 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 ### Output Descriptors
 
-- [ ] [focus on xpub output descriptors, e.g. from hardware wallets]
+- [ ] [focus on xpub output descriptors, *e.g. from hardware wallets*]
 - [ ] Introduction to bip32
+- [ ] bip44 derivation paths
 - [ ] Obtaining an xpub
 
 ### Labels
+
+- As with any payment some meta data to give context
+  - What was paid for
+  - What was received
+  - Who it was paid to
+  - Who it was received from
 
 ### Coin Custers
 
@@ -111,11 +119,20 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 ### Coins
 
-- ...
+- How do coins interact with one another
 
 ### Pending Items
 
-- ...
+Constraints on mobile — 
+
+- Review your pending operations
+  - Coin join registrations
+  - Payment Requests
+    - Scheduled for mixing
+  - Unconfirmed Payments
+    - Receiving
+    - Sending
+- On mobile, a user may have to be prompted to open the application if they have registered to coinjoin in a round.
 
 ### Wallet Defaults
 
@@ -124,6 +141,7 @@ As this was an exploritory process which relied on expert interviews, we did not
 ## Continuity Plan
 
 - Reach out to Max, Magnus, and others interested in coin control
+- Next steps...
 
 ---
 
