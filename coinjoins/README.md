@@ -3,7 +3,7 @@
 - Bitcoin is not anonymous.
 - Consider each address you generate as a new identity.
 - Coin has history
-- Histories can become linked
+- Histories can link addresses into clusters
 - Public ledger
 - Anyone can lookup
 - New users may not be aware
@@ -76,4 +76,3 @@ A type of coinjoin which involves two parties adding their inputs, and outputs o
 
 [1]: https://github.com/nopara73/ZeroLink#i-introduction
 [2]: https://zmnscpxj.github.io/bitcoin/coinjoinxt.html
-
