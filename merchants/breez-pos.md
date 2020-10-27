@@ -34,7 +34,7 @@
 
 > Export transactions — Another function is the ability to export a record of transactions in [.csv](https://en.wikipedia.org/wiki/Comma-separated_values)format. This allows managers to easily calculate their gross, their net, and to see just how fast they’ve restored their businesses
 
-> POS Connected to a Wireless Printer — It would be best to integrate option to connect printer like this: [https://m.aliexpress.com/item/4001204296782](https://m.aliexpress.com/item/4001204296782.html)
+> **POS Connected to a Wireless Printer** — It would be best to integrate option to connect printer like this: [https://m.aliexpress.com/item/4001204296782](https://m.aliexpress.com/item/4001204296782.html)
 
 ### Inbound capacity
 
@@ -46,9 +46,14 @@
 
 ## Persona
 
+- Operates a physical store
+- Early Adopter
+- Willing to try Beta Software
+- Device: Android / iOS user
+
 ### Motivations
 
-- Merchants who want to get bitcoins
+- Wants to get bitcoins
 - Lack of trust in banking systems
 - Reducing payment processing costs
 - Unbanked
