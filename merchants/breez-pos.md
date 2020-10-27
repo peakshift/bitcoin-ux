@@ -1,4 +1,4 @@
-# Merchants / Breez POS
+# Merchant Tool Perspectives / Breez POS
 
 > Merchants are the missing piece
 
@@ -44,19 +44,28 @@
 
 > In order to deal with the need for increased capacity, we’ve integrated [LNURL-channel](https://github.com/btcontract/lnurl-rfc/blob/master/spec.md). This protocol allows merchants to use external services like [Bitrefill](https://www.bitrefill.com/buy/lightning/?hl=en), [LNBIG](https://lnbig.com/#/), and other LSPs to open additional channels simply by scanning a QR code. However, since Breez doesn’t yet support [multi-path payments](https://wiki.ion.radar.tech/tech/research/atomic-multi-path-payments), testing this feature to make sure it fits your needs before using it for live transactions is highly recommended.
 
-## Persona
+## Personas
+
+### Buyer
+
+- Spend often while receiving relatively few payments
+- Ordering pizza (or toilet paper?), buying gift cards, or playing Lightning games online are the typical use cases
+
+### Merchant
 
 - Operates a physical store
 - Early Adopter
 - Willing to try Beta Software
 - Device: Android / iOS user
 
-### Motivations
+#### Motivations
 
 - Wants to get bitcoins
 - Lack of trust in banking systems
 - Reducing payment processing costs
 - Unbanked
+
+*Credits — Roy Sheinfeld CEO, [@Breez_Tech](https://twitter.com/Breez_Tech) for the article[^1] and for answering my questions.*
 
 [1]: https://medium.com/breez-technology/breezs-point-of-sale-mode-a-new-tool-for-the-day-after-tomorrow-fb8c0ba660a5	"Breez’s Point-of-Sale Mode: A New Tool for the Day after Tomorrow"
 
