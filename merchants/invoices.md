@@ -79,6 +79,10 @@ Here's an overview of typical data structure on an invoice on the receiver's (me
   "additionalStatus": "None"
 }
 ```
+## Invoice Generation Flow
+
+![Invoice Generation Flow](./img/InvoiceGenerationFlow.png)
+
 ## Payment Processors - Comparison of invoice design 
 
 ![BitPay, OpenNode and BitCartCC](./img/ComparisonInvoices1.png)
