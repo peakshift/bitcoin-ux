@@ -46,7 +46,12 @@
 
 ## Persona
 
-…
+### Motivations
+
+- Merchants who want to get bitcoins
+- Lack of trust in banking systems
+- Reducing payment processing costs
+- Unbanked
 
 [1]: https://medium.com/breez-technology/breezs-point-of-sale-mode-a-new-tool-for-the-day-after-tomorrow-fb8c0ba660a5	"Breez’s Point-of-Sale Mode: A New Tool for the Day after Tomorrow"
 
