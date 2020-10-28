@@ -40,5 +40,6 @@ The following is an example of a real-world support ticket, separated by payment
 
 * "What is the payment link" / "Do I use the address or the payment link" 
 * QR Code related: "What is this square thing, don't you take debit/visa/paypal?"
+* "I made added funds to my account via btcpay but the transaction expired before the payment was confirmed on bloackchain and it never relfected on my account, and no refund to my blockchain either"
 
 Additional resource: [A list of awesome payment processors](https://github.com/alexk111/awesome-bitcoin-payment-processors).
