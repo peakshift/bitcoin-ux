@@ -23,7 +23,10 @@ The way the transaction is constructed can give chain analysts an idea of which 
 1. Change is sometimes the last output
    1. Solutions
       1. Lexicographical Ordering
-2. If the timelock in the transaction is a specific amount
+2. If the `nLockTime` in the transaction or `nSequence` of the inputs are set
+  - locktime type (absolute/`nLockTime`, [relative/`nSequence` (BIP 68)](https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki), and their [interactions](https://b10c.me/mempool-observations/1-locktime-stairs/))
+  - locktime value type (blockheight, [MTP (BIP 113)](https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki))
+  - [RBF opt in (BIP 125)](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki)
 
 ## Routing Transaction
 
