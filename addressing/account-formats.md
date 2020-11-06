@@ -15,3 +15,7 @@ IT60X0542811101000000123456 —> Italy
 The difference with bitcoin is these accounts are not static, you generate one in your HD wallet
 
 Names, Phone numbers, Usernames and Email Addresses are things we have learned to keep in memory — it is a good example of how technology has influenced behaviour.
+
+---
+
+![global-accounts-formats](assets/img/global-accounts-formats.svg)
