@@ -70,23 +70,61 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 ## Technical Concepts
 
-### Transaction Fragements
+### UTXO
 
-- Data Structure for a Transaction Fragment (PSBT)
-- What is a transaction fragment?
-- What parts are relevant to designers?
-- Actions
-  - Add Inputs
-  - Add Outputs
-  - Sign
-  - Replace by fee
+```json
+[
+    ...,
+    {
+        txid: "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
+        vout: 0,
+        address: "bc...",
+        label: "",
+        scriptPubKey: "00...",
+        amount: 50,
+        confirmations: 0,
+        spendable: true,
+        solvable: true,
+        desc: "wpkh([2fa047bc/0'/0'/3']02f9308a019258c31049344f85f89d5229b531c845836f99b08601f113bce036f9)#t7as4qks",
+        safe: true
+    }
+]
+```
 
-### Output Descriptors
 
-- [ ] [focus on xpub output descriptors, *e.g. from hardware wallets*]
-- [ ] Introduction to bip32
-- [ ] bip44 derivation paths
-- [ ] Obtaining an xpub
+
+### Transaction Fragement (PSBT)
+
+- [ ] What is a transaction fragment?
+- [ ] What parts are relevant to designers?
+
+#### Data Structure
+
+1. **Input**
+   - Previous Transaction ID
+   - Index
+   - Signature
+2. **Output**
+   - Value
+   - Public Key
+3. **Locktime** `(numeric, optional, default=0)`
+   *Raw locktime. Non-0 value also locktime-activates inputs*
+4. **Replaceable**  `(boolean, optional, default=false)`
+   *Marks this transaction as BIP125 replaceable.*
+
+#### Actions
+
+- Add Inputs
+- Add Outputs
+- Sign
+- Check Replace by fee
+
+#### Actions after Creation
+
+- Join multiple transaction fragements together
+- Combine inputs from transaction fragments with the same base
+
+### [Output Descriptors](../addressing/output-descriptors.md)
 
 ### Labels
 

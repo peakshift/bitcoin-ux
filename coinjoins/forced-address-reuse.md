@@ -12,7 +12,7 @@
 
 ### How is this reflected in the user interface?
 
-In the wallet, this sould create a cluster of coins, or flagged as "address-reused".
+In the wallet, this sould create a cluster of coins, or flagged an address as "address-reused".
 
 ```gherkin
 Scenario: Potential address reuse attack
@@ -23,8 +23,9 @@ Scenario: Potential address reuse attack
 	And the transaction has "1" outputs directed to "bc1…0"
 	And the total value is "10000" sats
 	Then I go to "Coin List"
-	And I see a cluster of coins at "bc1…0" flagged as "address-reused"
-	And the "4" utxos in that cluster need to be mixed
+	And I see a cluster of coins for "bc1…0"
+	And the coins are flagged as "address-reused"
+	And I see the "4" utxos in that cluster need to be coinjoined
 ```
 
 
