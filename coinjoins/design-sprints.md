@@ -134,13 +134,19 @@ As this was an exploritory process which relied on expert interviews, we did not
   - Who it was paid to
   - Who it was received from
 
-### Coin Custers
+### Rounds
+
+### Toxic Change
 
 ### Coin Control
 
 - Spending should only be from confirmed coins (see [../anatomy-psbt.md#spending])
 
+### Coin Custers
+
 ### Batching
+
+Operations which are essentially Transaction Fragments can be queued for broadcast at a optimal time (when fee's are lower or when a round is about to start).
 
 ## User Facing
 ### Contacts
