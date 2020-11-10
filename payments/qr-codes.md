@@ -11,7 +11,7 @@
 
 ## Payment Request with On-chain Fallback
 
-User flow visualising a lightning payment with an onchain fallback in the event of errors.
+User flow visualising a lightning payment with an onchain fallback in the event of errors.[^2]
 
 - [ ] 
 
