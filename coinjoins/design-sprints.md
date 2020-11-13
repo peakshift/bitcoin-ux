@@ -70,7 +70,7 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 ## Technical Concepts
 
-### UTXO
+### Coin (UTXO)
 
 ```json
 [
@@ -91,9 +91,11 @@ As this was an exploritory process which relied on expert interviews, we did not
 ]
 ```
 
+### Transactions
 
+- …
 
-### Transaction Fragement (PSBT)
+### Transaction Fragment (PSBT)
 
 - [ ] What is a transaction fragment?
 - [ ] What parts are relevant to designers?
@@ -121,22 +123,45 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 #### Actions after Creation
 
-- Join multiple transaction fragements together
+- Join multiple transaction fragments together
 - Combine inputs from transaction fragments with the same base
 
 ### [Output Descriptors](../addressing/output-descriptors.md)
 
 ### Labels
 
-- As with any payment some meta data to give context
+Labels are essential for coin management and selection — as they allow the user to keep track of who has observed a coin in their wallet but also when they need to grok the purpose of the payment for accounting or expense tracking purposes.
+
+- As with any payment some meta data should be stored to give context for accounting purposes
+  - Who it was paid to / received from
   - What was paid for
-  - What was received
-  - Who it was paid to
-  - Who it was received from
+
+##### On-chain
+
+Labels are not stored on on-chain, they are usually stored on the device running the wallet. So this means if a user imports their seed into another wallet it would only be able to fetch transactions and not any of the off-chain meta data — **see address discovery**.
+
+#### Lightning
+
+This meta data on lightning is set in a description field of a BOLT11 invoice. These invoices are stores
+
+*NOTE: BIP21 has a message parameter, but most applications do not recognise this and only read the label.*
+
+#### Observers
+
+- Labels in coinjoin wallets can also be inheirted, so a coin which was received from Bob, that was partially sent to Malroy would have 2 observers as both parties now know of the coin histories.
+
+#### Memo
+
+- Labels are also used to record other details about a payment like a reference to an invoice.
 
 ### Rounds
 
+- ...
+
 ### Toxic Change
+
+- With fixed denomination coinjoins, you sometimes end up with change that is too small to be mixed in a round.
+- This change poses a problem because if you were to spend it, you will **decrease your privacy** because the transactions that created the change will now be linked. Note that this is also true if you mix your change with a mixed coin.
 
 ### Coin Control
 
@@ -146,10 +171,16 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 ### Batching
 
-Operations which are essentially Transaction Fragments can be queued for broadcast at a optimal time (when fee's are lower or when a round is about to start).
+Operations which are essentially Transaction Fragments can be added to a queue to be broadcasted at an optimal time. Optimal time being determined by the wallet + user setting for that operation. For instance when fee's are lower or when a round is about to start.
 
 ## User Facing
 ### Contacts
+
+Wasabi Wallet developers have noted that they had difficulty communicating to its users how to properly use labels. The coin join application relys heavily on manual coin selection in its user flows. 
+
+#### Extensibility
+
+Besides addresses and output descriptors which would be used for onchain payments, contacts can be used to store
 
 ### Payment Request
 
@@ -197,3 +228,6 @@ Constraints on mobile —
 - [ ] Design visual prototypes to illustrate some of the learnings
 - [ ] Continuity Plan
 - [ ] 10min video walk-through of Miro board
+
+[^1]: 
+
