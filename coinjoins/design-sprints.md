@@ -138,11 +138,11 @@ Labels are essential for coin management and selection — as they allow the use
 
 ##### On-chain
 
-Labels are not stored on on-chain, they are usually stored on the device running the wallet. So this means if a user imports their seed into another wallet it would only be able to fetch transactions and not any of the off-chain meta data — **see address discovery**.
+Labels are not stored on on-chain, they are usually stored on the device running the wallet. So this means if a user imports their seed into another wallet it would only be able to fetch transactions and not any of the off-chain meta data— **see address discovery**.
 
 #### Lightning
 
-This meta data on lightning is set in a description field of a BOLT11 invoice. These invoices are stores
+When creating a payment request, the memo on lightning is set in the description field of a BOLT11 invoice. It can also be extended with a “description_hash” to store things like an itemised list of whats being paid for typical purchase receipt.
 
 *NOTE: BIP21 has a message parameter, but most applications do not recognise this and only read the label.*
 
