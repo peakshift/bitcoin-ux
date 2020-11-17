@@ -1,6 +1,20 @@
-# Bitcoin & QR Codes
+# Bitcoin ❤️ QR Codes
 
 ## QR Code
+
+- [ ] What is a QR Code?
+- [ ] Use cases in bitcoin
+
+### Rationale
+
+Why bitcoin ❤️ QR Codes?
+
+- [ ] Hashing and cryptography produces lots of bit vomit
+- [ ] Manual input of bit vomit is impractical for users
+- [ ] Easy to transfer bit vomit through scanning
+- [ ] No app required
+
+### Technical
 
 - QR codes can hold up to 7,089 numeric characters and up to 4,296 alphanumeric characters value of data[^1]
 - QR Code has an error correction capability.[^1]
@@ -57,7 +71,7 @@ User flow visualising a wallet supporting both onchain and lightning payments, w
 ![bip21-compatible-bolt11](./assets/img/bip21-compatible-bolt11.svg)
 
 - [ ] Allow user to over-ride wallets' default network (lightning)
-- [ ] Continue onchain flow after after error message
+- [ ] Continue onchain flow after error message
 - [ ] Consider automatic error handling?
 - [ ] Talk about duplicated payment meta data (description/label), increased data size of the qr code leads to more difficulty with scanning
 
