@@ -49,8 +49,8 @@ Simmilar to a URL you may have come across BIP21 uses parameters which are relat
 Lighting Invoices are encoded — 
 
 - Amount
-- Description
-- Description Hash
+- Description — is a short description of the purpose of this invoice[^6]
+- Description Hash — is the SHA256 hash of a description of the purpose of this invoice.[^6]
 - Expiration
 - Fallback (Onchain)
 - Timestamp (creation)
@@ -92,3 +92,4 @@ User flow visualising a wallet supporting both onchain and lightning payments, w
 [^4]: https://github.com/lightningnetwork/lightning-rfc/issues/323 "Add BIP21 fallback example to Bolt11"
 [^5]: https://github.com/lightningnetwork/lightning-rfc/blob/master/11-payment-encoding.md#encoding-overview
 
+[^6]: https://github.com/lightningnetwork/lnd/commit/af01571fc61dfab2f5813050dc59c40e7c00be20#diff-432eb1b004c63792f9852a3eeb377f2468fac664524de260a0fc0c5c12e6ea32L154-R161
