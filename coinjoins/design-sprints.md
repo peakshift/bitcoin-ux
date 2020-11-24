@@ -43,7 +43,7 @@ Be true to the principals of bitcoin and display that honestly. Be truthful to t
 
 ### Consistency
 
-Create a consistent visual language for simmilar objects, especially in the case when new concepts are being introduced to the user (*e.g. UTXOs*).
+Create a consistent visual language for similar objects, especially in the case when new concepts are being introduced to the user (*e.g. UTXOs*).
 
 ## Persona
 
@@ -72,6 +72,8 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 ### Coin (UTXO)
 
+- [ ] How do you keep track of all of the addresses?
+
 ```json
 [
     ...,
@@ -99,6 +101,7 @@ As this was an exploritory process which relied on expert interviews, we did not
 
 - [ ] What is a transaction fragment?
 - [ ] What parts are relevant to designers?
+- [ ] Batching use case to reduce fees
 
 #### Data Structure
 
@@ -136,7 +139,19 @@ Labels are essential for coin management and selection — as they allow the use
   - Who it was paid to / received from
   - What was paid for
 
-##### On-chain
+For coin control and management the most important piece of data is the who — having your coins separated by the individaul observers.
+
+Coin history
+
+#### Observers
+
+- Labels in coinjoin wallets can also be inherited, so a coin which was received from Bob, that was partially sent to Malroy would have 2 observers as both parties now know of the coin histories.
+
+#### Memo
+
+- Labels are also used to record other details about a payment like a reference to an invoice.
+
+#### On-chain
 
 Labels are not stored on on-chain, they are usually stored on the device running the wallet. So this means if a user imports their seed into another wallet it would only be able to fetch transactions and not any of the off-chain meta data— **see address discovery**.
 
@@ -145,14 +160,6 @@ Labels are not stored on on-chain, they are usually stored on the device running
 When creating a payment request, the memo on lightning is set in the description field of a BOLT11 invoice. It can also be extended with a “description_hash” to store things like an itemised list of whats being paid for typical purchase receipt.
 
 *NOTE: BIP21 has a message parameter, but most applications do not recognise this and only read the label.*
-
-#### Observers
-
-- Labels in coinjoin wallets can also be inheirted, so a coin which was received from Bob, that was partially sent to Malroy would have 2 observers as both parties now know of the coin histories.
-
-#### Memo
-
-- Labels are also used to record other details about a payment like a reference to an invoice.
 
 ### Rounds
 
@@ -173,7 +180,12 @@ When creating a payment request, the memo on lightning is set in the description
 
 Operations which are essentially Transaction Fragments can be added to a queue to be broadcasted at an optimal time. Optimal time being determined by the wallet + user setting for that operation. For instance when fee's are lower or when a round is about to start.
 
+### Anonomity Set
+
+> While there is no universally agreed upon definition, the generally agreed upon concept is, *the size of the crowd*, that your mixed UTXOs can hide in.[^1]
+
 ## User Facing
+
 ### Contacts
 
 Wasabi Wallet developers have noted that they had difficulty communicating to its users how to properly use labels. The coin join application relys heavily on manual coin selection in its user flows. 
@@ -229,5 +241,6 @@ Constraints on mobile —
 - [ ] Continuity Plan
 - [ ] 10min video walk-through of Miro board
 
-[^1]: 
+[^1]: https://medium.com/samourai-wallet/diving-head-first-into-whirlpool-anonymity-sets-4156a54b0bc7 "Diving head first into Whirlpool Anonymity Sets"
 
+[^2]: https://docs.wasabiwallet.io/FAQ/FAQ-UseWasabi.html#what-is-the-anonymity-set "WHAT IS THE ANONYMITY SET?"
