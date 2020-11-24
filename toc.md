@@ -8,6 +8,14 @@
   - Onramps
 - How can bitcoin be used to facilitate payments?
 
+## Payment Requests
+
+## Fee Estimation
+
+## Pending Operations
+
+## Batched Operations
+
 ## User Flow
 
 ### Requesting
