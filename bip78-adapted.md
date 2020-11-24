@@ -79,3 +79,5 @@ sequenceDiagram
 > -- @nothingmuch
 
 This may be so in an online shopping scenario when you are interacting with a merchant, but i think this would be different for a more social use case.
+
+Not only does this expose the receivers inputs to a potentially malicous sender — but it may be possible that the sender receives a payment if they broadcast the transaction.
