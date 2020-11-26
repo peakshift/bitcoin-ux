@@ -1,8 +1,18 @@
 # Transaction Builder
 
-  It is possible to send very simple transaction in bitcoin which contain just one operation. This is how most wallets do it these days. One transaction for each payment.   This is not the most cost effective, or optimised way of handling onchain payments though.
+For every transaction you want to make on bitcoin — you need to fund it with some amount of coins.
 
-Since a transaction is able to take multiple inputs and outputs. You can essentially allow users to build a transaction that contains multiple operations. Enter, batched payments.
+You then specifcy the amount you want to send to the person you're paying — and the remainder is considered change which would typically be returned to your wallet.
+
+#### What is a transaction builder?
+
+  It is possible to send very simple transaction in bitcoin which contain just one payment. This is how most wallets do it these days. One transaction for each payment.  
+
+This is not the most cost effective, or optimised way of handling onchain payments though.
+
+Since a transaction is able to take multiple inputs and outputs. You can essentially allow users to build a transaction that contains multiple operations.
+
+Enter, batched payments.
 
 A batched payment is a collection of operations that will all be sent out at the same time, effectively in the same transaction. This has a potential for fee saving mechanism.
 
@@ -13,6 +23,9 @@ A batched payment is a collection of operations that will all be sent out at the
 - Set Broadcast Time
 - Broadcast Now
 - Set Replace by Fee (true/false)
+- Set Custom Action
+  - Schedule for coinjoin
+  - Include in coinjoin
 
 ## Individual Transactions
 
