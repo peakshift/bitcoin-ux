@@ -1,6 +1,6 @@
 # Payment Requests
 
-**Payment Requests** are abstractions of addresses and payment meter data combined.
+**Payment Requests** are abstractions of addresses and payment meta-data combined.
 
 They do not represent an account, the account will be synonymous to the wallet. 
 
