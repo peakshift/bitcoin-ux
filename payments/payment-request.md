@@ -8,6 +8,8 @@ It should be noted that Payment Requests can have multiple payments made to them
 
 There is no forced limit but you should only send a payment request to one payer in order to safeguard your privacy as using payment requests with multiple payers will expose your other funds to them.
 
+![payment-request-creation](assets/img/payment-request-creation.svg)
+
 - https://blog.btcpayserver.org/payment-requests/
 
 ## Distribution
