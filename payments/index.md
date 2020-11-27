@@ -31,6 +31,29 @@ In order to improve user experience we must equip designers with the knowledge o
 
 This means that some technical concepts must be communicated. It should be done with empathy for a designer who is new to bitcoin.
 
+## Networks
+
+### Bitcoin Onchain
+
+Simmilarities: `Bank`, `SWIFT`, `SEPA`
+
+- Bitcoin is a blockchain
+  - What is a blockchain?
+  - Link to getting started guide
+- Transactions Throughput.
+- Settlement network.
+- Is not reversable.
+- Final source of truth.
+- 7 transaction per second
+- Censorship Resistant
+  - Bank Blocked the account for a couple of non-proits or groups
+  - Prominant protestors accounts blocked
+  - https://www.coindesk.com/nigerian-activists-bitcoin-endsars-police-brutality
+
+### Bitcoin Lightning Payments
+
+- https://medium.com/galoymoney/lightning-as-a-retail-payment-system-part-1-7463c46342ef
+
 ## Concepts
 
 ### Pull Payments
@@ -47,6 +70,13 @@ This means that some technical concepts must be communicated. It should be done 
 > This is, rather, the closest analog we have in the digital world to a person-to-person cash payment.[^2]
 
 #### Lightning
+
+```mermaid
+graph LR
+	1(Request Payment) --> 2(Enter Amount + Memo) --> 3(Copy Lightning Invoice) --> 4(Paste in message to Payee) --> 5(Copy)
+```
+
+
 
 - [ ] Default lightning user flow
 - [ ] `keysend` and its limitations
