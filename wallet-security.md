@@ -1,5 +1,7 @@
 # Wallet Security
 
+- https://blog.keys.casa/how-to-protect-your-bitcoin-from-5-wrench-attacks/
+
 ## Risks
 
 - Accidental deletion of wallet app
@@ -46,7 +48,11 @@ The "Hide my Balance" switch should not be prominant -- e.g on the same page whe
 
 Once a user opens the app, a spinning balance animation is activated — simmilar to a slot machine and the user is asked are you alone?
 
-### Special Pin Code to Access an Account with Less Funds
+### Decoy Wallet
+
+Allow a user to set a Special Pin Code/Password to access an account with less funds.
+
+Instead of opening your **real** bitcoin wallet, you open one with a much smaller amount of money in it. You transfer it to the attacker and they leave satisfied.[^1]
 
 ```gherkin
 Feature: Secret Account
@@ -67,7 +73,7 @@ Feature: Secret Account
 >
 > [qwk](https://bitcointalk.org/index.php?action=profile;u=24140) — https://bitcointalk.org/index.php?topic=5112748.msg49853611#msg49853611
 
-- [ ] How can this be facilitated with Photon?
+- [ ] Using BIP39 passphrase in Photon?
 
 Q: Can you send money from the "fake" account?
 
@@ -83,3 +89,6 @@ A: You can fund it with some small amount that you’re willing to lose.
 ### Notifications Shows Balance
 
 User should disallow content of message to be shown when phone is locked.
+
+[^1]: https://blog.keys.casa/how-to-protect-your-bitcoin-from-5-wrench-attacks/
+
