@@ -1,5 +1,9 @@
 # Transaction Builder
 
+*An interface element faciliate the adding funds (inputs) and payments (outputs) to a transactions that is to be broadcasted or shared with other signatories.*
+
+---
+
 For every transaction you want to make on bitcoin — you need to fund it with some amount of coins.
 
 You then specifcy the amount you want to send to the person you're paying — and the remainder is considered change which would typically be returned to your wallet.
@@ -38,6 +42,23 @@ There is a fixed overhead for each transaction that is broadcasted. By sending 5
 If the transaction is not urgent - it may make sense to allow the user to add multiple payments to a queue. These operations would be scheduled for broadcast at the same time. Since only one transaction is made this time, we can see below that there is a saving of 200 satoshis (given that the transaction fee is 1sat per vbyte).
 
 ![batching-single-transactions](assets/img/batching-single-transactions.svg)
+
+## Adding Payments to a Transactions
+
+- Manually entering address and amount and memo
+- Subscription Manager automatically adds a payment to a transaction thats been scheduled.
+- Selecting an fullfilled payment request
+- Selecting contact and entering the amount
+- Scanning payment request
+- Detect payment request in clip board
+
+## Transaction List
+
+How are batched payments presented in the transaction list?
+
+1. Show the user 1 entry for each transaction.
+2. Show the user a list of payments (sent/received) if the addresses are known.
+3. If the addresses are unknown (not assigned to a contact) then the amounts in the transaction are summed and presetned as 
 
 ## Use Cases
 
