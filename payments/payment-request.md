@@ -35,21 +35,36 @@ While you should never ever share your seed phrase, or a private key for one of 
 
 You can however share the address, or extended public key (xpub) for an account.
 
-##### Use Cases
+#### Use Cases
 If you share an extended public key for one of your accounts with someone it is possible for them to generate billions of addresses without ever being able to generate the private keys of those addresses or the account itself.
 
 ##### Online Shops
-A merchant can enter an extended public key on their ecommerce software -- and every time a customer goes to checkout, a new address would be shown to them.
+A merchant can enter an extended public key on their e-commerce software -- and every time a customer goes to checkout, a new address would be shown to them.
 
 ##### Employers
-If you dont want to have to give a new address to your employer every 2 - 4 weeks for your salary, you can also share with them an xpub which they can use in their wallet to generate new addresses every time they have to pay your salary.
+If you don't want to have to give a new address to your employer every 2 - 4 weeks for your salary, you can also share with them an xpub which they can use in their wallet to generate new addresses every time they have to pay your salary.
 
-###### Why not just get your salary into one address?
-If you were to get your salary paid into just one address -- then anytime you make a payment using funds from this address, you will be exposing your entire salary history.
+###### Address Reuse
+
+*Why not just get your salary into one address?*
+
+If you were to get your salary paid into just one address — then anytime you make a payment using funds from this address, you will be exposing all payments you received as salary.
+
+###### What if I send a smaller amount from my daily spending wallet?
+
+Even if you were to add hops between ... 
+
+![payment-requests-salary-single](assets/img/payment-requests-salary-single.svg)
+
+- [ ] Get feedback from @nothingmuch
+
+![payment-requests-salary-multiple](assets/img/payment-requests-salary-multiple.svg)
+
+- [ ] Get feedback from @nothingmuch
 
 ## Data Format / Presentation
 
-A payment request should idealy be a BIP21 URI or BOLT11 lightning invoice with the `lightning:` URN. This piece of data can be represented in the following ways.
+A payment request should ideally be a BIP21 URI or BOLT11 lightning invoice with the `lightning:` URN. This piece of data can be represented in the following ways. [🔗 Read more](./qr-codes.md#uri-schemes)
 
 1. Encoded String
    1. Copy pasta
@@ -77,7 +92,7 @@ A payment request should idealy be a BIP21 URI or BOLT11 lightning invoice with 
 ### Close Proximity (no contact exchange/contactless)
 
 - NFC (Contactless Payment)
-- QR Code
+- [QR Code](./qr-codes.md)
 - Print (invoice, flyer, menu)
 
 ### Close Proximity (setup required)
