@@ -36,7 +36,7 @@ While you should never ever share your seed phrase, or a private key for one of 
 You can however share the address, or extended public key (xpub) for an account.
 
 #### Use Cases
-If you share an extended public key for one of your accounts with someone it is possible for them to generate billions of addresses without ever being able to generate the private keys of those addresses or the account itself.
+If you share an extended public key for one of your accounts with someone it is possible for them to generate billions of addresses without them ever being able to generate the private keys of those addresses or the private key for the account itself.
 
 ##### Online Shops
 A merchant can enter an extended public key on their e-commerce software -- and every time a customer goes to checkout, a new address would be shown to them.
