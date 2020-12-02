@@ -19,6 +19,11 @@ You see, every coin in the Bitcoin ecosystem can only be spent once. So, every b
 1. A miner received it as a mining reward, or
 2. It was minted during a transaction. *(Remember our example from earlier?)*
 
+```bash
+#rpc command
+listunspent
+```
+
 ## UTXO set
 
 > The *UTXO set* is the collection of all addresses with unspent outputs.
@@ -39,7 +44,19 @@ You see, every coin in the Bitcoin ecosystem can only be spent once. So, every b
 
 > “Segwit improves the situation here by making signature data, which does not impact the UTXO set size, cost 75% less than data that does impact the UTXO set size. This is expected to encourage users to favour the use of transactions that minimise impact on the UTXO set in order to minimise fees, and to encourage developers to design smart contracts and new features in a way that will also minimise the impact on the UTXO set.”
 
+## Broadcasting
+
+![tx-vending-machine](assets/img/tx-broadcast.svg)
+
+## Confirmation Times
+
+> chain rewrites
+>
+> the more confirmations your transactions has, the safer you are
+
 [1]: https://en.bitcoin.it/wiki/UTXO	"UTXO Definition"
 [2]: https://coincentral.com/utxo-beginners-explainer/
 [3]: https://medium.com/bitbees/what-the-heck-is-utxo-ca68f2651819
+
+[^4]:https://bitcoin.org/en/bitcoin-core/features/validation
 
