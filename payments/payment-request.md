@@ -4,6 +4,13 @@
 
 ![payment-request-creation](assets/img/payment-request-creation.svg)
 
+## Expirations
+
+- BOLT11 spec states default is 3600 seconds 
+  - Have not seen an application which allows expiration to be customised
+  - Some implementations set it as 24 hours, and others diverge
+- Merchant Payment Processors typically rely on expirations as a "protection mechanism against the volatility since it locks the cryptocurrency amount according to the crypto to fiat rates"[^4]
+
 ## Reusability
 
 It does not represent an account, ~~the account will be synonymous to the wallet~~ — ideally it should only be used once.
@@ -102,3 +109,4 @@ A payment request should ideally be a BIP21 URI or BOLT11 lightning invoice with
 [^1]: https://learnmeabitcoin.com/technical/hd-wallets#single-backup "HD Wallets: Using a single seed to generate a tree of keys"
 [^2]: https://learnmeabitcoin.com/technical/extended-keys "Extended Keys: Private keys and public keys that you can derive children from"
 [^3]: https://blog.btcpayserver.org/payment-requests/
+[^4]: https://docs.btcpayserver.org/FAQ/FAQ-Stores/#invoice-expires-if-the-full-amount-has-not-been-paid-after-minutes
