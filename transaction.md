@@ -44,6 +44,8 @@ listunspent
 
 > “Segwit improves the situation here by making signature data, which does not impact the UTXO set size, cost 75% less than data that does impact the UTXO set size. This is expected to encourage users to favour the use of transactions that minimise impact on the UTXO set in order to minimise fees, and to encourage developers to design smart contracts and new features in a way that will also minimise the impact on the UTXO set.”
 
+- https://medium.com/@blairlmarshall/how-does-a-bitcoin-transaction-actually-work-1c44818c3996
+
 ## Broadcasting
 
 ![tx-vending-machine](assets/img/tx-broadcast.svg)
@@ -53,6 +55,8 @@ listunspent
 > chain rewrites
 >
 > the more confirmations your transactions has, the safer you are
+
+- https://medium.com/@blairlmarshall/how-do-miners-validate-transactions-c01b05f36231
 
 [1]: https://en.bitcoin.it/wiki/UTXO	"UTXO Definition"
 [2]: https://coincentral.com/utxo-beginners-explainer/
