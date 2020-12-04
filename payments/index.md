@@ -2,7 +2,7 @@
 
 ## Abstract
 
-There are many types of operations a bitcoin transaction can contain. This research will focus on the ones relating to payments.
+There are many types of operations a bitcoin transaction can facilitate. This research will focus on the ones relating to payments.
 
 - https://twitter.com/NicolasDorier/status/1303356212705030144
 - http://bitcoin.sipa.be/miniscript/
@@ -53,17 +53,35 @@ Simmilarities: `Bank`, `SWIFT`, `SEPA`
 ### Bitcoin Lightning Payments
 
 - https://medium.com/galoymoney/lightning-as-a-retail-payment-system-part-1-7463c46342ef
+- Does not have final settlement but can facilitate instant payments.
+
+> Lightning Network cannot support large payment amounts. Liquidity in payment channels on the Lightning network is a scarce resource. Nodes which relay lightning payments always take care that a payment does not exhaust their liquidity. Users of Lightning today must often be aware of inbound liquidity, outbound liquidity and channel rebalancing. There even exist services today which sell Lightning liquidity.[^3]
+
+> it seems hard to imagine that Lightning Network will ever reliably route payments of 200 BTC to any node in the network (and it doesn't have to to be successful)
 
 ## Concepts
 
 ### Pull Payments
 
+##### Lightning
+
+```mermaid
+graph LR
+	1(Recipient: Create Invoice) --> 2(Exchange Invoice with Sender) --> 3(Sender: Approve Payment) --> 4(Payment Finds Route) --> 5(Recipient: Recieve Payment)
+```
+
 - [ ] [DIAGRAM: User Flow of Pull Payment]
 - [ ] Beyond the technical implication, to the user are lightning payment push payments if invoices are being issued?
+- [ ] Default lightning user flow
 
 ### Push Payments
 
-- [ ] [DIAGRAM: User Flow of Pull Payment]
+#### Onchain
+
+```mermaid
+graph LR
+	1(Sender: Create Transaction) --> 2(Broadcast Transaction) --> 3(Transaction Confrimed) --> 4(Recipient: Receive Payment)
+```
 
 > Traditionally, to make a Bitcoin payment, a receiver shares their bitcoin address and the sender later sends money to this address. Such a system is called `Push payment` as the sender initiates the payment while the receiver may be unavailable, in effect `pushing` the payment to the receiver.[^1]
 
@@ -71,15 +89,8 @@ Simmilarities: `Bank`, `SWIFT`, `SEPA`
 
 #### Lightning
 
-```mermaid
-graph LR
-	1(Request Payment) --> 2(Enter Amount + Memo) --> 3(Copy Lightning Invoice) --> 4(Paste in message to Payee) --> 5(Copy)
-```
-
-
-
-- [ ] Default lightning user flow
 - [ ] `keysend` and its limitations
 
 [^1]: https://docs.btcpayserver.org/PullPayments/ "BTCPayServer Pull + Push Payments"
 [^2]: https://www.coincenter.org/education/crypto-regulation-faq/how-are-payments-with-bitcoin-different-than-credit-cards/ "How Are Payments with Bitcoin Different than Credit Cards?"
+[^3]: https://gist.github.com/chris-belcher/9144bd57a91c194e332fb5ca371d0964
