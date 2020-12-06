@@ -1,20 +1,42 @@
 # Payments
 
+<details>
+  <summary>Rationale</summary>
+	<p>Below is the proposed structure for the payments section — there are first some foundations which will give readers a base to understand further chapters.</p>
+  <p>The goal with this structure is to provide the reader with a unified way of learning about bitcoin on-chain and lightning. Instead of having to navigate between separate subchapters and comparing the two - the reader is taken through a payments user flow. At each step, when relevant the individual considerations, implementation details and constraints are addressed.</p>
+</details>
+
 ###### FOUNDATIONS
 
 #### [Privacy](#)
 
-#### [Units, Symbols & Amount Display](#)
+#### [Units & Symbols](#)
 
 #### [Push & Pull Payments](#)
 
 #### [Addresses](#)
 
-#### [Transaction Lifecycle](#)
+- [Types](#)
+- [Validation](#)
+- [Display](#)
+
+#### [Lightning Invoices](#)
+
+- Description
+- Description Hash (receipt)
+- Amount
+- Node ID
+- [Validation](#)
+
+#### [Transactions & Lifecycle](#)
 
 ###### USER FLOW
 
 #### [Account Scanning](#)
+
+- Restoring Seed
+- Choosing Address Type
+- Gap Limit
 
 #### [Requesting Payments](#)
 
@@ -22,14 +44,9 @@
 - [Sharing Payment Requests](#)
 - [Merchants](#)
 
-#### [Creating Transactions](#)
-
-- [Coin Selection](#)
-- [Fees](#)
-- [Sharing Transaction](#)
-
 #### [Sending](#)
 
+- [Fees](#)
 - [Speeding Up / Canceling](#)
 - [Paying Merchants](#)
 - [Troubleshooting](#)
@@ -40,7 +57,15 @@
 - [Notifications](#)
 - [Dust Attacks](#)
 
+#### [Managing Funds](#)
+
+- [Transaction History](#)
+- [Coin Selection](#)
+- [Multi Party Payments](#)
+- [Spending Policies](#)
+
 #### [Security](#)
 
 - [Hide Balance](#)
 - [Decoy Accounts](#)
+
