@@ -16,19 +16,19 @@
 
 #### [Addresses](#)
 
-- [Types](#)
+- Types
 - [Validation](#)
 - [Display](#)
+
+#### [Transactions & Lifecycle](#)
 
 #### [Lightning Invoices](#)
 
 - Description
-- Description Hash (receipt)
+- Description Hash (use case: receipt)
 - Amount
 - Node ID
 - [Validation](#)
-
-#### [Transactions & Lifecycle](#)
 
 ###### USER FLOW
 
