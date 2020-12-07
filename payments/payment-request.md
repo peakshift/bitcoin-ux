@@ -9,7 +9,7 @@
 - BOLT11 spec states default is 3600 seconds 
   - Have not seen an application which allows expiration to be customised
   - Some implementations set it as 24 hours, and others diverge
-- Merchant Payment Processors typically rely on expirations as a "protection mechanism against the volatility since it locks the cryptocurrency amount according to the crypto to fiat rates"[^4]
+- Merchant Payment Processors typically rely on expirations as a "protection mechanism against the volatility since it locks the cryptocurrency amount according to the bitcoin to fiat rates"[^4]
 
 ## Reusability
 
