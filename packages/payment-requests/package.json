@@ -1,0 +1,31 @@
+{
+  "name": "@bitcoin-ux/payment-requests",
+  "version": "0.1.0",
+  "description": "a unified payment request encoder/decoder for bip21 and bolt11 URIs",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peakshift/bitcoin-ux.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "payment-request",
+    "invoice",
+    "bip21",
+    "bolt11",
+    "qr-code"
+  ],
+  "author": "Johns Beharry <johns@peakshift.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peakshift/bitcoin-ux/issues"
+  },
+  "homepage": "https://github.com/peakshift/bitcoin-ux#readme",
+  "dependencies": {
+    "bip21": "^2.0.3",
+    "bolt11": "^1.2.7"
+  }
+}
