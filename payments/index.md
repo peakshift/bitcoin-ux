@@ -55,42 +55,9 @@ Simmilarities: `Bank`, `SWIFT`, `SEPA`
 - https://medium.com/galoymoney/lightning-as-a-retail-payment-system-part-1-7463c46342ef
 - Does not have final settlement but can facilitate instant payments.
 
-> Lightning Network cannot support large payment amounts. Liquidity in payment channels on the Lightning network is a scarce resource. Nodes which relay lightning payments always take care that a payment does not exhaust their liquidity. Users of Lightning today must often be aware of inbound liquidity, outbound liquidity and channel rebalancing. There even exist services today which sell Lightning liquidity.[^3]
+> Lightning Network cannot support large payment amounts. Liquidity in payment channels on the Lightning network is a scarce resource. Nodes which relay lightning payments always take care that a payment does not exhaust their liquidity. Users of Lightning today must often be aware of inbound liquidity, outbound liquidity and channel rebalancing. There even exist services today which sell Lightning liquidity.[^1]
 
 > it seems hard to imagine that Lightning Network will ever reliably route payments of 200 BTC to any node in the network (and it doesn't have to to be successful)
 
-## Concepts
+[^1]: https://gist.github.com/chris-belcher/9144bd57a91c194e332fb5ca371d0964
 
-### Pull Payments
-
-##### Lightning
-
-```mermaid
-graph LR
-	1(Recipient: Create Invoice) --> 2(Exchange Invoice with Sender) --> 3(Sender: Approve Payment) --> 4(Payment Finds Route) --> 5(Recipient: Recieve Payment)
-```
-
-- [ ] [DIAGRAM: User Flow of Pull Payment]
-- [ ] Beyond the technical implication, to the user are lightning payment push payments if invoices are being issued?
-- [ ] Default lightning user flow
-
-### Push Payments
-
-#### Onchain
-
-```mermaid
-graph LR
-	1(Sender: Create Transaction) --> 2(Broadcast Transaction) --> 3(Transaction Confrimed) --> 4(Recipient: Receive Payment)
-```
-
-> Traditionally, to make a Bitcoin payment, a receiver shares their bitcoin address and the sender later sends money to this address. Such a system is called `Push payment` as the sender initiates the payment while the receiver may be unavailable, in effect `pushing` the payment to the receiver.[^1]
-
-> This is, rather, the closest analog we have in the digital world to a person-to-person cash payment.[^2]
-
-#### Lightning
-
-- [ ] `keysend` and its limitations
-
-[^1]: https://docs.btcpayserver.org/PullPayments/ "BTCPayServer Pull + Push Payments"
-[^2]: https://www.coincenter.org/education/crypto-regulation-faq/how-are-payments-with-bitcoin-different-than-credit-cards/ "How Are Payments with Bitcoin Different than Credit Cards?"
-[^3]: https://gist.github.com/chris-belcher/9144bd57a91c194e332fb5ca371d0964

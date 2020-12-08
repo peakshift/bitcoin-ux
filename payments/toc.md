@@ -44,6 +44,7 @@
 
 - Restoring Seed
 - Choosing Address Type
+- Selecting Account
 - Gap Limit
 
 #### [Requesting Payments](#)
