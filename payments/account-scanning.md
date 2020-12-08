@@ -38,7 +38,7 @@ Here, after the initial scan of 20 addresses and no transaction is found or the 
 
 Just like the first solution, the user can scan more addresses if the need arises, but in this case, the user enters how many addresses they want scanned in the next scanning process. That is, they get to enter a custom number.
 
-![Frame 109](assets/img/Frame 109.png)
+<img src="assets/img/Frame 109-1607448280310.png" alt="Frame 109" style="zoom:67%;" />
 
 #### User Flow
 
