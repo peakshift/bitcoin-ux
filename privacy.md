@@ -2,6 +2,20 @@
 
 A common misconception of bitcoin is that it provides anonymity and privacy of transactions. Since the blockchain is literally an unchangeable ledger of all bitcoin transactions ever made, it is in fact very hard to not have your complete transaction history visible to knowledgable parties once even a single one of your addresses is connected to you. If bitcoin is to become viable for a wider audience and daily use we ought to take privacy seriously. This is certainly not to enable or encourage illicit activity, but to protect individual financial privacy. We would not accept our bank to publish our financial transactions publicly. So when building wallet-products we should strive to implement best practice for maintaining and improving the financial privacy of bitcoin.[^2]
 
+## Why hide if there's nothing to hide?
+
+The greed for information —a monster that just wants more.
+
+A case for privacy — 
+
+- Identity
+- Autonomy
+- Control
+- Judgement
+- Freedom
+- Individuality
+- Once the box is opened it doesnt close.
+
 ## Bitcoin is not anonymous.
 
 Bitcoin is often perceived as an anonymous payment network. But in reality, Bitcoin is probably the most transparent payment network in the world. At the same time, Bitcoin can provide acceptable levels of privacy when used correctly. **Always remember that it is your responsibility to adopt good practices in order to protect your privacy**[^1]
