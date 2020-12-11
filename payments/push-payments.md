@@ -34,7 +34,7 @@ This is an opportunity for designers — putting the user back in control of the
 #### Lightning
 
 - [ ] `keysend`
-- [ ] `lnurl`
+- [ ] `lnurl-withdraw`
 
 ## Typical User Flows
 
@@ -76,8 +76,9 @@ graph LR
 ```
 
 <details>
-  If the sender already has the recipient's address or (xpub) it's possible for them to 
+  If the sender already has an xpub for the recipient, then it's possible for them to push a payment without the recipient sending a payment request (address).
 </details>
+
 
 
 

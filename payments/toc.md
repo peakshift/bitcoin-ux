@@ -40,9 +40,8 @@
 
 ###### USER FLOW
 
-#### [Account Scanning](#)
+#### [Account Discovery & Scanning](./account-scanning.md)
 
-- Restoring Seed
 - Choosing Address Type
 - Selecting Account
 - Gap Limit
@@ -55,21 +54,22 @@
 
 #### [Sending](#)
 
+- [Coin Selection](#)
 - [Fee Selection](#)
+- [Broadcasting](#)
 - [Speeding Up / Canceling](#)
 - [Paying Merchants](#)(?)
 - [Troubleshooting](#)(?)
 
 #### [Recieving](#)
 
-- [Unconfirmed](#)
+- [Pending / Confirmations](#)
 - [Notifications](#)
 - [Dust Attacks](#)
 
 #### [Managing Funds](#)
 
 - [Transaction History](#)
-- [Coin Selection](#)
 - [Multi Party Payments](#)
 - [Spending Policies](#)
 

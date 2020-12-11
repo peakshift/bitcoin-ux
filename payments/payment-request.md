@@ -13,9 +13,30 @@
 
 ## Reusability
 
+
+
 It does not represent an account, ~~the account will be synonymous to the wallet~~ — ideally it should only be used once.
 
 There is no forced limit but you should only send a payment request to one payer in order to safeguard your privacy as using payment requests with multiple payers will expose your other funds to them. It should also be noted that onchain Payment Requests can have multiple payments made to them, while bitcoin lightning payment requests only accept a single payment.
+
+## Persistance
+
+When a payment request is created it should be stored until it is fulfilled so the user does not acciedntly share the same address to multiple persons.
+
+#### Design Challenge
+
+- How might we enable the fast creation of labeled payment requests (e.g. vendor at a market)?
+
+#### Implications to Restoring/Migrating to a different software
+
+##### Lightning
+
+- Since invoices are already stored on the users lightning node, when they connect to that node on a new device it will pull the invoices
+
+##### On-chain
+
+- https://blog.lopp.net/mind-the-bitcoin-address-gap/
+- [account-scanning](./account-scanning.md)
 
 ## Sharing
 
@@ -40,7 +61,7 @@ Seed phrases are easy to write down, even on a piece of paper and would back up 
 #### Output Descriptors / xpub
 While you should never ever share your seed phrase, or a private key for one of your accounts or addresses.
 
-You can however share the address, or extended public key (xpub) for an account.
+You can however share the address, or extended public key (xpub) for an account. Sharing an xpub should be done with caution though since if one of your private keys for any account or address is leaked you can result in losing all the funds in your wallet.
 
 #### Use Cases
 If you share an extended public key for one of your accounts with someone it is possible for them to generate billions of addresses without them ever being able to generate the private keys of those addresses or the private key for the account itself.
