@@ -50,7 +50,15 @@ What happens if you need to send a payment to a contact which hasn't sent you an
 - Wallet can suggest a more private means of payment instead of onchain (lightning)?
 - Coin swap?
 
+How does this work in one off payments?
+
+> It would be a clunky UX for every transaction. I might visit 20 vendors — i dont want to have to save a contact for each transaction. I don't want to stop and stand still to exchange contacts.
+>
+> When the payment request is created by the merchant — does it contain the product being sold?
+
 ## Concept: Sharing Output Descriptors in vCard
+
+Rationale? There is no output descriptor file format. This is fine for device to device exchange, but not something that is friendly to share in a chat. 
 
 ```typescript
 import { vCardJS } from 'vcards-js';
