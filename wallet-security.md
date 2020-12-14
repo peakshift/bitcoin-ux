@@ -2,6 +2,10 @@
 
 - https://blog.keys.casa/how-to-protect-your-bitcoin-from-5-wrench-attacks/
 
+## Being your own bank
+
+- What does it mean to be your own bank and the responsiblity that is put on the user?
+
 ## Risks
 
 - Accidental deletion of wallet app

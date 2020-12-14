@@ -122,6 +122,7 @@ A payment request should ideally be a BIP21 URI or BOLT11 lightning invoice with
 - NFC (Contactless Payment)
 - [QR Code](./qr-codes.md)
 - Print (invoice, flyer, menu)
+- Sound Waves[^5]
 
 ### Close Proximity (setup required)
 
@@ -131,3 +132,5 @@ A payment request should ideally be a BIP21 URI or BOLT11 lightning invoice with
 [^2]: https://learnmeabitcoin.com/technical/extended-keys "Extended Keys: Private keys and public keys that you can derive children from"
 [^3]: https://blog.btcpayserver.org/payment-requests/
 [^4]: https://docs.btcpayserver.org/FAQ/FAQ-Stores/#invoice-expires-if-the-full-amount-has-not-been-paid-after-minutes
+[^5]: https://thenextweb.com/asia/2013/01/18/alipay-wallet/ "Money is transferred via the Internet, barcodes, QR codes and an interesting ‘sound wave payment’ technology"
+

@@ -60,4 +60,9 @@ Lighting payments gains us some privacy since the payments are not individually 
 
 Its possible to connect two computers together to share files or even make calls between themselves without the internet — but if you want to communicate someone outside of this network you would go to a Telcom (ISP) to get a connection to the global information network. The same with lightning — you can connect to a Lightning Service Provider (LSP) which would provide you access to a larger network of payment channels, a global payment network.
 
+## Questions
+
+- Do my funds get locked up for every payment on lightning?
+- How is lightning able to achieve such fast payments?
+
 [^1]: https://bitcoin.org/en/protect-your-privacy
