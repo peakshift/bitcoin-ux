@@ -48,9 +48,9 @@ The Lightning Network is part of the bitcoin ecosystem that will power this econ
 
 #### A Network of Payment Channels and Settlement 
 
-If two parties want to make payments between themselves often, they can lock up some funds together on-chain. Then they are able to bypass recording their subsequent payments with one another on-chain.
+If two parties want to make payments between themselves often, they can lock up some funds together on-chain. Then they are able to bypass recording their subsequent payments with one another on-chain. This is known as a payment channel.
 
-This is known as a payment channel, and Lightning is essentially a network of payment channels which a sender's payment can be routed through to reach any other beneficiary.
+Lightning is essentially a network of payment channels which a sender's payment can be routed through to reach any other beneficiary. Instead recording each payment as an on-chain transaction, instead they keep track of the balance at each side of the payment channel. 
 
 The parties only need to make a final settlement on-chain if that relationship ends and they want to "close" the channel. Lighting payments gains us some privacy since the payments are not individually recorded on-chain in a transaction only the final settlement is.
 
