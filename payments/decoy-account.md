@@ -40,4 +40,44 @@ Sadly, this isn’t a concept that these officers of the law and a lot of the ol
   - password doesn't meet strength requirements
   - app recommends better/stronger passwords
 3. Account authentication (sending a key to a registered phone number)
+
 4. Notifications on unusual login 
+
+   
+
+## Decoy  Account
+
+In case of an attack, a user can switch between their main account to a decoy that has a lesser amount than the main.
+
+## Ways to activate
+
+We've come up with two ways in which a decoy account can be activated.
+
+### Method 1 - Special Pin
+
+Normally in most wallets, users are requested to enter a certain pin to access this wallet. Hence the idea behind this solution is that users can formulate a second pin which instead of giving access to the main account with all the funds, it  opens up the decoy account which may have a lesser amount.
+
+#### How this works
+
+- opens app
+- pin is requested
+- enters pin of decoy account (depending on their need at the time)
+- gets shown your wallet balance and transactions ( if you have any)
+- carry out your transaction as though it was your main
+
+#### Pros
+
+- suppose the user was under attack, this method seems more believable to the attacker
+- it is also more convinient to use
+
+#### Cons
+
+- the user may not remember to put in the decoy account pin when they are under attack. They maybe too frightened or be more focused with staying alive.
+- it may cause suspisions if no previous transactions have been made on that account
+
+
+
+### Method 2 - Shaking phone to activate
+
+This method would involve the user shaking their phone, while in the wallets interface
+
