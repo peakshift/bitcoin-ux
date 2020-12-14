@@ -1,6 +1,8 @@
 # Payments
 
-There are limitations in the current financial system that make payment services inaccessible to people in many places of the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial tech services like PayPal, Ali Pay, Cash App, Strike, or Monzo.
+There are limitations in the current financial system that make payment services inaccessible to people in many places of the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial services like Ali Pay, Cash App, PayPal, Strike, or Monzo.
+
+The implications of this are that opportunities become limited — 
 
 ## Bitcoin is money
 
@@ -38,14 +40,22 @@ Transactions made on-chain can take minutes or days to confirm — depending on 
 
 This is may not be suitable if you want to make a small payment to a vendor at your local market — but if you're making or receiving a payment from someone accross the world the benefits are made very clear as the current banking and financial system can be quite restrictive, and expensive for some.
 
-### Lightning Payments — A micro-payment network
+### Lightning Payments — A micro-payment network for every day payments
 
 To meet the demands of our modern economy — movement of money needs to be borderless, secure, fast, and cheap.
 
 The Lightning Network is part of the bitcoin ecosystem that will power this economy. It allows for near-instant payments at much lower fees. This is possible because extends bitcoin in a way that does not record each payment on-chain.
 
-If two parties want make payments between themselves often, they can lock up some funds together on-chain then bypass recording their subsequent payments on-chain. This is known as a payment channel and Lightning is a network of payment channels each connected to one another and which payments to any other channel can be routed through.
+#### A Network of Payment Channels and Settlement 
 
-The parties only need to make a final settlement on-chain when that relationship ends and they want to "close" the channel. Lighting payments gains us some privacy since the payments are not individually recorded on-chain in a transaction only the final settlement is.
+If two parties want to make payments between themselves often, they can lock up some funds together on-chain. Then they are able to bypass recording their subsequent payments with one another on-chain.
+
+This is known as a payment channel, and Lightning is essentially a network of payment channels which a sender's payment can be routed through to reach any other beneficiary.
+
+The parties only need to make a final settlement on-chain if that relationship ends and they want to "close" the channel. Lighting payments gains us some privacy since the payments are not individually recorded on-chain in a transaction only the final settlement is.
+
+#### Who to open a payment channel with?
+
+Its possible to connect two computers together to share files or even make calls without the internet — but if you want to then send a file to someone outside of this network you would go to a Telcom (ISP) to get a connection to the global information network. The same with lightning — you can connect to a Lightning Service Provider (LSP) which would provide you access to a larger network of payment channels, a global payment network.
 
 [^1]: https://bitcoin.org/en/protect-your-privacy
