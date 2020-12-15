@@ -4,7 +4,7 @@
 
 Imagine this scenario. A user is in a public place, they need to open up their bitcoin wallet to maybe make a payment but they don't feel comfortable enough to have their balances displayed in bold on their phone screens once the wallet is opened. This here a problem because users want to feel safe whenever they use their wallets.
 
-This is where the ***hide balance*** feature comes in handy. With this feature, users have the ability to conceal their wallet balance and possibly transactions made, when they feel the need to.
+This is where the ***hide balance*** feature comes in handy. With this feature, users have the ability to conceal their wallet balance and other sensitive information, when they feel the need to.
 
 
 
@@ -127,7 +127,6 @@ Also, on these wallets they tend to hide just the balance, every other sensitive
 
 
 [^1]: https://medium.com/@olanrewajusodiq64/the-ui-ux-of-hide-balance-designing-to-improve-asset-security-e4b20668f315
-
 
 
 
