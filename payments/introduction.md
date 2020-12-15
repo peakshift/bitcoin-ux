@@ -2,11 +2,10 @@
 
 There are limitations in the current financial system that make payment services inaccessible to people in many places of the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial services like Ali Pay, Cash App, PayPal, Strike, or Monzo.
 
-The implications of this are that opportunities become limited — 
-
 ## Bitcoin is money
 
 > **Getting Started / Why bitcoin is unique**
+>
 > The economic definition of money typically involves three specific [functions](https://en.wikipedia.org/wiki/Money#Functions) (medium of exchange, unit of account, store of value) and five [properties](https://en.wikipedia.org/wiki/Money#Properties) (durability, portability, fungibility, scarcity, divisibility, recognizability). Although bitcoin is a new breed of money, it still satisfies all of these requirements. Instead of relying on physical properties (like gold and silver) or trust in central authorities (like traditional currencies), bitcoin relies on a network of thousands of computers to enforce its mathematically defined ruleset refered to as the protocol.
 
 ## Bitcoin is Global
@@ -14,6 +13,7 @@ The implications of this are that opportunities become limited —
 We are for designing the next evolution of money. One which is internet based, and global.
 
 > **Getting Started / Why bitcoin is unique**
+>
 > Bitcoin can be used by anyone with an internet connection, which is available to around [53.6% of the world population](https://en.wikipedia.org/wiki/Global_Internet_usage), a number that is growing quickly. Some aspects of bitcoin, like key and address generation, even work without being online. This makes it the first truly globally available form of money that is unbound by country borders. People from around the world can freely transact without having to rely on middlemen like currency exchanges and local payment services.
 
 ## Bitcoin is extensible, it's not just a payment network
