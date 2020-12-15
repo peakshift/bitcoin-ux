@@ -26,7 +26,7 @@ Here it is clearly visible and obvious that there are hidden items on the screen
 
 ### Hide balance by default on wallet launch
 
-Here, the wallet balance is hidden by default. Also there is no indicator that the balance is actually hidden, the user can then reveal it if they choose to by tapping on the logo. 
+Here, the wallet balance is hidden by default. Also there is no indicator that the balance is actually hidden, the user can then reveal it if they choose to by tapping on what was used to conceal the balance. The balance can be hidden by the app logo, an empty card or whatever is best fit for the design
 
 #### What could go wrong
 
