@@ -10,7 +10,7 @@ This is where the ***hide balance*** feature comes in handy. With this feature, 
 
 ## Methods
 
-The hide balance feature can be achieved in the following ways:
+The hide balance feature can be achieved in the following ways
 
 ### Hide and reveal balance with the eye icon on screen
 
@@ -38,9 +38,9 @@ It's possible that a new user would not know that the balance is hidden and can 
 
 
 
-### Hide balance and transactions completley without indications that it is hidden 
+### Hide balance and transactions completely without indications that it is hidden 
 
-Here, when the user hides the balance, the wallet looks as if the user hasn't made any transactions. They can unhide the balance by selecting "unhide" in the side  nav but before is can be revealed, the pin created by the user (when setting up the app) will be requested.
+Here, when the user hides the balance, the wallet looks as if the user hasn't made any transactions. They can unhide the balance by selecting "unhide" in the side nav but before is can be revealed, the pin created by the user (when setting up the app) will be requested.
 
 <img src="assets/img/Desktop - 7.png" alt="Desktop - 7" style="zoom:67%;" />
 
@@ -63,9 +63,7 @@ On this wallet,  when the hide balance is selected, the balance on the home scre
 - Launch app
 - open side nav
 - select "advanced settings"
-- select "hide balance"
-
-##### 
+- select "hide balance" 
 
 <img src="assets/img/Desktop - 5.png" alt="Desktop - 5" style="zoom:67%;" />
 
@@ -73,7 +71,7 @@ On this wallet,  when the hide balance is selected, the balance on the home scre
 
 #### Edge wallet
 
-On this wallet,  there is no "hide balnce" button or toogle. By tapping on the balance, it becomes hidden then a large "show balance" is displayed on the screen. This doesn't do so well for security.
+On this wallet,  there is no "hide balance" button or toggle. By tapping on the balance, it becomes hidden then a large "show balance" is displayed on the screen. This doesn't do so well for security.
 
 ##### user flow
 
@@ -101,7 +99,7 @@ On this wallet,  when the hide balance icon (Eye icon) is selected, the  balance
 
 #### Luno Wallet
 
-On this wallet,  there is also no "hide balnce" button or toogle. By tapping on the balance, it becomes hidden and the "Luno logo" is displayed in it's place.
+On this wallet,  there is also no "hide balance" button or toggle. By tapping on the balance, it becomes hidden and the "Luno logo" is displayed in it's place.
 
 #### user flow
 
