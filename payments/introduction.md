@@ -48,11 +48,11 @@ The Lightning Network is part of the bitcoin ecosystem that will power this econ
 
 #### A Network of Payment Channels and Settlement 
 
-If two parties want to make payments between themselves often, they can lock up some funds together in an on-chain transaction. Then they are able to bypass recording their subsequent payments with one another on-chain, by instead keeping track of each of their bitcoin balances in Lightning.
+If two parties want to make payments between themselves often, they can lock up some funds together in a smart contract on-chain. Then they are able to bypass recording their subsequent payments with one another on-chain, by instead keeping track of each of their bitcoin balances in Lightning.
 
 This is known as a payment channel, Lightning is essentially a network of payment channels which a sender's payment can be routed through to reach any other beneficiary.
 
-Instead of recording each payment as an on-chain transaction to be secured in a block, they instead they keep track of the balance at each side of the payment channel. The two parties only need to make a final settlement on-chain if that relationship ends and they want to "close" the channel which would unlock the balance on their side of the payment channel on-chain.
+Instead of recording each payment as an on-chain transaction to be secured in a block, they instead keep track of the balance at each side of the payment channel. The two parties only need to make a final settlement on-chain if that relationship ends and they want to "close" the channel which would unlock the balance on their side of the payment channel on-chain.
 
 Lighting payments gains us some privacy since the payments are not individually recorded on-chain in a transaction only the final settlement is.
 
@@ -64,5 +64,7 @@ Its possible to connect two computers together to share files or even make calls
 
 - Do my funds get locked up for every payment on lightning?
 - How is lightning able to achieve such fast payments?
+- When you make an on-chian transaction? Does it go directly to the blockchain
+- What is chain?
 
 [^1]: https://bitcoin.org/en/protect-your-privacy
