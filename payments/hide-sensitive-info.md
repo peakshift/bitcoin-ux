@@ -2,63 +2,60 @@
 
 ## Abstract
 
-Imagine this scenario. A user is in a public place, they need to open up their bitcoin wallet to maybe make a payment but they don't feel comfortable enough to have their balances displayed in bold on their phone screens once the wallet is opened. This here a problem because users want to feel safe whenever they use their wallets.
+Imagine this scenario. You are  in a public place, you need to open up your bitcoin wallet to maybe make a payment but you don't feel comfortable enough to have your wallets information displayed on your phone screen once the wallet is opened. This here a problem because you probably want to feel safe whenever they use your wallets.
 
-This is where the ***hide balance*** feature comes in handy. With this feature, users have the ability to conceal their wallet balance and other sensitive information, when they feel the need to.
-
-
-
-## Methods
-
-The hide balance feature can be achieved in the following ways
-
-### Hide and reveal balance with the eye icon on screen
-
-On the home screen, next to the balance, there could be an eye icon which when tapped, would hide the balance and when tapped again, would reveal it
-
-#### What could go wrong
-
-Here it is clearly visible and obvious that there are hidden items on the screen, this would only make prying eyes more curious.
-
-<img src="assets/img/Desktop - 1.png" alt="Desktop - 1" style="zoom:67%;" />
+Privacy in bitcoin wallets goes far beyond hiding balances and other sensitive information  but it is clear that they also play a part in it. By giving users the ability to hide the information they want to,  they gain an added sense of privacy and security when they have the ability to control when and who sees their information on the wallet.
 
 
 
-### Hide balance by default on wallet launch
+## How information is hidden on bitcoin wallets
 
-Here, the wallet balance is hidden by default. Also there is no indicator that the balance is actually hidden, the user can then reveal it if they choose to by tapping on what was used to conceal the balance. The balance can be hidden by the app logo, an empty card or whatever is best fit for the design
-
-#### What could go wrong
-
-It's possible that a new user would not know that the balance is hidden and can be easily revealed by tapping on the logo. They may end up searching all over for the balance and eventually give up
+Although the hiding information pattern isn't incorporated on many bitcoin applications, a few wallets like wasabi, wallet of satoshi etc. have made it work in the following ways.
 
 
 
-<img src="assets/img/Desktop - 2-1608020386198.png" alt="Desktop - 2" style="zoom:67%;" />
+### Tapping on the balance to hide and reveal it. 
+
+In this method, the hide icon / button is usually displayed within close reach of the balance itself. you can quickly and easily hide your information by tapping on this icon / button. Now, this method, though quick and easy to use, doesn't provide the user with much privacy. ***Wallet of satoshi***, ***Edge***  and ***Luno*** wallets implement this method of only hiding the wallet balance. What this means is that all other transactions, addresses, and other information that you may want to keep private, are still very much visible.
+
+<img src="assets/img/Frame 122.png" alt="Desktop - 5" style="zoom:67%;" />
 
 
 
-### Hide balance and transactions completely without indications that it is hidden 
+#### pros
 
-Here, when the user hides the balance, the wallet looks as if the user hasn't made any transactions. They can unhide the balance by selecting "unhide" in the side nav but before is can be revealed, the pin created by the user (when setting up the app) will be requested.
+- Quicker for the user to hide and unveil the information
 
-<img src="assets/img/Desktop - 7.png" alt="Desktop - 7" style="zoom:67%;" />
+#### cons
 
-
-
-#### What could go wrong
-
-The user may get frustrated of always having to input a pin whenever they want to reveal the balance especially when they intended to hide it for only a short while
+- It doesn't do much for security if every other sensitive information is still displayed on the screen.
+- Anyone other than the user can easily reveal the balance
 
 
 
-### Applications that use this feature
+### Tapping on the Hide icon hides balances , addresses  and transactions 
 
-#### Wallet of Satoshi
+This method of hiding or veiling sensitive information is the most thorough as not only the balance is hidden but also the addresses and the transactions. Wasabi wallet is one of the only wallets that implements this method. ***Wasabi wallet*** also  makes it convenient for the user to do this by clicking on one just one icon that then hides all the sensitive information.
+
+<img src="assets/img/Frame 121.png" alt="Desktop - 5" style="zoom:67%;" />
+
+#### Pros
+
+- Gives the user an added level of security when addresses are being hidden.
+
+#### Cons
+
+- Not sure yet.
+
+
+
+## Screenshots from some wallets and how they hide information
+
+### Wallet of Satoshi
 
 On this wallet,  when the hide balance is selected, the balance on the home screen is hidden as well as the conversation rate but the payments made and received are still very much visible on the home screen. 
 
-##### user flow
+#### How it works
 
 - Launch app
 - open side nav
@@ -69,11 +66,11 @@ On this wallet,  when the hide balance is selected, the balance on the home scre
 
 
 
-#### Edge wallet
+### Edge wallet
 
 On this wallet,  there is no "hide balance" button or toggle. By tapping on the balance, it becomes hidden then a large "show balance" is displayed on the screen. This doesn't do so well for security.
 
-##### user flow
+#### How it works
 
 - launch app
 - tapping on the balance hides it automatically
@@ -84,11 +81,11 @@ On this wallet,  there is no "hide balance" button or toggle. By tapping on the 
 
 
 
-#### Wasabi Wallet
+### Wasabi Wallet
 
-On this wallet,  when the hide balance icon (Eye icon) is selected, the  balance on the home screen is hidden as well as your bitcoin address 
+On this wallet, when the hide balance icon (Eye icon) is selected, the  balance on the home screen is hidden as well as your bitcoin address 
 
-#### user flow
+#### How it works
 
 - launch app
 - click eye icon to hide and reveal balance. It also hides addresses
@@ -97,11 +94,11 @@ On this wallet,  when the hide balance icon (Eye icon) is selected, the  balance
 
 
 
-#### Luno Wallet
+### Luno Wallet
 
 On this wallet,  there is also no "hide balance" button or toggle. By tapping on the balance, it becomes hidden and the "Luno logo" is displayed in it's place.
 
-#### user flow
+#### How it works
 
 - launch app
 - tapping on the balance hides it automatically
@@ -112,21 +109,21 @@ On this wallet,  there is also no "hide balance" button or toggle. By tapping on
 
 ## Why is this pattern important to designers?
 
-By including this pattern in design of wallets, we give users more sense of privacy when they use the app. To some users this also provides a little bit of security as a large balance, when discovered by others, puts the owner at risk of being targeted.
+As a designer you may be wondering why you should be concerned with user privacy and protection of data. Apart from the fact that it's legally expected, in a situation where there is a data breach, you wouldn't want your user's data leaked, this could result in losing the users of your product. The [***privacy by design***](https://en.wikipedia.org/wiki/Privacy_by_design) framework states that privacy should be incorporated / built into products by default. This way, whether or not the user is concerned with their data privacy, they would always be protected through the design. 
 
-Most wallets that make use of "hide balance" implement it in such a way that is also really easy to reveal it. This is convenient for the wallet owner to go back and forth between hiding and revealing the balance, but this also makes it easy for anyone else to do the same.
-
-Also, on these wallets they tend to hide just the balance, every other sensitive information like all the transactions made and received are still visible once you leave the screen where the balance is hidden.
-
-
-
-
+By including the hiding information pattern in design of wallets, we give users more sense of control when they use the app. They have the freedom to decide whether or not they want their information visible. 
 
 
 
 
 
 [^1]: https://medium.com/@olanrewajusodiq64/the-ui-ux-of-hide-balance-designing-to-improve-asset-security-e4b20668f315
+[^2]: https://www.invisionapp.com/inside-design/designing-for-privacy/
+[^3]: https://uxdesign.cc/how-to-design-with-privacy-in-mind-24c96cfc2611
+
+
+
+
 
 
 
