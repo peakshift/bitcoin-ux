@@ -48,7 +48,7 @@ The Lightning Network is part of the bitcoin ecosystem that will power this econ
 
 #### A Network of Payment Channels and Settlement 
 
-If two parties want to make payments between themselves often, they can lock up some funds together in a smart contract on-chain. Then they are able to bypass recording their subsequent payments with one another on-chain, by instead keeping track of each of their bitcoin balances in Lightning.
+If two parties want to make payments between themselves often, they can lock up some funds together in an on-chain transaction. Then they are able to bypass recording their subsequent payments with one another on-chain, by instead keeping track of each of their bitcoin balances in Lightning.
 
 This is known as a payment channel, Lightning is essentially a network of payment channels which a sender's payment can be routed through to reach any other beneficiary.
 
@@ -64,7 +64,8 @@ Its possible to connect two computers together to share files or even make calls
 
 - Do my funds get locked up for every payment on lightning?
 - How is lightning able to achieve such fast payments?
-- When you make an on-chian transaction? Does it go directly to the blockchain
-- What is chain?
+- When do you make an on-chian transaction?
+- How often do you have to make on-chain transactions out of lightning?
+- What is meant by chain (on-chain, off-chain)?
 
 [^1]: https://bitcoin.org/en/protect-your-privacy
