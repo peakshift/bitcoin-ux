@@ -10,7 +10,7 @@ Privacy in bitcoin wallets goes far beyond hiding balances and other sensitive i
 
 ## How information is hidden on bitcoin wallets
 
-Although the hiding information pattern isn't incorporated on many bitcoin applications, a few wallets like wasabi, wallet of satoshi etc. have made it work in the following ways.
+Although the hiding information pattern isn't incorporated on many bitcoin applications, a few wallets like wasabi, wallet of satoshi, etc. have made it work in the following ways.
 
 
 
@@ -41,11 +41,11 @@ This method of hiding or veiling sensitive information is the most thorough as n
 
 #### Pros
 
-- Gives the user an added level of security when addresses are being hidden.
+- Gives the user an added level of security and a sense of comfort when addresses as well as transactions are  hidden.
 
 #### Cons
 
-- Not sure yet.
+- the hidden information can easily be revealed.
 
 
 
