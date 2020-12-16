@@ -109,9 +109,9 @@ On this wallet,  there is also no "hide balance" button or toggle. By tapping on
 
 ## Why is this pattern important to designers?
 
-As a designer you may be wondering why you should be concerned with user privacy and protection of data. Apart from the fact that it's legally expected, in a situation where there is a data breach, you wouldn't want your user's data leaked, this could result in losing the users of your product. The [***privacy by design***](https://en.wikipedia.org/wiki/Privacy_by_design) framework states that privacy should be incorporated / built into products by default. This way, whether or not the user is concerned with their data privacy, they would always be protected through the design. 
+The [***privacy by design***](https://en.wikipedia.org/wiki/Privacy_by_design) framework states that privacy should be incorporated / built into products by default. This way, whether or not the user is concerned with their data privacy, they would always be protected through the design. 
 
-By including the hiding information pattern in design of wallets, we give users more sense of control when they use the app. They have the freedom to decide whether or not they want their information visible. 
+By including the hiding information pattern in design of wallets, we give users more sense of control and comfortability in any environment when they use the app. They have the freedom to decide whether or not they want their information visible. 
 
 
 
@@ -121,7 +121,7 @@ By including the hiding information pattern in design of wallets, we give users 
 [^2]: https://www.invisionapp.com/inside-design/designing-for-privacy/
 [^3]: https://uxdesign.cc/how-to-design-with-privacy-in-mind-24c96cfc2611
 
-
+[]: https://github.com/bitcoin-core/gui/issues/82
 
 
 
