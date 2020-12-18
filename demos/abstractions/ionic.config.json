@@ -1,0 +1,7 @@
+{
+  "name": "abstractions",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
