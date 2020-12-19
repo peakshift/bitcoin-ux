@@ -5,7 +5,7 @@ const ContactList: React.FC = () => (
   <IonContent>
     {/*-- List of Text Items --*/}
     <IonList>
-      <IonItem routerLink="/contacts/nothingmuch">
+      <IonItem routerLink="/contact-detail">
         <IonAvatar slot="start">
           <img src="https://picsum.photos/id/1074/200" />
         </IonAvatar>
