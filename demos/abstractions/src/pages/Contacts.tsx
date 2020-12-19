@@ -6,7 +6,7 @@ import './Tab3.css';
 const Tab3: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader translucent={true}>
         <IonToolbar>
           <IonTitle>Contacts</IonTitle>
         </IonToolbar>
