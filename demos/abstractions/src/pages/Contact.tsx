@@ -1,8 +1,9 @@
-import React from 'react';
-import { IonListHeader, IonChip, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonGrid, IonRow, IonCol, IonIcon, IonButtons, IonBackButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonAvatar, IonBadge, IonLabel, IonItemSliding, IonToggle, IonItemOptions, IonItemOption, IonItemDivider, IonInput, IonRadio, IonCheckbox } from '@ionic/react';
+import React, { useState } from 'react';
+import { IonModal, IonListHeader, IonChip, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonGrid, IonRow, IonCol, IonIcon, IonButtons, IonBackButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonAvatar, IonBadge, IonLabel, IonItemSliding, IonToggle, IonItemOptions, IonItemOption, IonItemDivider, IonInput, IonRadio, IonCheckbox } from '@ionic/react';
 import { ellipsisVertical, personCircle, search, ellipsisHorizontal, eyeOffOutline, eyeOutline, arrowForwardOutline, arrowDownOutline, pin, wifi, wine,warning, walk, closeCircle, close, heart } from 'ionicons/icons';
 
 const Tab3: React.FC = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <IonPage>
 {/*-- Header --*/}
@@ -91,7 +92,7 @@ const Tab3: React.FC = () => {
               <p>Pay String</p>
             </IonLabel>
             {/*-- <IonButton fill="outline" slot="end">Edit</IonButton> --*/}
-            <IonButton slot="end">Send Payment</IonButton>
+            <IonButton slot="end">Pay</IonButton>
           </IonItem>
 
           <IonItem>
@@ -103,10 +104,10 @@ const Tab3: React.FC = () => {
               <p>BTC Pay Server</p>
             </IonLabel>
             {/*-- <IonButton fill="outline" slot="end">Edit</IonButton> --*/}
-            <IonButton slot="end">Send Payment</IonButton>
+            <IonButton slot="end">Pay</IonButton>
           </IonItem>
 
-          <IonItem>
+          <IonItem lines="none">
             <IonAvatar slot="start">
               <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041b9cd9ada7741?d=identicon&f=y" />
             </IonAvatar>
@@ -115,7 +116,7 @@ const Tab3: React.FC = () => {
               <p>Output Descriptor</p>
             </IonLabel>
             {/*-- <IonButton fill="outline" slot="end">Edit</IonButton> --*/}
-            <IonButton slot="end">Send Payment</IonButton>
+            <IonButton slot="end">Pay</IonButton>
           </IonItem>
 
           {/*-- <IonCardContent>
@@ -134,7 +135,7 @@ const Tab3: React.FC = () => {
               <h2>UNDEFINED BTC</h2>
               <p>2Muc52RXvLk4ybgXag7GiPethDB7jUG63KD</p>
             </IonLabel>
-            <IonBadge slot="end">Unused</IonBadge>
+            <IonBadge slot="end" color="light">Unused</IonBadge>
             {/*-- <IonButton fill="outline" slot="end">View</IonButton> --*/}
           </IonItem>
 
@@ -144,7 +145,7 @@ const Tab3: React.FC = () => {
               <h2>0.00234 BTC</h2>
               <p>2Muc52RXvLk4ybgXag7GiPethDB7jUG63KD</p>
             </IonLabel>
-            <IonBadge slot="end">Unused</IonBadge>
+            <IonBadge slot="end" color="light">Unused</IonBadge>
             {/*-- <IonButton fill="outline" slot="end">View</IonButton> --*/}
           </IonItem>
 
@@ -154,22 +155,22 @@ const Tab3: React.FC = () => {
               <h2>0.00234 BTC</h2>
               <p>2Muc52RXvLk4ybgXag7GiPethDB7jUG63KD</p>
             </IonLabel>
-            <IonBadge slot="end">Unused</IonBadge>
+            <IonBadge slot="end" color="light">Unused</IonBadge>
             {/*-- <IonButton fill="outline" slot="end">View</IonButton> --*/}
           </IonItem>
 
-          <IonItem>
+          <IonItem lines="none">
             <IonIcon icon={arrowDownOutline} slot="start" />
             <IonLabel>
               <h2>0.00234 BTC</h2>
               <p>2Muc52RXvLk4ybgXag7GiPethDB7jUG63KD</p>
             </IonLabel>
-            <IonBadge slot="end">Unused</IonBadge>
+            <IonBadge slot="end" color="light">Unused</IonBadge>
             {/*-- <IonButton fill="outline" slot="end">View</IonButton> --*/}
           </IonItem>
 
           <IonCardContent>
-             <IonButton expand="block">Request Payment</IonButton>
+             <IonButton expand="block" onClick={() => setShowModal(true)}>Request Payment</IonButton>
           </IonCardContent>
         </IonCard>
 
@@ -186,7 +187,11 @@ const Tab3: React.FC = () => {
 
         <IonList>
 {/*-- Known Coins --*/}
-          <IonListHeader>Coins known by nothingmuch</IonListHeader>
+          <IonListHeader lines="full">
+            <IonLabel>
+              Coins known by nothingmuch
+            </IonLabel>
+          </IonListHeader>
           <IonItem>
             <IonCheckbox slot="start" />
             <IonLabel>
@@ -201,18 +206,19 @@ const Tab3: React.FC = () => {
               <p>0.00435 BTC</p>
             </IonLabel>
           </IonItem>
-          <IonItem>
+          <IonItem lines="none">
             <IonCheckbox slot="start" />
             <IonLabel>
               <h2>2NAAib51FEBU45evHfF86SzpCY3gAppvpks</h2>
               <p>0.00435 BTC</p>
             </IonLabel>
           </IonItem>
-          <IonItemDivider>
+
+          <IonListHeader lines="full">
             <IonLabel>
               Coins linked to other contacts
             </IonLabel>
-          </IonItemDivider>
+          </IonListHeader>
           <IonItem>
             <IonCheckbox slot="start" />
             <IonLabel>
@@ -227,18 +233,19 @@ const Tab3: React.FC = () => {
               <p>0.004 BTC</p>
             </IonLabel>
           </IonItem>
-          <IonItem>
+          <IonItem lines="none">
             <IonCheckbox slot="start" />
             <IonLabel>
               <h2>zkSnacks</h2>
               <p>0.000005 BTC</p>
             </IonLabel>
           </IonItem>
-          <IonItemDivider>
+
+          <IonListHeader>
             <IonLabel>
               Actions
             </IonLabel>
-          </IonItemDivider>
+          </IonListHeader>
           <IonItem>
             <IonLabel>Send Payment</IonLabel>
           </IonItem>
@@ -249,6 +256,45 @@ const Tab3: React.FC = () => {
             <IonLabel>Message over Tor</IonLabel>
           </IonItem>
         </IonList>
+
+{/*-- MODALS --*/}
+        <IonModal isOpen={showModal} cssClass='my-custom-class'>
+          <IonHeader>
+            <IonToolbar>
+              <IonButtons slot="start">
+                <IonBackButton defaultHref="/contacts" />
+              </IonButtons>
+              <IonTitle>nothingmuch</IonTitle>
+
+              <IonButtons slot="primary">
+                <IonButton onClick={() => setShowModal(false)}>
+                  Close
+                </IonButton>
+              </IonButtons>
+            </IonToolbar>
+          </IonHeader>
+          <IonContent fullscreen>
+            <IonHeader collapse="condense">
+              <IonToolbar>
+                <IonTitle size="large">Request Payment</IonTitle>
+              </IonToolbar>
+            </IonHeader>
+            {/* --- */}
+            <IonList lines="full" class="ion-no-margin">
+              <IonItem>
+                <IonLabel position="stacked">hello</IonLabel>
+              </IonItem>
+            </IonList>
+
+            <IonGrid>
+              <IonRow className="ion-align-items-center">
+                <IonCol className="ion-align-self-center">
+                  <IonButton>Save</IonButton>
+                </IonCol>
+              </IonRow>
+            </IonGrid>
+          </IonContent>
+        </IonModal>
       </IonContent>
     </IonPage>
   );

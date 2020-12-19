@@ -16,7 +16,7 @@ const Tab3: React.FC = () => {
             <IonTitle size="large">Receive</IonTitle>
           </IonToolbar>
         </IonHeader>
-s      </IonContent>
+      </IonContent>
     </IonPage>
   );
 };

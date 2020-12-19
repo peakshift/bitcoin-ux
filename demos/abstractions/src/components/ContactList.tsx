@@ -14,7 +14,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">47</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/919/200" />
       </IonAvatar>
@@ -24,7 +24,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">2</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/87/200" />
       </IonAvatar>
@@ -34,7 +34,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">8</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/27/200" />
       </IonAvatar>
@@ -44,7 +44,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">1</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/743/200" />
       </IonAvatar>
@@ -54,7 +54,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">14</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/287/200" />
       </IonAvatar>
@@ -64,7 +64,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">34</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/976/200" />
       </IonAvatar>
@@ -74,7 +74,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">177</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/44/200" />
       </IonAvatar>
@@ -84,7 +84,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">3</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/14/200" />
       </IonAvatar>
@@ -94,7 +94,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">0</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/334/200" />
       </IonAvatar>
@@ -104,7 +104,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">9</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem lines="none" routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="https://picsum.photos/id/1070/200" />
       </IonAvatar>
@@ -119,7 +119,7 @@ const ContactList: React.FC = () => (
         Exchanges
       </IonLabel>
     </IonItemDivider>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="//logo.clearbit.com/binance.com" />
       </IonAvatar>
@@ -129,7 +129,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">0</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="//logo.clearbit.com/cash.app" />
       </IonAvatar>
@@ -139,7 +139,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">13</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="//logo.clearbit.com/coinbase.com" />
       </IonAvatar>
@@ -149,7 +149,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">13</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="//logo.clearbit.com/mtgox.com" />
       </IonAvatar>
@@ -159,7 +159,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">0</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="//logo.clearbit.com/kraken.com" />
       </IonAvatar>
@@ -169,7 +169,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">1</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="//logo.clearbit.com/peakshift.com" />
       </IonAvatar>
@@ -179,7 +179,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">0</IonBadge>
     </IonItem>
-    <IonItem lines="none">
+    <IonItem lines="none" routerLink="/contact-detail">
       <IonAvatar slot="start">
         <img src="//logo.clearbit.com/wasabiwallet.io" />
       </IonAvatar>

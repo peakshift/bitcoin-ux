@@ -10,7 +10,7 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle, peopleCircleOutline, repeatOutline, walletOutline, cashOutline, logoBitcoin } from 'ionicons/icons';
+import { ellipse, square, triangle, people, peopleCircleOutline, repeatOutline, walletOutline, cashOutline, logoBitcoin } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Contacts from './pages/Contacts';
@@ -56,7 +56,7 @@ const App: React.FC = () => (
             <IonLabel>Payments</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/contacts">
-            <IonIcon icon={peopleCircleOutline} />
+            <IonIcon icon={people} />
             <IonLabel>Contacts</IonLabel>
           </IonTabButton>
         </IonTabBar>
