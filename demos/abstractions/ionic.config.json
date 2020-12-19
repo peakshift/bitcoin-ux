@@ -1,7 +1,7 @@
 {
-  "name": "abstractions",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
+	"name": "abstractions",
+	"integrations": {
+		"capacitor": {}
+	},
+	"type": "react"
 }
