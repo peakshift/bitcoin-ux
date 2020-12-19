@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonListHeader, IonChip, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonGrid, IonRow, IonCol, IonIcon, IonButtons, IonBackButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonAvatar, IonBadge, IonLabel, IonItemSliding, IonToggle, IonItemOptions, IonItemOption, IonItemDivider, IonInput, IonRadio, IonCheckbox } from '@ionic/react';
-import { eyeOffOutline, eyeOutline, arrowForwardOutline, arrowDownOutline, pin, wifi, wine,warning, walk, closeCircle, close, heart } from 'ionicons/icons';
+import { ellipsisVertical, personCircle, search, ellipsisHorizontal, eyeOffOutline, eyeOutline, arrowForwardOutline, arrowDownOutline, pin, wifi, wine,warning, walk, closeCircle, close, heart } from 'ionicons/icons';
 
 const Tab3: React.FC = () => {
   return (
@@ -12,8 +12,11 @@ const Tab3: React.FC = () => {
             <IonBackButton defaultHref="/contacts" />
           </IonButtons>
           <IonTitle>nothingmuch</IonTitle>
-          <IonButtons slot="end">
-            <IonBackButton defaultHref="/contacts" />
+
+          <IonButtons slot="primary">
+            <IonButton>
+              Edit
+            </IonButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
