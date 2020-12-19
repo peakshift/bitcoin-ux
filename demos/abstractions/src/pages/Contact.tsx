@@ -242,7 +242,7 @@ const Tab3: React.FC = () => {
           <IonItem>
             <IonLabel>Join on Lightning</IonLabel>
           </IonItem>
-          <IonItem>
+          <IonItem lines="none">
             <IonLabel>Message over Tor</IonLabel>
           </IonItem>
         </IonList>

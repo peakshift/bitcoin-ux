@@ -179,7 +179,7 @@ const ContactList: React.FC = () => (
       </IonLabel>
       <IonBadge slot="end" color="light">0</IonBadge>
     </IonItem>
-    <IonItem>
+    <IonItem lines="none">
       <IonAvatar slot="start">
         <img src="//logo.clearbit.com/wasabiwallet.io" />
       </IonAvatar>
