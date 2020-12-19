@@ -297,13 +297,13 @@ const Tab3: React.FC = () => {
 						<IonLabel>Actions</IonLabel>
 					</IonListHeader>
 					<IonItem>
-						<IonLabel>Send Payment</IonLabel>
+						<IonLabel color="primary">Send Payment</IonLabel>
 					</IonItem>
 					<IonItem>
-						<IonLabel>Join on Lightning</IonLabel>
+						<IonLabel color="primary">Join on Lightning</IonLabel>
 					</IonItem>
 					<IonItem lines="none">
-						<IonLabel>Message over Tor</IonLabel>
+						<IonLabel color="primary">Message over Tor</IonLabel>
 					</IonItem>
 				</IonList>
 

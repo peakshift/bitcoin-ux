@@ -67,6 +67,11 @@ const Tab2: React.FC = () => {
 						<IonLabel position="stacked">Amount</IonLabel>
 						<IonInput value={text} placeholder="... BTC" />
 					</IonItem>
+
+					<IonItem>
+						<IonLabel position="stacked">Expiration</IonLabel>
+						<IonInput value="3600" placeholder="Time in seconds" />
+					</IonItem>
 				</IonList>
 
 				<IonGrid>
@@ -136,9 +141,9 @@ const Tab2: React.FC = () => {
 									slot="start"
 									className="ion-avatar-icon ion-align-items-center ion-justify-content-center"
 								>
-									<IonIcon className="ion-align-self-center" icon={personAdd} />
+									<IonIcon className="ion-align-self-center" icon={personAdd} color="primary" />
 								</IonAvatar>
-								<IonLabel>New Contact</IonLabel>
+								<IonLabel color="primary">New Contact</IonLabel>
 							</IonItem>
 
 							<IonItem lines="none">
@@ -146,9 +151,9 @@ const Tab2: React.FC = () => {
 									slot="start"
 									className="ion-avatar-icon ion-align-items-center ion-justify-content-center"
 								>
-									<IonIcon className="ion-align-self-center" icon={qrCode} />
+									<IonIcon className="ion-align-self-center" icon={qrCode} color="primary" />
 								</IonAvatar>
-								<IonLabel>Add via QR Code</IonLabel>
+								<IonLabel color="primary">Add via QR Code</IonLabel>
 							</IonItem>
 
 							{/* --- */}
