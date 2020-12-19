@@ -75,48 +75,16 @@ const Tab3: React.FC = () => {
 				<IonGrid>
 					<IonRow className="ion-align-items-center">
 						<IonCol className="ion-align-self-center">
-							<IonChip>
-								<IonLabel>Default</IonLabel>
+							<IonChip outline color="tertiary">
+								<IonLabel>Exchange</IonLabel>
+								<IonIcon icon={closeCircle}></IonIcon>
 							</IonChip>
 
-							<IonChip>
-								<IonLabel color="secondary">Secondary Label</IonLabel>
-							</IonChip>
-
-							<IonChip color="secondary">
-								<IonLabel color="dark">Secondary w/ Dark label</IonLabel>
-							</IonChip>
-
-							<IonChip disabled={true}>
-								<IonLabel>Disabled Chip</IonLabel>
-							</IonChip>
-
-							<IonChip>
-								<IonIcon icon={pin} />
-								<IonLabel>Default</IonLabel>
-							</IonChip>
-
-							<IonChip>
-								<IonIcon icon={heart} color="dark" />
-								<IonLabel>Default</IonLabel>
-							</IonChip>
-
-							<IonChip>
-								<IonLabel>Button Chip</IonLabel>
-								<IonIcon icon={closeCircle} />
-							</IonChip>
-
-							<IonChip>
-								<IonIcon icon={pin} color="primary" />
-								<IonLabel>Icon Chip</IonLabel>
-								<IonIcon icon={close} />
-							</IonChip>
-
-							<IonChip>
+							<IonChip outline color="tertiary">
 								<IonAvatar>
-									<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+									<img src="https://gravatar.com/avatar/s8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 								</IonAvatar>
-								<IonLabel>Avatar Chip</IonLabel>
+								<IonLabel>Contact Name</IonLabel>
 								<IonIcon icon={closeCircle} />
 							</IonChip>
 						</IonCol>
