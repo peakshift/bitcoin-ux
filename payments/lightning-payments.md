@@ -23,8 +23,13 @@ Think of this as a single blob that acts as a fingerprint for the invoice. Each 
 #### Payment preimage
 Think of this as the receipt that is provided on successful delivery of a payment. This receipt is held secretly by the recipient and only revealed on receipt of the payment that comes in across the network.
 
-_**Important:** if this secret is revealed before the payment is received, other participants in the network involved in routing this particular payment can steal the funds en route before it gets to its destination._
+_**Important:** if this secret is revealed before the payment is received, other participants in the network involved in routing this particular payment can steal the funds en route before it gets to its destination. This could be done by passing the receipt (preimage) back up the chain without sending the payment forward to the recipient._
 
+--
+
+**_Links:_**
+- _Technical breakdown of a Lightning Invoice: https://medium.com/suredbits/lightning-101-what-is-a-lightning-invoice-d527db1a77e6_
+- _Required fields for a Lightning Invoice: https://btcmanager.com/brief-guide-how-create-lightning-network-invoices/_
 
 ### The HODL Invoice
 ...
