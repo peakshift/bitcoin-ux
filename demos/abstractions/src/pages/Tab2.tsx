@@ -20,6 +20,7 @@ import {
 	IonItem,
 	IonLabel,
 	IonList,
+	IonSearchbar,
 } from "@ionic/react";
 import {
 	trash,
@@ -134,6 +135,7 @@ const Tab2: React.FC = () => {
 						</IonToolbar>
 					</IonHeader>
 					<IonContent fullscreen>
+						<IonSearchbar placeholder="Search Contacts" />
 						{/* --- */}
 						<IonList>
 							<IonItem>
@@ -141,7 +143,11 @@ const Tab2: React.FC = () => {
 									slot="start"
 									className="ion-avatar-icon ion-align-items-center ion-justify-content-center"
 								>
-									<IonIcon className="ion-align-self-center" icon={personAdd} color="primary" />
+									<IonIcon
+										className="ion-align-self-center"
+										icon={personAdd}
+										color="primary"
+									/>
 								</IonAvatar>
 								<IonLabel color="primary">New Contact</IonLabel>
 							</IonItem>
@@ -151,7 +157,11 @@ const Tab2: React.FC = () => {
 									slot="start"
 									className="ion-avatar-icon ion-align-items-center ion-justify-content-center"
 								>
-									<IonIcon className="ion-align-self-center" icon={qrCode} color="primary" />
+									<IonIcon
+										className="ion-align-self-center"
+										icon={qrCode}
+										color="primary"
+									/>
 								</IonAvatar>
 								<IonLabel color="primary">Add via QR Code</IonLabel>
 							</IonItem>

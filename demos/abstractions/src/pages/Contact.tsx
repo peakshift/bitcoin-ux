@@ -66,7 +66,9 @@ const Tab3: React.FC = () => {
 					<IonTitle>nothingmuch</IonTitle>
 
 					<IonButtons slot="primary">
-						<IonButton>Edit</IonButton>
+						<IonButton routerDirection="root" routerLink="/contact-edit">
+							Edit
+						</IonButton>
 					</IonButtons>
 				</IonToolbar>
 			</IonHeader>
