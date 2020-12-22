@@ -36,22 +36,31 @@ import {
 import "./Tab2.css";
 import ContactList from "../components/ContactList";
 
-const presetOptions = [
-	{ value: "A", label: "👨‍ Friends & Family" },
-	{ value: "B", label: "💸 Work" },
-	{ value: "C", label: "🚗 Travel" },
-	{ value: "D", label: "🍕‍ Food & Drink" },
-	{ value: "E", label: "🏠 Home" },
-	{ value: "F", label: "🔧 Utilities" },
-	{ value: "F", label: "🔧 Exchange" }
+const presetOptions: Array<string> = [
+	"👨‍ Friends & Family",
+	"💸 Work",
+	"🚗 Travel",
+	"🍕‍ Food & Drink",
+	"🏠 Home",
+	"🔧 Utilities",
+	"🔧 Exchange"
 ];
-
 
 const Tab2: React.FC = () => {
 	const [text, setText] = useState<string>();
 	const [number, setNumber] = useState<number>();
 	const [showActionSheet, setShowActionSheet] = useState(false);
 	const [showModal, setShowModal] = useState(false);
+	const [checked, setChecked] = useState<Array<number>>([]);
+
+	const handleCheck = (option: number) => {
+		if(checked.includes(option)) {
+			let removedFromChecked = checked.filter(item => item !== option);
+			setChecked(removedFromChecked);
+		} else {
+			setChecked([...checked, option]);
+		}
+	}
 
 	return (
 		<IonPage>
@@ -92,7 +101,16 @@ const Tab2: React.FC = () => {
 					<IonRow className="ion-align-items-center">
 						<IonCol className="ion-align-self-center">
 							{presetOptions.map((option, index) => {
-								return(<IonChip color="tertiary"><IonLabel>{{option.label}}</IonLabel></IonChip>)
+								return(
+									<IonChip
+										key={index}
+										color="tertiary"
+										outline={(checked.includes(index) ? false : true)}
+										onClick={() => handleCheck(index)}
+									>
+										<IonLabel>{option}</IonLabel>
+									</IonChip>
+								)
 							})}
 						</IonCol>
 					</IonRow>
