@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
 	IonIcon,
 	IonBadge,
@@ -21,6 +21,7 @@ import {
 	IonLabel,
 	IonList,
 	IonSearchbar,
+	IonChip,
 } from "@ionic/react";
 import {
 	trash,
@@ -30,9 +31,21 @@ import {
 	close,
 	personAdd,
 	qrCode,
+	closeCircle,
 } from "ionicons/icons";
 import "./Tab2.css";
 import ContactList from "../components/ContactList";
+
+const presetOptions = [
+	{ value: "A", label: "👨‍ Friends & Family" },
+	{ value: "B", label: "💸 Work" },
+	{ value: "C", label: "🚗 Travel" },
+	{ value: "D", label: "🍕‍ Food & Drink" },
+	{ value: "E", label: "🏠 Home" },
+	{ value: "F", label: "🔧 Utilities" },
+	{ value: "F", label: "🔧 Exchange" }
+];
+
 
 const Tab2: React.FC = () => {
 	const [text, setText] = useState<string>();
@@ -74,6 +87,16 @@ const Tab2: React.FC = () => {
 						<IonInput value="3600" placeholder="Time in seconds" />
 					</IonItem>
 				</IonList>
+
+				<IonGrid>
+					<IonRow className="ion-align-items-center">
+						<IonCol className="ion-align-self-center">
+							{presetOptions.map((option, index) => {
+								return(<IonChip color="tertiary"><IonLabel>{{option.label}}</IonLabel></IonChip>)
+							})}
+						</IonCol>
+					</IonRow>
+				</IonGrid>
 
 				<IonGrid>
 					<IonRow className="ion-align-items-center">
