@@ -123,7 +123,7 @@ const Tab2: React.FC = () => {
 								expand="block"
 								onClick={() => setShowActionSheet(true)}
 							>
-								Continue
+								Create Payment Request
 							</IonButton>
 						</IonCol>
 					</IonRow>

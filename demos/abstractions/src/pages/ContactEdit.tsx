@@ -72,14 +72,14 @@ const Tab3: React.FC = () => {
 			<IonHeader>
 				<IonToolbar>
 					<IonButtons slot="start">
-						<IonButton routerDirection="back" routerLink="/contact-detail">
+						<IonButton routerDirection="root" routerLink="/contact-detail">
 							Cancel
 						</IonButton>
 					</IonButtons>
 					<IonButtons slot="primary">
 						<IonButton
 							strong
-							routerDirection="forward"
+							routerDirection="root"
 							routerLink="/contact-detail"
 						>
 							Save
