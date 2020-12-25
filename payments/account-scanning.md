@@ -9,9 +9,7 @@ Accounts store the addresses/payment requests. The majority of users have one ac
 
 The wallet scans the account for addresses that contain payment requests, then it further scans the addresses for payment requests that were fulfilled / have transactions made on them. By identifying these tranactions, the wallet can then add up all transactions to get the users balance from the previous wallet. 
 
-Wallets scan 20 addresses by default, hence if no transaction is found on the first 20 addresses, the wallet will assume that you have no previous transactions on that account. This means that if a user has transactions on the 21st address, the wallet will not display that transaction balance. The result of this is that the user will get a wrong balance.
-
-
+Wallets usually scan 20 addresses by default, hence if no transaction is found on the first 20 addresses, the wallet will assume that you have no previous transactions on that account. This means that if a user has transactions on the 21st address, the wallet will not display that transaction balance. The result of this is that the user will get a wrong balance.
 
 ## Design Solution
 
@@ -42,11 +40,12 @@ Just like the first solution, the user can scan more addresses if the need arise
 
 #### User Flow
 
-- select "restore wallet"
-- enter recovery phrase
-- account scan begins automatically
-- balance and number of transactions found will increase as more transactions are identified in the addresses.
-- if no transactions are found in the first 20 addresses, the user can select "scan again" to begin another scan.
-- a pop-up comes up, propmting the user to input a custom No. of addresses per scan
-- user selects " done " and a new scan begins
-- if transactions are found, the final balance is displayed along with the number of transactions found. The individual transactions will also be displayed. The user can also scan again here if the balance is still less than what they had.
+- Select "restore wallet"
+- Enter recovery phrase
+- Account scan begins automatically
+- Balance and number of transactions found will increase as more transactions are identified in the addresses.
+- If no transactions are found in the first 20 addresses, the user can select "scan again" to begin another scan.
+- A pop-up comes up, propmting the user to input a custom No. of addresses per scan
+- User selects "done" and a new scan begins
+- If transactions are found, the final balance is displayed along with the number of transactions found. The individual transactions will also be displayed. The user can also scan again here if the balance is still less than what they had.
+
