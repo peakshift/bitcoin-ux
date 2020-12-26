@@ -77,6 +77,20 @@ const Tab2: React.FC = () => {
 				</IonHeader>
 				{/* --- */}
 				<IonList lines="full" class="ion-no-margin">
+					{/*
+						NOTE: Send flow (when copied)
+						If the wallet doesn't support output descriptors
+						or another mechanism for generating addresses
+						the From/To field can be replaced with a field
+						to paste the address manually. Before send, the
+						user can be prompted with actions to create or add
+						the address to a Contact.
+
+						This way labeling would not be as forced onto
+						the user - and may be a way to transition to the
+						desired user behaviour around contacts and address
+						generations.
+					*/}
 					<IonItem>
 						<IonLabel position="stacked">From</IonLabel>
 						<IonInput
