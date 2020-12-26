@@ -72,7 +72,7 @@ const Send: React.FC = () => {
 			<IonContent fullscreen>
 				<IonHeader collapse="condense">
 					<IonToolbar>
-						<IonTitle size="large">Request Payment</IonTitle>
+						<IonTitle size="large">Send Payment</IonTitle>
 					</IonToolbar>
 				</IonHeader>
 				{/* --- */}

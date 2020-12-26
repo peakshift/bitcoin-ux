@@ -26,6 +26,7 @@ import Tab2 from "./pages/Tab2";
 import Contacts from "./pages/Contacts";
 import Contact from "./pages/Contact";
 import ContactEdit from "./pages/ContactEdit";
+import Send from "./pages/Send";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -53,6 +54,8 @@ const App: React.FC = () => (
 				<IonRouterOutlet>
 					<Route path="/tab1" component={Tab1} exact={true} />
 					<Route path="/tab2" component={Tab2} exact={true} />
+					<Route path="/receive" component={Tab2} exact={true} />
+					<Route path="/send" component={Send} exact={true} />
 					<Route path="/contact-detail" component={Contact} exact={true} />
 					<Route path="/contact-edit" component={ContactEdit} exact={true} />
 					<Route path="/contacts" component={Contacts} exact={true} />
