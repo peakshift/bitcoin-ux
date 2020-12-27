@@ -32,6 +32,7 @@ import {
 	personAdd,
 	qrCode,
 	closeCircle,
+	people,
 } from "ionicons/icons";
 import "./Tab2.css";
 import ContactList from "../components/ContactList";
@@ -43,7 +44,7 @@ const presetOptions: Array<string> = [
 	"🍕‍ Food & Drink",
 	"🏠 Home",
 	"🔧 Utilities",
-	"🔧 Exchange"
+	"🔧 Exchange",
 ];
 
 const Send: React.FC = () => {
@@ -54,13 +55,13 @@ const Send: React.FC = () => {
 	const [checked, setChecked] = useState<Array<number>>([]);
 
 	const handleCheck = (option: number) => {
-		if(checked.includes(option)) {
-			let removedFromChecked = checked.filter(item => item !== option);
+		if (checked.includes(option)) {
+			let removedFromChecked = checked.filter((item) => item !== option);
 			setChecked(removedFromChecked);
 		} else {
 			setChecked([...checked, option]);
 		}
-	}
+	};
 
 	return (
 		<IonPage>
@@ -96,8 +97,28 @@ const Send: React.FC = () => {
 						<IonInput
 							value={text}
 							placeholder="Choose a contact or paste an address..."
-							onFocus={() => setShowModal(true)}
 						/>
+						<IonAvatar
+							slot="end"
+							className="ion-avatar-icon ion-align-items-center ion-justify-content-center"
+						>
+							<IonIcon
+								className="ion-align-self-center"
+								icon={people}
+								color="primary"
+								onClick={() => setShowModal(true)}
+							/>
+						</IonAvatar>
+						<IonAvatar
+							slot="end"
+							className="ion-avatar-icon ion-align-items-center ion-justify-content-center"
+						>
+							<IonIcon
+								className="ion-align-self-center"
+								icon={qrCode}
+								color="primary"
+							/>
+						</IonAvatar>
 					</IonItem>
 
 					<IonItem>
@@ -110,16 +131,16 @@ const Send: React.FC = () => {
 					<IonRow className="ion-align-items-center">
 						<IonCol className="ion-align-self-center">
 							{presetOptions.map((option, index) => {
-								return(
+								return (
 									<IonChip
 										key={index}
 										color="tertiary"
-										outline={(checked.includes(index) ? false : true)}
+										outline={checked.includes(index) ? false : true}
 										onClick={() => handleCheck(index)}
 									>
 										<IonLabel>{option}</IonLabel>
 									</IonChip>
-								)
+								);
 							})}
 						</IonCol>
 					</IonRow>
@@ -173,11 +194,16 @@ const Send: React.FC = () => {
 				></IonActionSheet>
 
 				{/*-- MODALS --*/}
-				<IonModal isOpen={showModal} cssClass="my-custom-class">
+				<IonModal
+					isOpen={showModal}
+					//swipeToClose={true}
+					//onDidDismiss={() => setShowModal(false)}
+					cssClass="my-custom-class"
+				>
 					<IonHeader>
 						<IonToolbar>
 							<IonButtons slot="start"></IonButtons>
-							<IonTitle>Request Payment</IonTitle>
+							<IonTitle>Select Contact to Send Payment</IonTitle>
 
 							<IonButtons slot="primary">
 								<IonButton onClick={() => setShowModal(false)}>Close</IonButton>

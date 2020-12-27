@@ -24,16 +24,10 @@ const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
 
 			<strong>{name}</strong>
 			<p>
-				<a
-					href="/send"
-				>
-					Send
-				</a>
-				<a
-					href="/receive"
-				>
-					Receive
-				</a>
+				<a href="/send">Send</a>
+			</p>
+			<p>
+				<a href="/receive">Receive</a>
 			</p>
 		</div>
 	);

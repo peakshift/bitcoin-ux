@@ -43,7 +43,7 @@ const presetOptions: Array<string> = [
 	"🍕‍ Food & Drink",
 	"🏠 Home",
 	"🔧 Utilities",
-	"🔧 Exchange"
+	"🔧 Exchange",
 ];
 
 const Tab2: React.FC = () => {
@@ -54,13 +54,13 @@ const Tab2: React.FC = () => {
 	const [checked, setChecked] = useState<Array<number>>([]);
 
 	const handleCheck = (option: number) => {
-		if(checked.includes(option)) {
-			let removedFromChecked = checked.filter(item => item !== option);
+		if (checked.includes(option)) {
+			let removedFromChecked = checked.filter((item) => item !== option);
 			setChecked(removedFromChecked);
 		} else {
 			setChecked([...checked, option]);
 		}
-	}
+	};
 
 	return (
 		<IonPage>
@@ -115,16 +115,16 @@ const Tab2: React.FC = () => {
 					<IonRow className="ion-align-items-center">
 						<IonCol className="ion-align-self-center">
 							{presetOptions.map((option, index) => {
-								return(
+								return (
 									<IonChip
 										key={index}
 										color="tertiary"
-										outline={(checked.includes(index) ? false : true)}
+										outline={checked.includes(index) ? false : true}
 										onClick={() => handleCheck(index)}
 									>
 										<IonLabel>{option}</IonLabel>
 									</IonChip>
-								)
+								);
 							})}
 						</IonCol>
 					</IonRow>
