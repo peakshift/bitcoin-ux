@@ -201,16 +201,6 @@ const Tab3: React.FC = () => {
 					</IonCardContent>
 				</IonCard>
 
-				{/*-- 
-        <IonGrid>
-          <IonRow className="ion-align-items-center">
-            <IonCol className="ion-align-self-center">
-             <IonButton expand="block">Block Button</IonButton>
-            </IonCol>
-          </IonRow>
-        </IonGrid>
- --*/}
-
 				<IonList>
 					{/*-- Known Coins --*/}
 					<IonListHeader lines="full">
