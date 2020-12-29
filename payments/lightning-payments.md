@@ -18,10 +18,12 @@ Invoices are made up of a few different pieces of information, but the two criti
 1. The payment preimage
 
 #### Payment hash
-Think of this as a single blob that acts as a fingerprint for the invoice. Each payment hash is unique and can only ever correspond to a single generated invoice. The payment hash is created by the recipient and given to the sender (it is contained in the invoice). It is used by the sender to start the process of sending the funds across to the recipient across the Lightning Network.
+Think of this as a single blob that acts as a fingerprint that secures the invoice. It is not related to the rest of the invoice contents in any way and a single payment hash can optionally be used to make multiple invoices (see **Hodl invoices** below). For a standard payment, the payment hash is included as part if an invoice created by the recipient and the invoice is given to the sender for payment.
+
+Payment hashes are created by first randomly selecting some secret (preimage) and then hashing this to the payment hash.
 
 #### Payment preimage
-Think of this as the receipt that is provided on successful delivery of a payment. This receipt is held secretly by the recipient and only revealed on receipt of the payment that comes in across the network.
+Think of this as the receipt that is provided on successful delivery of a payment. This receipt is held secretly by the recipient and only revealed on receipt of the payment that comes in across the network. The sender can confirm that a given preimage is the correct one for a payment by calculating the hash and comparing to the payment hash included in the invoice.
 
 _**Important:** if this secret is revealed before the payment is received, other participants in the network involved in routing this particular payment can steal the funds en route before it gets to its destination. This could be done by passing the receipt (preimage) back up the chain without sending the payment forward to the recipient._
 
@@ -32,7 +34,28 @@ _**Important:** if this secret is revealed before the payment is received, other
 - _Required fields for a Lightning Invoice: https://btcmanager.com/brief-guide-how-create-lightning-network-invoices/_
 
 ### The HODL Invoice
-...
+
+At a high level, a `hodl invoice` is an invoice that is held by the recipient but not settled right away. A `hodl invoice` can be resolved in 2 ways:
+1. The payment is **_settled_** when the recipient releases the preimage (to the payment route)
+1. The payment is **_canceled_** if the recipient does not release the preimage and the invoice expires
+
+A `hodl invoice` works in the exact way that a standard invoice does except that, when the recipient receives the payment on a given route they do not immediately/automatically return the `preimage` back. _As a reminder, a successful payment is a 2-part process consisting of sending a payment for a given invoice along a Lightning Network route from sender to recipient and receiving the secret (preimage) for the payment back up to the route._
+
+With a `hodl invoice` there is also an addiitonal option where the recipient **_does not_** have to be the same person _creating the payment hash for a given invoice_ they will generate (as is usually the case). They can also receive a payment has from another party to create an invoice again where that other party would be the one that will hold the secret (preimage) for the hash until some condition is met. 
+
+Primitives ([source](https://wiki.ion.radar.tech/tech/research/hodl-invoice)):
+- preimage and payment hash
+  - describe how someone who is not the recipient can make a hash from their own generated preimage
+  - describe how the preimage can be revealed by either:
+    - hash creator shares secret (premiage)
+    - aother invoice created with the same hash is settled
+  - describe role of **_expiry time_** in canceling the invoice
+  - describe how same payment hash may be used by different recipients for different invoices, and how these can be chained together for an atomic payment chain
+    - caveat: if a path participant sits on two routes, there's a risk they can take the revealed preimage from payment of one invoice and collect settlement on the second invoice before the recipient is able to settle their hodl invoice
+
+Mechanism:
+- ...
+
 
 ---
 
