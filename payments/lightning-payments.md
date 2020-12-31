@@ -23,9 +23,17 @@ Think of this as a single blob that acts as a fingerprint that secures the invoi
 Payment hashes are created by first randomly selecting some secret (preimage) and then hashing this to the payment hash.
 
 #### Payment preimage
-Think of this as the receipt that is provided on successful delivery of a payment. This receipt is held secretly by the recipient and only revealed on receipt of the payment that comes in across the network. The sender can confirm that a given preimage is the correct one for a payment by calculating the hash and comparing to the payment hash included in the invoice.
+Think of this as the receipt that is provided on successful delivery of a payment. This receipt is held secretly by the recipient and only revealed on receipt of the payment that comes in across the network.
 
-_**Important:** if this secret is revealed before the payment is received, other participants in the network involved in routing this particular payment can steal the funds en route before it gets to its destination. This could be done by passing the receipt (preimage) back up the chain without sending the payment forward to the recipient._
+The way it is revealed is by passing the preimage back up the route to the nodes who forwarded the payment down. This preimage allows each node to trustlessly collect the fees for their part of the route, and the preimage is passed all the way back up to the sender. The sender can confirm that a given preimage is the correct one for a payment by calculating the hash and comparing to the payment hash included in the invoice.
+
+_**Important:** if this secret is revealed before the payment is received, other participants in the network involved in routing this particular payment can steal the funds (note: confim this) en route before it gets to its destination. This could be done by passing the receipt (preimage) back up the chain without sending the payment forward to the recipient._
+
+#### Expiry time
+This is effectively a time limit past which the invoice becomes invalid.
+
+(Research how this is enforced. So far I'm only finding that the recipient discards the preimage, but this doesn't make sense in cases where the recipient isn't the one generating th preimage as with hodl invoices)
+
 
 --
 
@@ -41,17 +49,38 @@ At a high level, a `hodl invoice` is an invoice that is held by the recipient bu
 
 A `hodl invoice` works in the exact way that a standard invoice does except that, when the recipient receives the payment on a given route they do not immediately/automatically return the `preimage` back. _As a reminder, a successful payment is a 2-part process consisting of sending a payment for a given invoice along a Lightning Network route from sender to recipient and receiving the secret (preimage) for the payment back up to the route._
 
-With a `hodl invoice` there is also an addiitonal option where the recipient **_does not_** have to be the same person _creating the payment hash for a given invoice_ they will generate (as is usually the case). They can also receive a payment has from another party to create an invoice again where that other party would be the one that will hold the secret (preimage) for the hash until some condition is met. 
+With a `hodl invoice` there is also an addiitonal option where the recipient **_does not_** have to be the same person _creating the payment hash for a given invoice_ they will generate (as is usually the case). They can also receive a payment hash from another party to create an invoice again where that other party would be the one that will hold the secret (preimage) for the hash until some condition is met. 
 
-Primitives ([source](https://wiki.ion.radar.tech/tech/research/hodl-invoice)):
-- preimage and payment hash
-  - describe how someone who is not the recipient can make a hash from their own generated preimage
-  - describe how the preimage can be revealed by either:
-    - hash creator shares secret (premiage)
-    - aother invoice created with the same hash is settled
-  - describe role of **_expiry time_** in canceling the invoice
-  - describe how same payment hash may be used by different recipients for different invoices, and how these can be chained together for an atomic payment chain
+#### Scenarios ([source](https://wiki.ion.radar.tech/tech/research/hodl-invoice))
+
+1. Simple delay by recipient, secret held by recipient
+
+    - Intended to settle
+        e.g. merchant returns
+
+    - Intended to not settle
+        e.g. fidelity bond
+
+(All other examples below, trust not to reveal secret preimage to any other route participants)
+
+1. Simple delay by sender
+
+    - Secret revealed out-of-band by sender
+        e.g. customer holds payment until delivery of service
+
+    - Secret revealed via on-chain transaction
+        e.g. submarine swap where sender must necessarily reveal the preimage when sweeping an on-chain htlc and recipient can use revealed preimage to settle invoice
+
+        _caveat: preimage is revealed before transaction is mined. If high enough fee isn't used, recipient could potentially double-spend UTXOs involved in HTLC before HTLC can be mined_
+
+1. Chained delay by sender, secret revealed out-of-band by sender, secret revealed via settlement to chain participants
+    e.g. sender (customer) gives preimage to courier who settles an invoice revealing preimage to recipient (shop) who can in turn settle their invoice
+
     - caveat: if a path participant sits on two routes, there's a risk they can take the revealed preimage from payment of one invoice and collect settlement on the second invoice before the recipient is able to settle their hodl invoice
+
+
+
+
 
 Mechanism:
 - ...
