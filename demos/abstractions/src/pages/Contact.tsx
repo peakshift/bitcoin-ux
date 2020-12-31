@@ -237,6 +237,7 @@ const Tab3: React.FC = () => {
 							<h2>Dan</h2>
 							<p>0.6 BTC</p>
 						</IonLabel>
+						<IonButton slot="end">Schedule for Coinjoin</IonButton>
 					</IonItem>
 					<IonItem>
 						<IonCheckbox slot="start" />
@@ -244,6 +245,7 @@ const Tab3: React.FC = () => {
 							<h2>Ana</h2>
 							<p>0.004 BTC</p>
 						</IonLabel>
+						<IonButton slot="end">Schedule for Coinjoin</IonButton>
 					</IonItem>
 					<IonItem lines="none">
 						<IonCheckbox slot="start" />
@@ -251,6 +253,7 @@ const Tab3: React.FC = () => {
 							<h2>zkSnacks</h2>
 							<p>0.000005 BTC</p>
 						</IonLabel>
+						<IonButton slot="end">Schedule for Coinjoin</IonButton>
 					</IonItem>
 
 					<IonListHeader>
