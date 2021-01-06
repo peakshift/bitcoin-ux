@@ -1,6 +1,6 @@
 # Payments
 
-###### Rationale
+###### RATIONALE
 
 Below is the proposed structure for the payments section — there are first some foundations which will give readers a base to understand further chapters.
 
