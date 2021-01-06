@@ -1,10 +1,11 @@
 # Payments
 
-<details>
-  <summary>Rationale</summary>
-	<p>Below is the proposed structure for the payments section — there are first some foundations which will give readers a base to understand further chapters.</p>
-  <p>The goal with this structure is to provide the reader with a unified way of learning about bitcoin on-chain and lightning. Instead of having to navigate between separate subchapters and comparing the two - the reader is taken through a payments unified user flow. At each step, when relevant the individual considerations, implementation details and constraints are addressed for each technology.</p>
-</details>
+###### Rationale
+
+Below is the proposed structure for the payments section — there are first some foundations which will give readers a base to understand further chapters.
+
+The goal with this structure is to provide the reader with a unified way of learning about bitcoin on-chain and lightning. Instead of having to navigate between separate subchapters and comparing the two - the reader is taken through a payments unified user flow. At each step, when relevant the individual considerations, implementation details and constraints are addressed for each technology.
+
 
 ###### FOUNDATIONS
 
@@ -22,12 +23,16 @@
 
 #### [Transaction Structure & Lifecycle](#)
 
-- Funding
+- Creating a Transaction
+- Funding a transaction
 - Multiple Signers
 - Adding Payments
+- Fee
 - Change
+- Signing
 - Filetype
 - Broadcasting
+- Speeding Up / Canceling
 - Confirmations
 
 #### [Lightning Invoices](#)
@@ -55,7 +60,7 @@
 #### [Sending](#)
 
 - [Coin Selection](#)
-- [Fee Selection](#)
+- [Fees & Estimations](#)
 - [Broadcasting](#)
 - [Speeding Up / Canceling](#)
 - [Paying Merchants](#)(?)
