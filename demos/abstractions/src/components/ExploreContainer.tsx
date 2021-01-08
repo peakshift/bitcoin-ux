@@ -1,7 +1,15 @@
 import React from "react";
 import "./ExploreContainer.css";
 
-import { IonSegment, IonSegmentButton, IonLabel, IonGrid, IonRow, IonCol, IonButton } from "@ionic/react";
+import {
+	IonSegment,
+	IonSegmentButton,
+	IonLabel,
+	IonGrid,
+	IonRow,
+	IonCol,
+	IonButton,
+} from "@ionic/react";
 
 interface ContainerProps {
 	name: string;
@@ -30,15 +38,13 @@ const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
 				<a href="/receive">Receive</a>
 			</p>
 
-	        <IonGrid>
-	          <IonRow className="ion-align-items-center">
-	            <IonCol className="ion-align-self-center">
-	             <IonButton expand="block">Block Button</IonButton>
-	            </IonCol>
-	          </IonRow>
-	        </IonGrid>
-
-
+			<IonGrid>
+				<IonRow className="ion-align-items-center">
+					<IonCol className="ion-align-self-center">
+						<IonButton expand="block">Block Button</IonButton>
+					</IonCol>
+				</IonRow>
+			</IonGrid>
 		</div>
 	);
 };

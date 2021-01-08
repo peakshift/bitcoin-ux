@@ -1,7 +1,13 @@
 {
 	"name": "abstractions",
 	"version": "0.0.1",
-	"private": true,
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"serve": "ionic serve"
+	},
 	"dependencies": {
 		"@capacitor/core": "2.4.5",
 		"@ionic/react": "^5.0.7",
@@ -22,13 +28,6 @@
 		"react-router-dom": "^5.1.2",
 		"react-scripts": "3.4.0",
 		"typescript": "3.8.3"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"serve": "ionic serve"
 	},
 	"eslintConfig": {
 		"extends": "react-app"

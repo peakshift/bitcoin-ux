@@ -1,6 +1,6 @@
 # Payments
 
-There are limitations in the current financial system that make payment services inaccessible to people in many places of the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial services like Ali Pay, Cash App, PayPal, Strike, or Monzo.
+There are limitations in the current financial system that make payment services inaccessible to people in many places of the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial services.
 
 ## Bitcoin is money
 
@@ -34,13 +34,13 @@ Even though all transactions are stored publicly, there is no personally identif
 
 We should inform our users of these risks but also provide mechanisms that help them gain an acceptable amount of privacy[^1].
 
-## Bitcoin is too slow for payments
+## Bitcoin is too secure for daily payments
 
-Transactions made on-chain can take minutes or days to confirm — depending on the fee you pay. This is because they get secured by the entire network of nodes and miners which exchange transactions they receive from wallets and other services with each other. Every 10 minutes miners validate the payments within the transactions and publish a block. For this service, they typically take the transactions with the highest fees.
+Transactions made on-chain can take as little as 10 minutes or as much as a few days to confirm — the speed is depending on the fee you pay. This is because they get secured by the entire network of nodes and miners which exchange transactions they receive from wallets and other services with each other. Every 10 minutes (average) miners validate the payments within the transactions and publish a block. For this service, they typically take the transactions with the highest fees.
 
 This is may not be suitable if you want to make a small payment to a vendor at your local market — but if you're making or receiving a payment from someone accross the world the benefits are made very clear as the current banking and financial system can be quite restrictive, and expensive for some.
 
-### Lightning Payments — A micro-payment network for every day payments
+### Lightning Payments
 
 To meet the demands of our modern economy — movement of money needs to be borderless, secure, fast, and cheap.
 
