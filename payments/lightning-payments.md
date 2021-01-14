@@ -99,9 +99,11 @@ _(All other examples below, trust not to reveal secret preimage to any other rou
     _**Caveat:** if a path participant sits on two routes, there's a risk they can take the revealed preimage from payment of one invoice and collect settlement on the second invoice before the recipient is able to settle their hodl invoice_
 
 
-### Keysend
+### Keysend (no invoice)
 
-The `keysend` feature is a way for a sender to send a payment to a iven recipient over the Lightning Network without first having an invoice from the recipient to send against.
+The `keysend` feature is a way for a sender to send a payment to a given recipient over the Lightning Network **without first having an invoice** from the recipient to send against.
+
+The way this works is...
 
 #### Common criticisms
 
@@ -111,6 +113,13 @@ A common concern you would hear is that the sender does not have in hand a signe
 Not everyone agrees with this perspective though since not everyone puts the same level of importance on having this cryptographic linkage for a fulfilled payment.
 - Conner Fromknecht from Lightning Labs ([tweet](https://twitter.com/bitconner/status/1349178391073746944) | [img](./assets/img/lightning-payments-keysend-conner.png))
 - Alex Bosworth from Lightning Labs ([img](./assets/img/lightning-payments-keysend-alex.png))
+
+
+### Lightning Offers (invoices on demand)
+
+Covered by potentially BOLT12, still in development...
+- [Announcement on `lightning-dev` mailing list](https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-November/002276.html)
+- [WIP PR on Github](https://github.com/lightningnetwork/lightning-rfc/pull/798)
 
 ---
 
