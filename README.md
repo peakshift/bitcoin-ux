@@ -1,10 +1,27 @@
 # Bitcoin UX / Payments
 
+## Abstract
+
+Problem statement
+
+- transactions in bitcoin vs payments.
+- applications may want to 
+
+The objective is to expose Bitcoin designers and wallet developers to use cases, user patterns, data structures and communication relating to payments — focusing on non-custodial methods, and users in frontier and developing markets certains a challenging mix of UX problems.
+
+This objective creates certain challenges in the UX 
+
+- Designers and Developers Work Separatly
+- There are many Payment related BIPs and Protocols which are very technical
+- Technical constraints can be seen in the UI and create poor experience
+- Wallet UX is lacking and does not have the context of global challegnes
+- Bitcoin is global 
+
 ## Motivation
 
 There are limitations in the current system that make payment services inaccessible in many places in the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial services like Cash App, Strike, Monzo, Visa, etc.
 
-The objective is to expose Bitcoin designers and wallet developers to use cases, user patterns, data structures and communication relating to payments — focusing on users in frontier and developing markets.
+## Methods
 
 The process will include exploring what takes to make a complete end-to-end payment experience on Bitcoin and Lightning in a way that is familiar and seamless between the two networks, while finding ways to use these UX patterns as hooks that can maximise the use of transactions; and improve the privacy of the payment. An example would be using payment requests for Payjoins, or redirecting the change outputs to refill a lightning channel.
 
@@ -14,7 +31,7 @@ The output, is documentation and tools that is between technical and visual — 
 
 ### [Consistent Push & Pull Payments on and off-chain](consistent-payment-flow.md)
 
-`bip21`, `psbt`,`bolt11`, `payment-request`, `keysend`
+`bip21`, `psbt`, `bolt11`, `payment-request`, `keysend`
 
 Default user flows for payments when switching between On/Offchain payments is inconsistent, this leads to users having to learn new behaviours and terminology between which does not lend itself to a seamless user experience.
 
@@ -34,6 +51,8 @@ When building, its offen we miss the cultural and environmental aspect of the au
 - Personas
 
 ### [WabiSabi: Design Sprints for Coinjoins and Privacy](coinjoins/design-sprints.md)
+
+`coinjoin`, `privacy`, `coin-control`, `design-sprint`
 
 Together with [@nothingmuch](https://github.com/nothingmuch) we explore onchain payments and privacy through the lense of [WabiSabi](https://github.com/zkSNACKs/WabiSabi/blob/master/explainer.md) a coinjoin protocol in Design Sprint inspired sessions every week. The sessions aim to create Resources that allow designers to explore creative solutions of these technical topics, and are centered around a persona who realises their mental model is incomplete and is also concerned for their privacy.
 
