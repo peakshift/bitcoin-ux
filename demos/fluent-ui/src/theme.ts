@@ -1,4 +1,4 @@
-const wasabiTheme = createTheme({
+const wasabiTheme = {
 	palette: {
 		themePrimary: "#74b64a",
 		themeLighterAlt: "#f8fcf6",
@@ -23,4 +23,8 @@ const wasabiTheme = createTheme({
 		black: "#f8f8f8",
 		white: "#211b24",
 	},
-});
+};
+
+export {
+	wasabiTheme,
+}
