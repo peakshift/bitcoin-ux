@@ -14,20 +14,31 @@ A transaction can not only contain multiple payments but also other kinds of ope
 ### Canceling transactions
 
 - How is this handled in non-bitcoin payment services?
-  - e.g. [Mpesa’s Hakikisha](https://niabusiness.com/safaricom-hakikisha/)
-- RBF (Replace by fee)
+  - Mobile Money e.g. [Mpesa’s Hakikisha](https://niabusiness.com/safaricom-hakikisha/)
+- Mechanism to achieve this on-chain is by using RBF (Replace by fee)
   - https://twitter.com/blockonomics_co/status/1318540752360648704
   - https://github.com/spesmilo/electrum/pull/6641#issuecomment-712689820
 
-### Slowing down to speed up
+### Send. Slowing down to manage expectations
+- Mpesa’s Hakikisha has a 5 min window for the transaction to get canceled. Bitcoin is more variable, as a transaction with a lower fee rate can take mins or hours to get a confirmation.
+- On-chain fees will continue to rise.
+- Should we encourange long to confirm on-chain transactions? Benefit is that the window of time to ammend a broadcasted transaction using RBF can be increased.
+- Batching payments in a low fee transaction that takes longer to confirm but is cheaper?
+  - Replace by Fee can allow you to add another payment to the batch, and also speed it up.
+- Scheduling transactions to be broadcasted when fee’s reach a certain amount?
 
-- Should long to confirm/unconfirmed transactions be encouraged?
-- How does this get impacted by Replace by Fee
-- The appearance of speed can be achieved if wallets show incoming mempool transactions.
+#### What are the implications in commerce?
+- https://github.com/btcpayserver/btcpayserver/issues/1330
+- Merchants like supermarkets and restaruants in Venezuela using "cryptobuyer" seem to accept/rely on 0 confirmation transactions.
+- Since there are varying times for on-chain transaction confirmations maybe merchants should also slow down, and only set the order as paid if they have full confirmation of a payment. Note: Instant payment and delivery may be solved if both sides adopt lightning payments in commerce.
+
+### Receive
+- The appearance of faster payments can be achieved if wallets shows incoming mempool transactions.
   - UTXO should not be spendable until it is confirmed.
-    - see 
-- Scheduling transactions when fee’s reach a certain amount?
-- Estimations/countdowns using block time
+- Estimations/countdowns using block time(?)
+
+#### Alternatively, Instant Payments
+- Lightning network provides instant payments (also cannot be reversed, but also too fast to be canceled)
 
 ### Fee Awareness
 

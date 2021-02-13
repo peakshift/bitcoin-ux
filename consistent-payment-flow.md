@@ -4,7 +4,7 @@
 
 #### Default User Flows for payments when switching between On/Offchain payments is inconsistent
 
-Payments by default on Lightning Network are pull based, while Bitcoin is push. If we are able to replicate pull payments on-chain and push payments on lightning, it could enable more consistent user experience for wallet users going between the networks.
+All bitcoin payments are push based. They are initiated by the sender, using their private keys. If we are able to replicate pull payments on-chain and push payments on lightning, it could enable more consistent user experience for wallet users going between the networks.
 
 There are specifications that can make some of this possible already.
 
