@@ -24,6 +24,7 @@ declare module WasabiWallet {
 		PrivacyLevelStrong: number;
 		DustThreshold: string;
 	}
+
 	export interface WalletJSON {
 		EncryptedSecret: string;
 		ChainCode: string;
