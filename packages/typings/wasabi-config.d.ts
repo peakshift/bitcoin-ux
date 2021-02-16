@@ -24,4 +24,27 @@ declare module WasabiWallet {
 		PrivacyLevelStrong: number;
 		DustThreshold: string;
 	}
+	export interface WalletJSON {
+		EncryptedSecret: string;
+		ChainCode: string;
+		MasterFingerprint: string;
+		ExtPubKey: string;
+		PasswordVerified: boolean;
+		MinGapLimit: number;
+		AccountKeyPath: string;
+		BlockchainState: BlockchainState;
+		HdPubKeys: HdPubKey[];
+	}
+
+	export interface BlockchainState {
+		Network: string;
+		Height: string;
+	}
+
+	export interface HdPubKey {
+		PubKey: string;
+		FullKeyPath: string;
+		Label: string;
+		KeyState: number;
+	}
 }
