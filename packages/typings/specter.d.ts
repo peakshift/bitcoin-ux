@@ -1,4 +1,17 @@
 declare module Specter {
+	// The apps settings, there iss one instance
+    export interface AppSettings {
+		mode: "specterd" | "hwibridge";
+        specterURL: string;
+        tor: boolean;
+        proxyURL: string;
+        specterdVersion: string;
+        specterdHash: string;
+        specterdCLIArgs: string;
+        versionInitialized: string;
+    }
+
+    // Device config, there may be multiple instances
 	export interface Device {
 		name: string;
 		alias: string;
