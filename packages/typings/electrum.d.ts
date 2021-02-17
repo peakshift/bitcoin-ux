@@ -10,7 +10,9 @@ declare namespace Electrum {
 		coin_chooser_output_rounding: boolean;
 		config_version: number;
 		confirmed_only: boolean;
-		"console-history": any[];
+		// changed for consistency
+		// actually "console-history"
+		console_history: string[];
 		currency: string;
 		dark_icon: boolean;
 		decimal_point: number;
