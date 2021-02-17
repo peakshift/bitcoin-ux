@@ -4,11 +4,11 @@ declare module BitcoinCore {
 		testnet: boolean;
 		regtest: boolean;
 		// Sections
-		main: Configs;
-		test: Configs;
+		main: ConfOptions;
+		test: ConfOptions;
 	}
 
-	export interface Configs {
+	export interface ConfOptions {
 		proxy: string;
 		bind: string;
 		whitebind: string;
@@ -34,5 +34,21 @@ declare module BitcoinCore {
 		// User interface options
 		min: number;
 		minimizetotray: number;
+	}
+
+	// list unspent
+	type ListUnspent = Unspent[];
+	interface Unspent {
+		txid: string;
+		vout: number;
+		address: string;
+		label: string;
+		scriptPubKey: string;
+		amount: number;
+		confirmations: number;
+		spendable: boolean;
+		solvable: boolean;
+		desc?: string;
+		safe: boolean;
 	}
 }
