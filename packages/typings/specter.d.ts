@@ -1,7 +1,11 @@
 declare module Specter {
+	export enum Mode {
+		specterd,
+		hwibridge,
+	}
 	// The app's settings, there iss one instance
 	export interface AppSettings {
-		mode: "specterd" | "hwibridge";
+		mode: Mode;
 		specterURL: string;
 		tor: boolean;
 		proxyURL: string;
