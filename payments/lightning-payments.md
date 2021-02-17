@@ -98,12 +98,35 @@ _(All other examples below, trust not to reveal secret preimage to any other rou
 
     _**Caveat:** if a path participant sits on two routes, there's a risk they can take the revealed preimage from payment of one invoice and collect settlement on the second invoice before the recipient is able to settle their hodl invoice_
 
+#### Limitations
+...
+
 
 ### Keysend (no invoice)
 
-The `keysend` feature is a way for a sender to send a payment to a given recipient over the Lightning Network **without first having an invoice** from the recipient to send against.
+The `keysend` feature is a way for a sender to send a payment to a given recipient over the Lightning Network **without first having an invoice** from the recipient to send against ([docs](https://lightning.readthedocs.io/lightning-keysend.7.html)).
 
-The way this works is...
+The way this works is the sender first needs the **destination node id (node's public key)** for the recipient's Lightning Network node. The sender then creates a preimage and uses it to construct a keysend payment that it then forwards along an appropriate route to the recipient.
+
+When the recipient receives the keysend payment, they would decode the payment and extract the preimage to accept the payment (resolve the HTLC). The recipient would also create an ad-hoc invoice on their end that corresponds to the payment and store it in their local invoice registry.
+
+The recipient would usually have no way of knowing who sent the keysend payment unless the sender somehow makes this explicitly known.
+
+This is a feature that is currently fully supported in:
+- `lnd` ([PR #3795](https://github.com/lightningnetwork/lnd/pull/3795))
+- `eclair` ([PR #1485](https://github.com/ACINQ/eclair/pull/1485))
+- `c-lightning` ([PR #3792](https://github.com/ElementsProject/lightning/pull/3792))
+
+_Note: Unlike when sending against a lightning invoice, if the same keysend is attempted multiple times then multiple fund transfers occur._
+
+_`keysend` used to be previously called `sphinx send` as a reference to the [sphinx packets](https://wiki.ion.radar.tech/tech/lightning/sphinx-packet) that the Lightning Network uses to onion route packets across the network._
+
+#### Useful attributes
+
+ - There is a `--data` flag for sending along data as well (needs `record=hexvalue`)
+
+- Tlv data records + keysend open up some interesting possibilities (see [tweet](https://twitter.com/joostjgr/status/1234896447038017537))
+
 
 #### Common criticisms
 
@@ -120,25 +143,6 @@ Not everyone agrees with this perspective though since not everyone puts the sam
 Covered by potentially BOLT12, still in development...
 - [Announcement on `lightning-dev` mailing list](https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-November/002276.html)
 - [WIP PR on Github](https://github.com/lightningnetwork/lightning-rfc/pull/798)
-
----
-
-### 1. Notes on `key send`
-
-- Uses “sphinx packets”?
-    - https://github.com/lightningnetwork/lightning-onion/pull/40
-    - https://wiki.ion.radar.tech/tech/lightning/sphinx-packet)
-
-
-- Used to be called `sphinx send`
-    -https://wiki.ion.radar.tech/tech/research/sphinx-send
-
-
- - `--data` flag for sending along data as well (needs `record=hexvalue`)
-
-- tlv data records + keysend open up some interesting possibilities
-    - https://twitter.com/joostjgr/status/1234896447038017537
-
 
 ---
 
