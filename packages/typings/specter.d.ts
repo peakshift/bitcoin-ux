@@ -1,7 +1,7 @@
 declare module Specter {
 	export enum Mode {
-		specterd,
-		hwibridge,
+		specterd = "specterd",
+		hwibridge = "hwibridge",
 	}
 	// The app's settings, there iss one instance
 	export interface AppSettings {
