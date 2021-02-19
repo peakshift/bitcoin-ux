@@ -121,11 +121,12 @@ _Note: Unlike when sending against a lightning invoice, if the same keysend is a
 
 _`keysend` used to be previously called `sphinx send` as a reference to the [sphinx packets](https://wiki.ion.radar.tech/tech/lightning/sphinx-packet) that the Lightning Network uses to onion route packets across the network._
 
-#### Useful attributes
+#### Useful "additional data" mechanisms & applications
 
- - There is a `--data` flag for sending along data as well (needs `record=hexvalue`)
+ - There is a [`--data` flag](https://api.lightning.community/#sendpayment) for sending along data as well (needs `record=hexvalue`)
+    - This can potentially be used for including things like custom messages or sender info (e.g. see Whatsat's [usage of custom records](https://github.com/joostjager/whatsat/tree/b3759020e913727ef2f9661b3463a5035b6887a6#protocol))
 
-- Tlv data records + keysend open up some interesting possibilities (see [tweet](https://twitter.com/joostjgr/status/1234896447038017537))
+- [Custom tlv data records](https://github.com/lightningnetwork/lnd/pull/3742) + keysend open up some interesting possibilities (see this [tlvshop](https://twitter.com/joostjgr/status/1234896447038017537) example)
 
 
 #### Common criticisms
