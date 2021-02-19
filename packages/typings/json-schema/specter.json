@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "Specter.Mode": {
+            "enum": [
+                "hwibridge",
+                "specterd"
+            ],
+            "type": "string"
+        }
+    },
+    "properties": {
+        "mode": {
+            "$ref": "#/definitions/Specter.Mode"
+        },
+        "proxyURL": {
+            "type": "string"
+        },
+        "specterURL": {
+            "type": "string"
+        },
+        "specterdCLIArgs": {
+            "type": "string"
+        },
+        "specterdHash": {
+            "type": "string"
+        },
+        "specterdVersion": {
+            "type": "string"
+        },
+        "tor": {
+            "type": "boolean"
+        },
+        "versionInitialized": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+
