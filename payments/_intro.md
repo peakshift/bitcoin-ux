@@ -45,7 +45,7 @@ We demonstrate how the conecpts we've learned can be put together to create a pa
 ## Push vs. pull transactions
 Pull Payments enable business models like subscriptions where you only need to provide your authorissation once to happen. With Pull Payments you can be charged by the merchant automatically whenever they say the payment is due.
 
-Since you should never give anyone else your private key you will always needs to authorise any outgoing paymentss. This is called a Push Payment. No one can move your funds without having your private key. In this way Bitcoin works simmiarly to cash.
+Since you should never give anyone else your private key you will always needs to authorise any outgoing paymentss. This is called a Push Payment. No one can move your funds without having your private key. In this way Bitcoin works simmilar to cash.
 
 ## Bitcoin Transactions
 A transaction is like a small program that has a set of instructions on how to spend some bitcoin. It also needs to have the signatures by the authorised key holder.
@@ -119,11 +119,13 @@ In the case the address is not valid, the user should be informed of such and se
 
 ## Inputting the amount to send
 
-### Depending on your user base, 
+Depending on their familliarity with bitcoin, your users may have a peference to transact with a bitcoin denoination as the standard in the application, or another prefered currency. Read more about [Units, symbols and amount display](https://deploy-preview-63--sad-borg-390916.netlify.app/guide/payments/units-and-symbols/).
 
-### Allow the amount input to be denominated in bitcoin or a currency the user may be 
+Allowing the amount to be inputed in different bitcoin denominations, or the user's prefered currency should be readily available.
 
-### There may be cases where a specific amount of bitcoin needs to be sent for a payment — in such scenario having the otion to enter a bitcoin or satoshi amount would be needed. Another scenario is that the user wants to send an amount in their local or other currency — and have that converted to bitcoin.
+There may be cases where a specific amount of bitcoin needs to be sent for a payment — in such scenario having the option to enter a bitcoin or satoshi amount would be needed. 
+
+Another scenario is that the user wants to send an amount in their local or other currency — and have that converted to bitcoin by the application.
 
 ### Dos
 
@@ -146,10 +148,15 @@ Each transaction needs to pay a fee to miners for validation. Since miners choos
 
 ## Reviewing the payment and approval
 
-### Always take into consideration that every valid transaction which is broadcasted to the network cannot be reversed, so it is critical that the user is given a chance to double check the payment details as a final confirmation.
+Always take into consideration that every valid transaction which is broadcasted to the network cannot be reversed, so it is critical that the user is given a chance to double check the payment details as a final confirmation.
 
 ## Processing
+
+Once a transaction has been broadcasted, depending on the fee paid … [UNCONFIRMED STATE]
+
 ## Confirmation
+
+Once the transaction containing the payment has been mined, the user should be notified … 
 
 # Receiving bitcoin
 Generating payment requests (addresses)
