@@ -6,7 +6,16 @@ If you make use of wallets, you probably have heard of private keys and private 
 
 This chapter focuses however not on private key management, but on security in the general sense. It looks at existing mechanisms and also best practices that improve and ensure security in wallets. 
 
-**Possible headings**
+**Why it is important**
+
+- talk about risk of loss and theft
+
+**Existing Mechanisms**
+
+- Signing Messages
+- Encryption (messages, passcode)
+- PIN code
+- cold or offline storage
 
 
 
