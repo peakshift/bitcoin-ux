@@ -6,7 +6,6 @@ import {
 	IonCard,
 	IonCardHeader,
 	IonCardSubtitle,
-	IonCardTitle,
 	IonCardContent,
 	IonButton,
 	IonGrid,
@@ -25,33 +24,9 @@ import {
 	IonAvatar,
 	IonBadge,
 	IonLabel,
-	IonItemSliding,
-	IonToggle,
-	IonItemOptions,
-	IonItemOption,
-	IonItemDivider,
-	IonInput,
-	IonRadio,
 	IonCheckbox,
 } from "@ionic/react";
-import {
-	ellipsisVertical,
-	personCircle,
-	search,
-	ellipsisHorizontal,
-	eyeOffOutline,
-	eyeOutline,
-	arrowForwardOutline,
-	arrowDownOutline,
-	pin,
-	wifi,
-	wine,
-	warning,
-	walk,
-	closeCircle,
-	close,
-	heart,
-} from "ionicons/icons";
+import { arrowDownOutline, closeCircle } from "ionicons/icons";
 
 const Tab3: React.FC = () => {
 	const [showModal, setShowModal] = useState(false);
@@ -84,7 +59,10 @@ const Tab3: React.FC = () => {
 
 							<IonChip outline color="tertiary">
 								<IonAvatar>
-									<img src="https://gravatar.com/avatar/s8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+									<img
+										alt=""
+										src="https://gravatar.com/avatar/s8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+									/>
 								</IonAvatar>
 								<IonLabel>Contact Name</IonLabel>
 								<IonIcon icon={closeCircle} />
@@ -100,7 +78,10 @@ const Tab3: React.FC = () => {
 
 					<IonItem>
 						<IonAvatar slot="start">
-							<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+							<img
+								alt=""
+								src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+							/>
 						</IonAvatar>
 						<IonLabel>
 							<h2>kukks$paystring.kukks.org</h2>
@@ -112,7 +93,10 @@ const Tab3: React.FC = () => {
 
 					<IonItem>
 						<IonAvatar slot="start">
-							<img src="https://gravatar.com/avatar/dba6bae8c566f4041b9cd9ada7741?d=identicon&f=y" />
+							<img
+								alt=""
+								src="https://gravatar.com/avatar/dba6bae8c566f4041b9cd9ada7741?d=identicon&f=y"
+							/>
 						</IonAvatar>
 						<IonLabel>
 							<h2>donate.kukks.org</h2>
@@ -124,7 +108,10 @@ const Tab3: React.FC = () => {
 
 					<IonItem lines="none">
 						<IonAvatar slot="start">
-							<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041b9cd9ada7741?d=identicon&f=y" />
+							<img
+								alt=""
+								src="https://gravatar.com/avatar/dba6bae8c566f9d4041b9cd9ada7741?d=identicon&f=y"
+							/>
 						</IonAvatar>
 						<IonLabel>
 							<h2>

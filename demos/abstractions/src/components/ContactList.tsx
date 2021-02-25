@@ -6,14 +6,6 @@ import {
 	IonAvatar,
 	IonBadge,
 	IonLabel,
-	IonInput,
-	IonToggle,
-	IonRadio,
-	IonCheckbox,
-	IonItemSliding,
-	IonItemOption,
-	IonItemOptions,
-	IonContent,
 } from "@ionic/react";
 
 const ContactList: React.FC = () => (
@@ -21,7 +13,7 @@ const ContactList: React.FC = () => (
 		{/*-- List of Text Items --*/}
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/1074/200" />
+				<img alt="" src="https://picsum.photos/id/1074/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>nothingmuch</h2>
@@ -33,7 +25,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/919/200" />
+				<img alt="" src="https://picsum.photos/id/919/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Obi</h2>
@@ -45,7 +37,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/87/200" />
+				<img alt="" src="https://picsum.photos/id/87/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Ana</h2>
@@ -57,7 +49,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/27/200" />
+				<img alt="" src="https://picsum.photos/id/27/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Gatete</h2>
@@ -69,7 +61,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/743/200" />
+				<img alt="" src="https://picsum.photos/id/743/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Oüzgür</h2>
@@ -81,7 +73,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/287/200" />
+				<img alt="" src="https://picsum.photos/id/287/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Chenguang W.</h2>
@@ -93,7 +85,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/976/200" />
+				<img alt="" src="https://picsum.photos/id/976/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Dewi</h2>
@@ -105,7 +97,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/44/200" />
+				<img alt="" src="https://picsum.photos/id/44/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Dan</h2>
@@ -117,7 +109,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/14/200" />
+				<img alt="" src="https://picsum.photos/id/14/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Taxi Bali</h2>
@@ -129,7 +121,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/334/200" />
+				<img alt="" src="https://picsum.photos/id/334/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Fabrise</h2>
@@ -141,7 +133,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem lines="none" routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="https://picsum.photos/id/1070/200" />
+				<img alt="" src="https://picsum.photos/id/1070/200" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Gina</h2>
@@ -156,7 +148,7 @@ const ContactList: React.FC = () => (
 		</IonItemDivider>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="//logo.clearbit.com/binance.com" />
+				<img alt="" src="//logo.clearbit.com/binance.com" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Binance</h2>
@@ -168,7 +160,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="//logo.clearbit.com/cash.app" />
+				<img alt="" src="//logo.clearbit.com/cash.app" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>My personals CashApp</h2>
@@ -180,7 +172,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="//logo.clearbit.com/coinbase.com" />
+				<img alt="" src="//logo.clearbit.com/coinbase.com" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Coinbase</h2>
@@ -192,7 +184,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="//logo.clearbit.com/mtgox.com" />
+				<img alt="" src="//logo.clearbit.com/mtgox.com" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>MtGox</h2>
@@ -204,7 +196,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="//logo.clearbit.com/kraken.com" />
+				<img alt="" src="//logo.clearbit.com/kraken.com" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Kraken</h2>
@@ -216,7 +208,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="//logo.clearbit.com/peakshift.com" />
+				<img alt="" src="//logo.clearbit.com/peakshift.com" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>Peak Shift Ltd.</h2>
@@ -228,7 +220,7 @@ const ContactList: React.FC = () => (
 		</IonItem>
 		<IonItem lines="none" routerLink="/contact-detail">
 			<IonAvatar slot="start">
-				<img src="//logo.clearbit.com/wasabiwallet.io" />
+				<img alt="" src="//logo.clearbit.com/wasabiwallet.io" />
 			</IonAvatar>
 			<IonLabel>
 				<h2>zkSnacks</h2>

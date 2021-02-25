@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
 	IonIcon,
 	IonBadge,
@@ -23,17 +23,7 @@ import {
 	IonSearchbar,
 	IonChip,
 } from "@ionic/react";
-import {
-	trash,
-	share,
-	caretForwardCircle,
-	heart,
-	close,
-	personAdd,
-	qrCode,
-	closeCircle,
-	people,
-} from "ionicons/icons";
+import { personAdd, qrCode, people } from "ionicons/icons";
 import "./Tab2.css";
 import ContactList from "../components/ContactList";
 
@@ -49,10 +39,11 @@ const presetOptions: Array<string> = [
 
 const Send: React.FC = () => {
 	const [text, setText] = useState<string>();
-	const [number, setNumber] = useState<number>();
 	const [showActionSheet, setShowActionSheet] = useState(false);
 	const [showModal, setShowModal] = useState(false);
 	const [checked, setChecked] = useState<Array<number>>([]);
+
+	setText("");
 
 	const handleCheck = (option: number) => {
 		if (checked.includes(option)) {
@@ -249,7 +240,7 @@ const Send: React.FC = () => {
 							</IonItemDivider>
 							<IonItem>
 								<IonAvatar slot="start">
-									<img src="//logo.clearbit.com/peakshift.com" />
+									<img alt="" src="//logo.clearbit.com/peakshift.com" />
 								</IonAvatar>
 								<IonLabel>
 									<h2>Peak Shift Ltd.</h2>
@@ -261,7 +252,7 @@ const Send: React.FC = () => {
 							</IonItem>
 							<IonItem>
 								<IonAvatar slot="start">
-									<img src="https://picsum.photos/id/1074/200" />
+									<img alt="" src="https://picsum.photos/id/1074/200" />
 								</IonAvatar>
 								<IonLabel>
 									<h2>nothingmuch</h2>
@@ -273,7 +264,7 @@ const Send: React.FC = () => {
 							</IonItem>
 							<IonItem lines="none">
 								<IonAvatar slot="start">
-									<img src="//logo.clearbit.com/wasabiwallet.io" />
+									<img alt="" src="//logo.clearbit.com/wasabiwallet.io" />
 								</IonAvatar>
 								<IonLabel>
 									<h2>zkSnacks</h2>

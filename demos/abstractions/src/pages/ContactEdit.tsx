@@ -1,57 +1,23 @@
 import React, { useState } from "react";
 import {
-	IonModal,
-	IonListHeader,
 	IonChip,
-	IonCard,
-	IonCardHeader,
-	IonCardSubtitle,
-	IonCardTitle,
-	IonCardContent,
 	IonButton,
 	IonGrid,
 	IonRow,
 	IonCol,
 	IonIcon,
 	IonButtons,
-	IonBackButton,
 	IonContent,
 	IonHeader,
 	IonPage,
-	IonTitle,
 	IonToolbar,
 	IonList,
 	IonItem,
 	IonAvatar,
-	IonBadge,
 	IonLabel,
-	IonItemSliding,
-	IonToggle,
-	IonItemOptions,
-	IonItemOption,
-	IonItemDivider,
 	IonInput,
-	IonRadio,
-	IonCheckbox,
 } from "@ionic/react";
-import {
-	ellipsisVertical,
-	personCircle,
-	search,
-	ellipsisHorizontal,
-	eyeOffOutline,
-	eyeOutline,
-	arrowForwardOutline,
-	arrowDownOutline,
-	pin,
-	wifi,
-	wine,
-	warning,
-	walk,
-	closeCircle,
-	close,
-	heart,
-} from "ionicons/icons";
+import { closeCircle } from "ionicons/icons";
 
 interface IContact {
 	name: string;
@@ -60,8 +26,12 @@ interface IContact {
 }
 
 const Tab3: React.FC = () => {
-	const [text, setText] = useState<string>();
 	const [contact, setContact] = useState<IContact>({
+		name: "",
+		output_descriptors: [],
+		addresses: [],
+	});
+	setContact({
 		name: "nothingmuch",
 		output_descriptors: [],
 		addresses: [],
@@ -116,7 +86,10 @@ const Tab3: React.FC = () => {
 
 							<IonChip outline color="tertiary">
 								<IonAvatar>
-									<img src="https://gravatar.com/avatar/s8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+									<img
+										alt=""
+										src="https://gravatar.com/avatar/s8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+									/>
 								</IonAvatar>
 								<IonLabel>Contact Name</IonLabel>
 								<IonIcon icon={closeCircle} />

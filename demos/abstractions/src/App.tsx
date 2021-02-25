@@ -10,17 +10,7 @@ import {
 	IonTabs,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import {
-	ellipse,
-	square,
-	triangle,
-	people,
-	peopleCircleOutline,
-	repeatOutline,
-	walletOutline,
-	cashOutline,
-	logoBitcoin,
-} from "ionicons/icons";
+import { people, repeatOutline, logoBitcoin } from "ionicons/icons";
 import Tab1 from "./pages/Tab1";
 import Tab2 from "./pages/Tab2";
 import Contacts from "./pages/Contacts";
