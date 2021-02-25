@@ -1,0 +1,93 @@
+<style type="text/css">
+	body {
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	}
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	td,
+	th {
+		border-bottom: 1px solid #eaeaea;
+		padding: 0.5rem;
+		text-align: left;
+	}
+</style>
+
+<h1>Coin Selection</h1>
+<table>
+	<thead>
+		<th width="20%">Observer</th>
+		<th>Select Coins</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td>alice</td>
+			<td>
+				<select multiple>
+					<option disabled selected value>3 btc (3 coins)</option>
+					<optgroup label="Only known to alice">
+						<option value="...">1 btc</option>
+						<option value="...">2 btc</option>
+					</optgroup>
+					<optgroup label="Known by others">
+						<option value="...">bob, charlie (1 btc)</option>
+					</optgroup>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>alice+bob (multisig)</td>
+			<td>
+				<select>
+					<option disabled selected value>1 btc (1 coin)</option>
+					<optgroup label="Only known to alice+bob (multisig)">
+						<option value="..." disabled>none</option>
+					</optgroup>
+					<optgroup label="Known by others">
+						<option value="...">charlie (1 btc)</option>
+					</optgroup>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>bob</td>
+			<td>
+				<select>
+					<option disabled selected value>5 btc (2 coins)</option>
+					<optgroup label="Only known to bob">
+						<option value="...">4 btc</option>
+					</optgroup>
+					<optgroup label="Known by others">
+						<option value="...">alice, charlie (1 btc)</option>
+					</optgroup>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>charlie</td>
+			<td>
+				<select>
+					<option disabled selected value>6 btc (2 coins)</option>
+					<optgroup label="Only known to charlie">
+						<option value="...">5 btc</option>
+					</optgroup>
+					<optgroup label="Known by others">
+						<option value="...">alice, alice+bob, bob (1 btc)</option>
+					</optgroup>
+				</select>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<pre><code>
+1 btc alice
+4 btc charlie
+2 btc alice
+4 btc bob
+5 btc charlie
+1 alice, bob, charlie, alice+bob
+</code></pre>
