@@ -68,7 +68,7 @@ In a Bitcoin wallet, funds are often not held in a single address, but more comm
 
 Likewise, you need to speficy the destination address, or addresses for the transaction. These are callet *outputs*. Should there be more bitcoin in the inputs than are needed for the transaction, a new address will be created in your wallet for the change, often called a *change output*.
 
-A wallet application can either pick the inputs automatically based on the transaction amount, or let you pick the inputs yourself. Picking them manually can be useful for privacy and other reasons commonly requested by advanced users.
+The bitcoin you use in a payment can leak information to the previous entities you have received payments from. Because of this structure, choosing to optimise for privacy, lower transaction fees, or speed are things you need to consider when designing a payment expereince.
 
 ### Transaction fee
 
@@ -120,9 +120,9 @@ Each additional block that is accepted by the network counts as an extra confirm
 
 # Sending bitcoin
 
-Bitcoin wallets don't have a balance in the conventional sense. Instead it keeps track of all the previously received [UTXOs](https://bitcoin.design/guide/glossary/#unspent-transaction-output-utxo). The balance applications usually show is actually a total of those UTXOs controled by the private key that are available for the owner to spend.
+One of the most common actions someone using your application would make is sending bitcoin. This may take place in a private space like their home, or on the busy streets. They may be making a payment to a retailer, sending to a known contact, or moving funds between their wallets.
 
-The UTXO you use in a payment can leak information to previous entities you have received payments from. Because of this structure, choosing to optimise for privacy, lower transaction fees, or speed are things you need to consider when designing a payment expereince.
+Which ever the case there are some things that are standard — 
 
 ## How do you get an address from the person you need to send to?
 The person or entity being paid would generate an address in their wallet. Since addresses are one time use, long, and unreadable, it is not practical for users to manually type or try to memorise. For this reason addresses or Bitcoin URIs are typically represented as a QR Code, or in plain text. This is typically received in text or QR form in some out of band communication method.
