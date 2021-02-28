@@ -64,9 +64,9 @@ Technically, the transaction is data that contains the necessary information to 
 
 ### Input and outputs
 
-In a Bitcoin wallet, funds are often not held in a single address, but more commonly in one address per transaction where you received bitcoin. When you are making a transaction you need to specify which of your addresses should be the source of the funds. If you need to spend more than what a single address holds, you can speficy several. These are called *inputs* to the transaction.
+In a Bitcoin wallet, funds are often not held in a single address, but more commonly in one address per transaction where you received bitcoin. When you are making a transaction you need to specify which of your addresses should be the source of the funds. If you need to spend more than what a single address holds, you can  several. These are called *inputs* to the transaction.
 
-Likewise, you need to speficy the destination address, or addresses for the transaction. These are callet *outputs*. Should there be more bitcoin in the inputs than are needed for the transaction, a new address will be created in your wallet for the change, often called a *change output*.
+Likewise, you need to  the destination address, or addresses for the transaction. These are called *outputs*. Should there be more bitcoin in the inputs than are needed for the transaction, a new address will be created in your wallet for the change, often called a *change output*.
 
 The bitcoin you use in a payment can leak information to the previous entities you have received payments from. Because of this structure, choosing to optimise for privacy, lower transaction fees, or speed are things you need to consider when designing a payment expereince.
 
@@ -78,7 +78,7 @@ Blocks are limited in size and new ones are created on average every 10 minutes.
 
 When submitting a transaction you can optimize for fast confirmation, or lower fee. It is common to give some control of this to the user.
 
-## Transaction life cycle
+## Transaction lifecycle
 
 Lets break the entire payment process of down further.
 
@@ -120,22 +120,28 @@ Each additional block that is accepted by the network counts as an extra confirm
 
 # Sending bitcoin
 
-One of the most common actions someone using your application would make is sending bitcoin. This may take place in a private space like their home, or on the busy streets. They may be making a payment to a retailer, sending to a known contact, or moving funds between their wallets.
+One of the most common actions someone using your application would make is sending bitcoin. This may take place in a private space like their home, or on the busy streets. They may be making a payment to a retailer, sending bitcoin to a known contact, or moving it between their wallets.
 
-Which ever the case there are some things that are standard — 
+What ever the reason for the payment, there are some standard inputs that they would be required to set.
 
 ## How do you get an address from the person you need to send to?
-The person or entity being paid would generate an address in their wallet. Since addresses are one time use, long, and unreadable, it is not practical for users to manually type or try to memorise. For this reason addresses or Bitcoin URIs are typically represented as a QR Code, or in plain text. This is typically received in text or QR form in some out of band communication method.
+The receiver of the payment needs to generates an address in their wallet and share with you. Since addresses are one time use, long, and unreadable it is usually communicated in text or QR Code form. 
 
-You will need to consider what enviroment the application will be used in. If you are paying a vendor at your local market you probably won't have their contact details to exchange an address via chat. So scanning a QR Code from the wallet to get their address would likely make more sense in this situation.
+Addresses can be published on a product checkout page, show on at a terminal for scanning at the physical store or shared in chat.
+
+You will need to consider what enviroment the application will be used in for payments. If you are paying a vendor at your local market you probably won't have their contact details to exchange an address via chat. So scanning a QR Code from the wallet to get their address would likely make more sense in this situation.
 
 Each time you need to send bitcoin, you will need to obtain a new address from whomever you are paying.
 
 ## Inputing the address
 
-The address should be copied or scanned to avoid mistakes, because as we learned the [push payments](#) structrue of bitcoin prevent you from being able to retrieve the funds yourself once sent. You would have to explicitly request the receiver to return the bitcoin, and if its gets accidently sent to an unknown entities address you can consider retriving the bitcoin an impossible task.
+The address should be copied or scanned to avoid mistakes, because as we learned the [push payments](#) structure of bitcoin prevent you from being able to retrieve the funds yourself once sent. You would have to explicitly request the receiver to return the bitcoin, and if its gets accidentally sent to an unknown entities address you can consider retrieving the bitcoin an impossible task.
 
 Mobile bitcoin applications often ask for camera access in order to be able to scan QR Codes. This is an effective way to transfer details required for a payment between two devices. Once the camera detects a valid address in the QR Code, it would auto fill the address if its valid.
+
+Since QR Codes are more suitable to exchange information between devices that are in close proximity to one another, when the only means of exchanging a address is through chat or email the user will need to paste it into the address field.
+
+It's possible to auto Auto-detecting and pasting an address in the clipboard are a what is in the clip
 
 In the event the payer and receiver are not in close proximity, have some contact with one another, for instance if they are using a text based form of communication the address or Bitcoin URI can be copied and pasted into the address field.
 
@@ -157,7 +163,7 @@ In the case the address is not valid, the user should be informed of such and se
 
 ## Inputing the amount to send
 
-Depending on their familliarity with bitcoin, your users may have a preference to transact with a bitcoin denomination as the standard in the application, or another prefered currency. Read more about [Units, symbols and amount display](https://deploy-preview-63--sad-borg-390916.netlify.app/guide/payments/units-and-symbols/).
+Depending on their familiarity with bitcoin, your users may have a preference to transact with a bitcoin denomination as the standard in the application, or another preferred currency. Read more about [Units, symbols and amount display](https://deploy-preview-63--sad-borg-390916.netlify.app/guide/payments/units-and-symbols/).
 
 Allowing the amount to be inputed in different bitcoin denominations, or the user's prefered currency should be readily available.
 
@@ -183,9 +189,9 @@ Fee estimations are largly inaccurate — this is because the fee rate is impact
 
 The fee recomendation in your application can cause senders to end up over paying in fees, or wait long periods of time to get their traansactions confirmed.
 
-#### Selecting the fee rate
+#### Selecting the fee-rate
 
-The application can automaticly estimate a fee and set it for the sender which would prioritse the transaction to be incldued in a block as soon as possible. Since the fee rate may vary if there is high demand for blockspace you can present senders with more fine grained fee controls so they can set the priority of when the transaction is confirmed themselves. 
+The application can automatically estimate a fee and set it for the sender which would prioritise the transaction to be included in a block as soon as possible. Since the fee rate may vary if there is high demand for  you can present senders with more fine grained fee controls so they can set the priority of when the transaction is confirmed themselves. 
 
 Whichever method you use, it is important that the amount that will be paid is communicated clearly. 
 
