@@ -1,0 +1,94 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "Specter.Explorers": {
+            "properties": {
+                "main": {
+                    "type": "string"
+                },
+                "regtest": {
+                    "type": "string"
+                },
+                "signet": {
+                    "type": "string"
+                },
+                "test": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Specter.Rpc": {
+            "properties": {
+                "autodetect": {
+                    "type": "boolean"
+                },
+                "datadir": {
+                    "type": "string"
+                },
+                "host": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "port": {
+                    "type": "string"
+                },
+                "protocol": {
+                    "type": "string"
+                },
+                "user": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "properties": {
+        "alt_rate": {
+            "type": "number"
+        },
+        "alt_symbol": {
+            "type": "string"
+        },
+        "auth": {
+            "type": "string"
+        },
+        "explorers": {
+            "$ref": "#/definitions/Specter.Explorers"
+        },
+        "hwi_bridge_url": {
+            "type": "string"
+        },
+        "only_tor": {
+            "type": "boolean"
+        },
+        "price_check": {
+            "type": "boolean"
+        },
+        "price_provider": {
+            "type": "string"
+        },
+        "proxy_url": {
+            "type": "string"
+        },
+        "rpc": {
+            "$ref": "#/definitions/Specter.Rpc"
+        },
+        "tor_control_port": {
+            "type": "string"
+        },
+        "uid": {
+            "type": "string"
+        },
+        "unit": {
+            "type": "string"
+        },
+        "validate_merkle_proofs": {
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+
