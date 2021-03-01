@@ -51,7 +51,7 @@ A `hodl invoice` works in the exact way that a standard invoice does except that
 
 With a `hodl invoice` there is also an addiitonal option where the recipient **_does not_** have to be the same person _creating the payment hash for a given invoice_ they will generate (as is usually the case). They can also receive a payment hash from another party to create an invoice again where that other party would be the one that will hold the secret (preimage) for the hash until some condition is met and the secret is revealed which allows the invoice to be successfully settled.
 
-#### Scenarios ([source](https://wiki.ion.radar.tech/tech/research/hodl-invoice))
+#### Scenarios ([source](https://wiki.ion.radar.tech/tech/research/hodl-invoice) & [more examples](https://github.com/lightningnetwork/lnd/pull/2022))
 
 To help expose some of how a hodl invoice works, the following are a set of hypothetical real-world scenarios that are created by using different combinations of the elements of a hodl invoice in different ways.
 
@@ -99,7 +99,9 @@ _(All other examples below, trust not to reveal secret preimage to any other rou
     _**Caveat:** if a path participant sits on two routes, there's a risk they can take the revealed preimage from payment of one invoice and collect settlement on the second invoice before the recipient is able to settle their hodl invoice_
 
 #### Limitations
-...
+
+- Limit of 483 open invoices can be routed at any given time by a node (something about on-chain transaction size limit? https://bitcoin.stackexchange.com/a/91169)
+
 
 
 ### Keysend (no invoice)
@@ -187,25 +189,12 @@ Described by:
 - [mailing list description](https://lists.linuxfoundation.org/pipermail/lightning-dev/2018-February/000993.html)
 - [Lightning Spec BOLT-04 PR](https://github.com/lightningnetwork/lightning-rfc/pull/658)
 
----
-
-### 2. Notes on `hodl invoices`
 
 
-- Pretty much a normal send except the receiver holds the preimage and settles later
-    - The payment is split into a "send" step (by the sender) and an "settle" step (by the receiver)
-    - Limit of 483 open invoices can be routed at any given time by a node (something about on-chain transaction size limit? https://bitcoin.stackexchange.com/a/91169)
-
-- Collection of different real-world scenarios here
-    - https://github.com/lightningnetwork/lnd/pull/2022
-    - https://wiki.ion.radar.tech/tech/research/hodl-invoice
-
-
-- Submarine swap variant
-    - https://wiki.ion.radar.tech/tech/research/hodl-invoice#submarine-swap-variation
 
 
 ---
 ### 3. Notes on `submarine swaps` (automated Lightning Pool etc.)
 
-- ...
+- Submarine swap variant of hodl invoices
+    - https://wiki.ion.radar.tech/tech/research/hodl-invoice#submarine-swap-variation
