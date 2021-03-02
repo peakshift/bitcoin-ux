@@ -80,17 +80,7 @@ When submitting a transaction you can optimize for fast confirmation, or lower f
 
 ## Transaction lifecycle
 
-Lets break the entire payment process of down further.
-
-// Daniel
-Create
-Sign
-Broadcast
-Validate
-Propagate
-Verify
-Record
-//
+Let's break the entire payment process of down further.
 
 ### 1. Reason...
 
@@ -98,15 +88,31 @@ Initially somebody wants to send money to another person for some reason. It cou
 
 ### 2. Invoice creation
 
-The recipient creates an invoice in their wallet application and sends it to the sender. (Mention the term "address" //Alexa)
+The recipient creates an address in their wallet application and sends it to the sender.
 
 ### 3. Transaction creation
 
+User enters the amount, the reccipeints address and sometimes sets the fee themselves — this is the required information a wallet application needs to construct a transaction.
+
+### 4. Transaction signing
+
 The sender receives the invoice, creates a transaction, and broadcasts it to the bitcoin network.
 
-### 4. Transaction processing
+### 5. Transaction broadcast
+
+… 
+
+### 6. Transaction validation
+
+...
+
+### 7. Transaction propagation
 
 The transaction is in the mempool ("?" //Alexa). The sender sees the transaction in their wallet as unconfirmed.
+
+### 8. Transaction verification
+
+...
 
 ### 5. First transaction confirmation
 
@@ -120,40 +126,40 @@ Each additional block that is accepted by the network counts as an extra confirm
 
 # Sending bitcoin
 
-One of the most common actions someone using your application would make is sending bitcoin. This may take place in a private space like their home, or on the busy streets. They may be making a payment to a retailer, sending bitcoin to a known contact, or moving it between their wallets.
+One of the most common actions someone using your application would make is sending bitcoin. They may be making a payment to a retailer, sending bitcoin to a known contact, or moving it between their own wallets. Whomever the bitcoin is getting sent to, there are some specific considerations that an interface need to accommodate.
 
-What ever the reason for the payment, there are some standard inputs that they would be required to set.
+mention 
 
-## How do you get an address from the person you need to send to?
-The receiver of the payment needs to generates an address in their wallet and share with you. Since addresses are one time use, long, and unreadable it is usually communicated in text or QR Code form. 
+- Day-to-day spending [#](https://bitcoin.design/guide/getting-started/personal-finance/#day-to-day-spending)
+  - From a portability perspective, many of these payments happen outside of our homes. This makes mobile wallet applications ideally suited, which allow us to take advantage of the unique benefits of smartphones
+  - Convenient camera access allows for quick scanning of QR payment code and NFC support ([Near-Field Communication](https://en.wikipedia.org/wiki/Near-field_communication)) lets us pay just by holding our phone next to a card reader
 
-Addresses can be published on a product checkout page, show on at a terminal for scanning at the physical store or shared in chat.
-
-You will need to consider what enviroment the application will be used in for payments. If you are paying a vendor at your local market you probably won't have their contact details to exchange an address via chat. So scanning a QR Code from the wallet to get their address would likely make more sense in this situation.
-
-Each time you need to send bitcoin, you will need to obtain a new address from whomever you are paying.
+## Get an address from the receiver
+The first requirement of sending bitcoin is knowing the desintation to send the funds to. The receiver of the payment needs to generate an address in their wallet and share with the sender. Since addresses are one time use, long, and unreadable it is usually communicated in plain text as an [address](https://bitcoin.design/guide/glossary/#address), or [payment link](https://bitcoin.design/guide/foundations/wallet-interoperability/#payment-links) which can be copy and pasted. It can also be presetned as a scannable [QR Code](https://bitcoin.design/guide/foundations/wallet-interoperability/#qr-codes) which is typical when in close proximity and the two parites do not have another communication method to exchange the address.
 
 ## Inputing the address
 
-The address should be copied or scanned to avoid mistakes, because as we learned the [push payments](#) structure of bitcoin prevent you from being able to retrieve the funds yourself once sent. You would have to explicitly request the receiver to return the bitcoin, and if its gets accidentally sent to an unknown entities address you can consider retrieving the bitcoin an impossible task.
+The address should be copied or scanned to avoid mistakes, because as we learned the [push payments](#) structure of bitcoin prevent you from being able to retrieve the funds yourself once sent. If address is not valid, the user should be informed of such and sending should be disabled. You would have to explicitly request the receiver to return the bitcoin, and if its gets accidentally sent to an unknown entities address you can consider retrieving the bitcoin an impossible task.
+
+#### QR Code
 
 Mobile bitcoin applications often ask for camera access in order to be able to scan QR Codes. This is an effective way to transfer details required for a payment between two devices. Once the camera detects a valid address in the QR Code, it would auto fill the address if its valid.
 
-Since QR Codes are more suitable to exchange information between devices that are in close proximity to one another, when the only means of exchanging a address is through chat or email the user will need to paste it into the address field.
+#### Copy Paste
 
-It's possible to auto Auto-detecting and pasting an address in the clipboard are a what is in the clip
+Since QR Codes are more suitable to exchange information between devices that are in close proximity to one another, when the only means of exchanging an address is through chat or email the user will need to paste it into the address field.
 
-In the event the payer and receiver are not in close proximity, have some contact with one another, for instance if they are using a text based form of communication the address or Bitcoin URI can be copied and pasted into the address field.
-
-In the case the address is not valid, the user should be informed of such and sending should be disabled.
+:::info
+Once the user switches to your wallet application from the one they copied the address or payment link from, it's possible to auto-detect the contents of the devices clipboard then paste into the address field. While some users may find this convienent, others may prefer to disable this so you should consider giving them that option.
+:::
 
 ### Dos
 
-- Inform the sender if the address is invalid while disabling the send action.
+- Indicate clearly if the address is invalid
 
 ### Don'ts
 
-- 
+- Allow a transaction to be sent if the address is invalid
 
 [INSERT PROTOTYPE OR ANIMATION: SCANNING TO INPUT ADDRESS]
 
@@ -163,13 +169,17 @@ In the case the address is not valid, the user should be informed of such and se
 
 ## Inputing the amount to send
 
-Depending on their familiarity with bitcoin, your users may have a preference to transact with a bitcoin denomination as the standard in the application, or another preferred currency. Read more about [Units, symbols and amount display](https://deploy-preview-63--sad-borg-390916.netlify.app/guide/payments/units-and-symbols/).
+- bitcoin — standard
+- sats — deeper knowledge about bitcoin denominations
+- local currency — more familiar, if something is priced in their local currency, typical for a purchase
 
-Allowing the amount to be inputed in different bitcoin denominations, or the user's prefered currency should be readily available.
+Payment links and QR Codes can contain an amount —when they do, once scanned, or pasted
 
-There may be cases where a specific amount of bitcoin needs to be sent for a payment — in such scenario having the option to enter a bitcoin or satoshi amount would be needed. 
+Depending on their familiarity with bitcoin, your users may have a preference to transact with a bitcoin denomination as the standard in the application, or another preferred currency.
 
-Another scenario is that the user wants to send an amount in their local or other currency — and have that converted to bitcoin by the application.
+Allowing the amount to be inputed in different bitcoin denominations, or the user's preferred currency should be readily available.
+
+Read more about changing units contextually on [Units, symbols and amount display](https://deploy-preview-63--sad-borg-390916.netlify.app/guide/payments/units-and-symbols/).
 
 ### Dos
 
@@ -251,7 +261,7 @@ When a payment request is created it should be stored until it is fulfilled so t
 
 # Transaction privacy
 
-
+- It becomes more important to quickly execute a transaction than protecting the money involved from as many attack vectors as possible
 
 # Managing funds
 
@@ -260,6 +270,11 @@ Since there is no registry for merchants and identities, payment data tends is l
 We will explore some of the components required for managing Bitcoin within the application.
 
 ## Labeling
+
+## Transaction History
+
+- Showing UTXOs
+- Showing Transactions containing the UTXOs
 
 # Case Studies / Sending bitcoin
 
