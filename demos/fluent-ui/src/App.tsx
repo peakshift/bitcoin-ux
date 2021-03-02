@@ -1,5 +1,6 @@
 import React from "react";
 import { Stack, Text, Link, FontWeights, IStackTokens } from "@fluentui/react";
+import SideNav from "./organisms/Menu";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -22,6 +23,8 @@ export const App: React.FunctionComponent = () => {
 			}}
 			tokens={stackTokens}
 		>
+			<SideNav />
+
 			<img className="App-logo" src={logo} alt="logo" />
 			<Text variant="xxLarge" styles={boldStyle}>
 				Welcome to Your Fluent UI App
