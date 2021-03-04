@@ -49,14 +49,14 @@ const App: React.FC = () => (
 					<Route path="/contact-detail" component={Contact} exact={true} />
 					<Route path="/contact-edit" component={ContactEdit} exact={true} />
 					<Route path="/contacts" component={Contacts} exact={true} />
-					<Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+					<Route path="/" render={() => <Redirect to="/send" />} exact={true} />
 				</IonRouterOutlet>
 				<IonTabBar slot="bottom">
 					<IonTabButton tab="tab1" href="/tab1">
 						<IonIcon icon={logoBitcoin} />
 						<IonLabel>Money</IonLabel>
 					</IonTabButton>
-					<IonTabButton tab="tab2" href="/tab2">
+					<IonTabButton tab="send" href="/send">
 						<IonIcon icon={repeatOutline} />
 						<IonLabel>Payments</IonLabel>
 					</IonTabButton>

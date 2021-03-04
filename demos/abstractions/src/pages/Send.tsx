@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
 	IonIcon,
 	IonBadge,
@@ -43,7 +43,9 @@ const Send: React.FC = () => {
 	const [showModal, setShowModal] = useState(false);
 	const [checked, setChecked] = useState<Array<number>>([]);
 
-	setText("");
+	useEffect(() => {
+		setText("");
+	}, []);
 
 	const handleCheck = (option: number) => {
 		if (checked.includes(option)) {
