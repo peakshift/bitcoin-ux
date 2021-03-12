@@ -2,25 +2,17 @@
 
 There are two parts to this plan. Teaching, and researching cutting edge UX patterns that can be implemented by wallets in the ecosystem.
 
-## Education
+## Bitcoin Design Community & Guide
 
-### Coin Selection & Label Management
+Helping the Guide and Community understand bitcoin payment and privacy protocols as well as serving as a technical + design bridge.
 
-Creating interactive tools, holding workshops, and creating video content to educate designers and developers about coin selection, batched transactions, and privacy implication of on-chain payments.
-
-- https://utxo.tools/
-
-### Bitcoin Design Community & Guide
-
-Helping the Guide and Community understand bitcoin payment and privacy protocols as well as serving as a technical + design bridge between projects like BDK, LDK, LNURL, and others.
-
-- Guide / Payments / Incorporating this [existing research](https://github.com/peakshift/bitcoin-ux) as v2 of the payments content.
-- Guide / Helping introduce lightning network into the bitcoin design guide.
-- Collaboration / Understanding the capabilities of BDK + LDK and finding ways to communicate that back to places like the Bitcoin Design Community, Guide, Wallet UI Kit, and Photon.
+- Improving content relating to privacy and payments in the bitcoin design guide.
 
 ## Design Research
 
 Continuing from the 2020 research on discovering ways to create more [consistent and famillair user experience](https://github.com/peakshift/bitcoin-ux/blob/master/consistent-payment-flow.md) between lightning and on-chain. Little explorations were done on [subscription style payments](https://github.com/BitcoinDesign/Guide/discussions/122), but a lot of foundational UX abstractions that can serve purposess beyond that origional gaol have been discovered and has received favorable responses in the developer forums they have been presented.
+
+Understanding the capabilities of BDK + LDK and finding ways to connect it to user experience. Then communicate that back to places like the Bitcoin Design Community, Guide, Wallet UI Kit, and Photon.
 
 ### [Bitcoin Design Abstractions & Advanced UX Patterns](https://docs.google.com/presentation/d/1qIhzGTTFxwRZlvu33Fuwkv70YtJoj-tMHNmS_dt1n6M/edit#slide=id.gc6fa3c898_0_28)
 
