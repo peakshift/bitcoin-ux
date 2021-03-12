@@ -10,7 +10,7 @@ Helping the Guide and Community understand bitcoin payment and privacy protocols
 
 ## Design Research
 
-Continuing from the 2020 research on discovering ways to create more [consistent and famillair user experience](https://github.com/peakshift/bitcoin-ux/blob/master/consistent-payment-flow.md) between lightning and on-chain. Little explorations were done on [subscription style payments](https://github.com/BitcoinDesign/Guide/discussions/122), but a lot of foundational UX abstractions that can serve purposess beyond that origional gaol have been discovered and has received favorable responses in the developer forums they have been presented.
+Continuing from the 2020 research on discovering ways to create more [consistent and familiar user experience](https://github.com/peakshift/bitcoin-ux/blob/master/consistent-payment-flow.md) between lightning and on-chain.
 
 Understanding the capabilities of BDK + LDK and finding ways to connect it to user experience. Then communicate that back to places like the Bitcoin Design Community, Guide, Wallet UI Kit, and Photon.
 
