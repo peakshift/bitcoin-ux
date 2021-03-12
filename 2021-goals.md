@@ -4,8 +4,7 @@ There are two parts to this plan. Teaching, and researching cutting edge UX patt
 
 ## Bitcoin Design Community & Guide
 
-Helping the Guide and Community understand bitcoin payment and privacy protocols as well as serving as a technical + design bridge.
-
+- Helping the Guide and Community understand bitcoin payment and privacy protocols as well as serving as a technical + design bridge.
 - Improving content relating to privacy and payments in the bitcoin design guide.
 
 ## Design Research
