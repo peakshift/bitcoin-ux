@@ -9,9 +9,9 @@ There are two parts to this plan. Teaching, and researching cutting edge UX patt
 
 ## Design Research
 
-Continuing from the 2020 research on discovering ways to create more [consistent and familiar user experience](https://github.com/peakshift/bitcoin-ux/blob/master/consistent-payment-flow.md) between lightning and on-chain.
+Continuing from the 2020 research on discovering ways to create more [consistent and familiar user experience](https://github.com/peakshift/bitcoin-ux/blob/master/consistent-payment-flow.md) between lightning and on-chain. Next steps are to understand the capabilities of BDK + LDK and finding ways to connect it to UX patterns. Then communicate that output back to places like the Bitcoin Design Community, Guide, Wallet UI Kit, and Photon.
 
-Understanding the capabilities of BDK + LDK and finding ways to connect it to user experience. Then communicate that back to places like the Bitcoin Design Community, Guide, Wallet UI Kit, and Photon.
+The vehicle for this would be the following:
 
 ### [Bitcoin Design Abstractions & Advanced UX Patterns](https://docs.google.com/presentation/d/1qIhzGTTFxwRZlvu33Fuwkv70YtJoj-tMHNmS_dt1n6M/edit#slide=id.gc6fa3c898_0_28)
 
