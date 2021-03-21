@@ -1,9 +1,16 @@
 # Design Language
 
-> A **design language** or **design vocabulary** is an overarching scheme or style that guides the design of a complement of products or architectural settings.
+> A **design language** or **design vocabulary** is an overarching scheme or style that guides the design of a complement of products or architectural settings.[^4]
 
 - Why does bitcoin need a design language?
 - Guidelines not strict rules.
+- This collection of abstractions form a language.
+
+#### A Pattern Language: Towns, Buildings, Construction
+
+- Patterns live in a context.
+- Spreading means to provide inspiration and identify problems and solutions.
+- Making things recognisable.
 
 #### TheUXConf 2020 | Design Language Systems | Hayley Hughes | Shopify[^1]
 
@@ -58,4 +65,5 @@ Spending funds
 
 [2]: https://www.youtube.com/watch?v=XpJdZrviSuw	"What Is Abstraction?"
 [3]: https://uxdesign.cc/ux-ui-analysis-of-currency-design-fce69fc569f8	"UX/UI analysis of currency design"
+[4]: https://en.wikipedia.org/wiki/Design_language	"Wikipedia — Design language"
 
