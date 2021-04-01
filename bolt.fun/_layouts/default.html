@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="{% if page.path contains 'guide' %}sidebar{% endif %}">
+
+    {%- include svgs.html -%}
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+
+      {% if page.url == '/home' %}
+      <div class="hero" style="background-image: url(/assets/images/home/hero.png);">
+        <div class="main">
+          <h1 class="page-heading">
+            Design Bitcoin <br>for Everyone
+          </h1>
+          <h3>
+            Open-source design for bitcoin products.
+          </h3>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="page-content-wrapper">
+
+        {%- if page.path contains 'guide' -%}
+        <div class="side-bar">
+          <nav role="navigation" aria-label="Main" id="secondary-nav" class="secondary-nav">
+              {% include secondary-nav.html %}
+          </nav>
+        </div>
+        {%- endif -%}
+
+        <div class="main{% if page.path contains 'guide' %} sidebar{% endif %}{% if page.main_classes %} {{ page.main_classes }}{% endif %}" id="top">
+
+          {{ content }}
+
+        </div>
+
+      </div>
+
+
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
