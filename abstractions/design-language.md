@@ -14,7 +14,7 @@
 
 #### TheUXConf 2020 | Design Language Systems | Hayley Hughes | Shopify[^1]
 
-- Aim for unity not uniformity.
+- Aim for unity not uniformity**
 - Strive for unity — Eliot Noyes, Described by Gordon Bruce
   - "Unitiy is a family of ideas, that are held together by execlence…"
   - "Uniformity being more about following a consistent style like being a miliary branch…"
@@ -38,6 +38,11 @@
   - Simplify a process.
   - Automate the steps in the background.
   - User is only concerned about the result.
+
+#### Consider our word choices
+
+- Language that you use to describe something paints a picture and can lead to more confusion. Especially when you have to unlearn some concepts.
+- Is this going to add to the confusion in understanding bitcoin?
 
 ## Case Study
 
