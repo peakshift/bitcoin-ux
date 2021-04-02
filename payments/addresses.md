@@ -13,11 +13,11 @@ Below is a rough outline to get you going.
 
 Currently there are 3 address types which are available for use on bitcoin.
 
-| Version | Name          | Example  |
-| ------- | ------------- | -------- |
-| 3       | Native Segwit | `bc1...` |
-| 2       | Segwit        | `3...`   |
-| 1       | Legacy        | `1...`   |
+| Version | Name          | Example  |                              |
+| ------- | ------------- | -------- | ---------------------------- |
+| 3       | Native Segwit | `bc1...` |                              |
+| 2       | Segwit        | `3...`   |                              |
+| 1       | Legacy        | `1...`   | Legacy bitcoin address type. |
 
 ### Address Display
 
@@ -28,7 +28,20 @@ Currently there are 3 address types which are available for use on bitcoin.
 ### Address Input
 - ...
 
+### Compatability
+
+- What happens when bech32 addresses are entered in wallets that use legacy address?
+- What happens when legacy addresses are inputed in native segwit wallets?
+
+### Dos
+
+- Show the whole address if possible to help the sender visually verify it is correct
+- If space is a constraint, truncate the address in the middle so that both the beginning and end are visible
+
+### Don'ts
+
 ### Bonus: Consider Taproot
+
 Taproot introduces a 4th address type to bitcoin.
 
 ### REF
