@@ -1,17 +1,17 @@
 ---
 layout: guide
 nav_order: 3
-title: Proposed Site Map
-secondary_nav_title: Proposed Site Map
+title: Site Plan
+secondary_nav_title: Site Plan
 description:
-permalink: /site-map/
+permalink: /site-plan/
 main_nav: true
 secondary_nav: true
 main_classes: -no-top-padding
 
 ---
 
-# Proposed Site Map
+# Site Plan
 
 The following is a high-level structure of how we would like to see this mini-site evolve. It gives some idea of our research plans and progress with that research.
 
@@ -21,7 +21,7 @@ The following is a high-level structure of how we would like to see this mini-si
 
   _Introduce the idea behind bolt.fun and give high-level overview of content contained_
 
-    - **Invoices**
+    - [**Invoices**](/guide/invoices)
 
       _Introduce basic concept of what a standard invoice is and how it works_
 
@@ -33,17 +33,17 @@ The following is a high-level structure of how we would like to see this mini-si
 
             - tlv field
 
-        - Variations of invoices
+        - [Variations of invoices _(to populate...)_](/guide/invoices/variations/)
 
-            - The HODL Invoice
+            - [The HODL Invoice](/guide/invoices/variations/hodl-invoice)
 
-            - Keysend
+            - [Keysend](/guide/invoices/variations/keysend)
 
-            - Multi-part Payments
+            - [Multi-part Payments](/guide/invoices/variations/mpp)
 
-            - Submarine swaps
+            - [Submarine swaps](/guide/invoices/variations/submarine-swap)
 
-            - Lightning Offers
+            - [Lightning Offers](/guide/invoices/variations/lightning-offers)
 
     - **Channel Management**
 
