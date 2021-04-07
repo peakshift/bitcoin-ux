@@ -37,13 +37,32 @@
 
   #### Constraints
 
+  ##### Mobile
+
   - This can potentially serve as a contacts identifier
   - On ios Tor can only run for 20 seconds in the background if the app is closed.
   - The user has to keep the app open.
 
+  ##### General
+
+  - May need a rendevous server
+  - Incentivisation
+
+  
+
   ## 2. Keysend
 
   - see bolt.fun/lightning/invoices/keysend
+
+  #### Constraints
+
+  - Is not metadata resistant
+
+  
+
+  ## 3. Cwtch
+
+  https://git.openprivacy.ca/cwtch.im/cwtch
 
   
 
