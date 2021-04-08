@@ -12,7 +12,7 @@ This page should cover what to do when receiving bitcoin, how to share and copy 
 
 -->
 
-Every payment starts with the receiver generating an address. When receieving bitcoin there are typically two critical parts that need to be communicated: the address, and also often the amount.
+Every payment starts with the receiver generating an address. When receieving bitcoin there are typically two critical parts that need to be communicated though, the address, and amount.
 
 Properties of a payment request
 - Address (required)
@@ -20,8 +20,18 @@ Properties of a payment request
 - Contact/Observer (label who knows about the coin)
 - Memo (what is the purpose)
 
+---
+
+**Payment Requests** hold the information a wallet requires to make a bitcoin payment. Whether on-chain or lightning, a payment request does not represent an account. Instead, think of it as an invoice, and ideally, recipients should only use payment requests once.
+
+Whether you are making an On-chain or Lightning Payment, the user flow is typically the same.The receiver generates a payment request, shares it with the payer via some out-of-band method (QR code, text message, etc.), then the payer approves the payment in their wallet.
+
+At the core, they contain the destination (address or invoice) and other pieces of data required to identify who and what is being paid for, like the amount, payer’s name, and memo.
+
 ## Payment Requests / Addresses
+
 Do we need to consider different types of addresses?
+
 - Example Muun, default to bech32 (v3 addresss) but allowing to fall back to legacy address.
 - Describe types of secure way to send addresses when you are not in the same physical location.
 - Difference between payment request and invoice / an addresss is not a payment requesst but it is a good way to describe this to a user.
@@ -34,7 +44,18 @@ There are different types of Bitcoin addresses. This can have implications for c
 
 There is no forced limit on how many times you can use an address, but it is critical for your privacy to use it only once per transaction. You should generate a new one everytime you need to receive some bitcoin, even if it's from an already known sender. Read more on addresss reuse and it's privacy implications in Transaction privacy.
 
+---
+
+On-chain the core of a payment request is an address. While not strictly enforced, you should recommend users only to use them once as all transactions are public. By receiving multiple payments to a single address leaks more information about the users’ funds in future transactions.
+
+It’s also possible to have an online service generating a Payment Request on-demand, for instance, online shops that accept bitcoin. They usually have a hot wallet (see glossary), which can generate payment requests as needed for customers at checkout.
+
+There is no forced limit, but you should only send a payment request to one payer to safeguard your privacy, as using payment requests with multiple payers will expose your other funds to them. You should also note that on-chain payment requests can have numerous payments made to them, while bitcoin Lightning Payment requests only accept a single payment, which must be paid in full.
+
+---
+
 ### Dos
+
 - ...
 
 ### Don'ts
@@ -57,19 +78,6 @@ Allowing the user to share in some out of band method.
 
 ### Don'ts
 - ...
-
-:::danger
-## Labeling and storing addressses and showing the payment status (excluded from v1)
-- contact / observer
-- memo
-- keep track of things for the futrue
-    - presets
-- attaching receipts
-- refernce perssonal finance apps
-- reference to managing funds + wallet ui kit spending reports.
-
-![](https://i.imgur.com/EMBLfZb.png)
-:::
 
 ## Notifications
 - Types of statuses

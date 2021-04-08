@@ -9,6 +9,12 @@ This is a good first issue for the foundations page, relating to bitcoin address
 
 Below is a rough outline to get you going.
 
+---
+
+Most bitcoin wallets these days typically store a 12/24 word seed phrase that is able to generate billions of accounts which each further contain billions of address and their private keys. In the past, with a basic wallet, you would generate pairs of private keys and public keys independently each time you wanted to receive some bitcoin.
+
+[INSERT GRAPHIC]
+
 ### Address Types
 
 Currently there are 3 address types which are available for use on bitcoin.
@@ -61,3 +67,4 @@ Taproot introduces a 4th address type to bitcoin.
 - EasyPaysy
 - BNS
 - Output Descriptors
+
