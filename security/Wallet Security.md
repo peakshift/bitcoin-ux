@@ -2,7 +2,7 @@
 
 ## Intro
 
-Wallet security is a term that is used to describe the mechanisms, processes or actions that ensure security of users wallet against physical and digital attackers. This information needs to be properly secured because if they fall into the wrong hands, all your bitcoin could be stolen.
+Wallet security is a term that is used to describe the mechanisms, processes or actions that ensure security of sensitive information contained in a bitcoin wallet against physical and digital attackers. This information needs to be properly secured because if they fall into the wrong hands, the funds could be stolen or the wallet owners' privacy compromised.
 
 This chapter focuses therefore on information security in the general sense. It looks at the importance, existing mechanisms and also best practices that improve and ensure security in wallets. It also considers the roles designers play in ensuring this security through design.
 
