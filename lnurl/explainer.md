@@ -35,6 +35,7 @@ The ***LNURL-pay flow*** automates the first step and combines it with the secon
 - LN Invoice
 
 ### Steps
+_[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md) | [Flow docs](https://xn--57h.bigsun.xyz/lnurl-pay-flow.txt)_
 1. Using an LNURL-enabled LN Wallet, **payer** requests an LN invoice with certain parameters (description, amount etc.) from a **recipient** by pinging the recipient's endpoint with the query parameters. This can be currently done by simply scanning a QR code representation of a bech32-encoded endpoint
 1. The **recipient** receives the request and generates an LN invoice against these parameters
 1. The **recipient** sends the LN invoice back to the **payer** via a response of some type (http response? separate endpoint call?)
@@ -60,7 +61,7 @@ The ***LNURL-pay flow*** automates the first step and combines it with the secon
         ]
     }
 
-    // An endpoint is setup to generate a response with the 'params' send along as well
+    // An endpoint is setup to generate a response which will include the 'params'
     "https://lnurl-toolbox.degreesofzero.com/u?q=7fc8736ea7340c211ccb9a7bc0a6c5280456ac319ae4c2afc09b24d37bdd489b"
 
     // Endpoint gets bech32 encoded
@@ -142,6 +143,7 @@ The ***LNURL-withdraw flow*** standardises the communication of this LN invoice 
 - LN Invoice
 
 ### Steps
+_[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-withdraw.md) | [Flow docs](https://xn--57h.bigsun.xyz/lnurl-withdraw-flow.txt)_
 1. Using an LNURL-enabled LN Wallet, **recipient** requests that they would like to intiate a payment from the **payer** by pinging the payer's endpoint. This can be currently done by simply scanning a QR code representation of a bech32-encoded endpoint
 1. The **payer** receives the request and responds with:
     - a callback url that an LN-invoice can be sent to for payment
@@ -150,6 +152,79 @@ The ***LNURL-withdraw flow*** standardises the communication of this LN invoice 
 1. The **recipient** creates an LN invoice with the amount between min and max and then sends it back to the payer along with the secret `k1`
 1. The **payer** responds to the request and then attempts payment of the LN invoice
 
+### An Example Flow
+
+1. **`Payer-Server`: Generate a unique LNURL endpoint**
+
+    The first step is for the **payer** to setup and encode a unique LNURL endpoint for the user.
+
+    ```js
+    // The params for the endpoint are determined
+    var params = {
+        "minWithdrawable": 10000,
+        "maxWithdrawable": 20000,
+        "defaultDescription": "lnurl-toolbox: withdrawRequest"
+    }
+
+    // An endpoint is setup to generate a response which will include the 'params'
+    "https://lnurl-toolbox.degreesofzero.com/u?q=a7dd031e0506e8da6da3cef92970fab4d61f099051b4941e8a2ce9d338963aad"
+
+    // Endpoint gets bech32 encoded
+    "lnurl1dp68gurn8ghj7mrww4exctt5dahkccn00qhxget8wfjk2um0veax2un09e3k7mf0w5lhz0tpxajxgvpnx9jnqdfsxejnserpxejxzvmrv4nrjv3exucxvctzx3jrvvtxxqunjvp4x93rgwf5x9jnscfjvdjnjepnxvurjd3nv9skg4e9eg2"
+    ```
+
+1. **`User`: Scan the LNURL QR Code (or copy-paste the LNURL bech32 string)**
+
+    The user opens an LNURL-enabled wallet and scans or pastes the LNURL invoice. The wallet then calls the endpoint and receives a response with parameters required to be filled into an LN invoice by the **Payer-Server**. The response also contains a secret `k1` that the **user's wallet** must also send along in the subsequent withdrawal request later on.
+
+    ```sh
+    # Wallet decodes the LNURL invoice and sends a GET request to decoded url
+    GET https://lnurl-toolbox.degreesofzero.com/u?q=a7dd031e0506e8da6da3cef92970fab4d61f099051b4941e8a2ce9d338963aad
+    ```
+
+    ```js
+    // Wallet receives a response
+    {
+        "minWithdrawable":10000,
+        "maxWithdrawable":20000,
+        "defaultDescription":"lnurl-toolbox: withdrawRequest",
+        "callback":"https://lnurl-toolbox.degreesofzero.com/u",
+        "k1":"a7dd031e0506e8da6da3cef92970fab4d61f099051b4941e8a2ce9d338963aad",
+        "tag":"withdrawRequest"
+    }
+    ```
+
+1. **`User`: Enter amount and confirm withdrawal via in-wallet payment dialog**
+
+    The wallet should present a dialog at this point where the user can enter an amount (constrained to a given valid range).
+
+1. **`User-Wallet`: Generate LN invoice to send in request**
+
+    The user's wallet uses the amount from the user input to generate a valid LN invoice in the traditional way internally.
+
+    ```
+    lnbc150n1ps875y7pp5jv886ulk50nt0dm94sgr6q7zquv3qv5h8dnxkvn022fhtlp8x40sdqlf38925jv94mkjargv3exzaeqw3jhxaqcqzpgxqyz5vqsp5w33wl0jwkmrjqjkptz05c3rlwumgzt0gr2z2vg5pg6ctcdj4426q9qyyssqdrsph679ra7vuk5exkemtjhx0f3ee3xk2nf7egj0dapn5erwzjr404x0z6580c4wrgxnnwv8kcgwwc0z396rmnk4u35xms7temlpxvsqstsqn9
+    ```
+
+1. **`User-Wallet`: Sends withdrawal details to Recipient-Server**
+
+    The wallet adds the generated LN invoice and the original secret `k1` to a request object and then calls the callback url with this object.
+
+    ```sh
+    GET https://lnurl-toolbox.degreesofzero.com/u?k1=a7dd031e0506e8da6da3cef92970fab4d61f099051b4941e8a2ce9d338963aad&pr=lnbc150n1ps875y7pp5jv886ulk50nt0dm94sgr6q7zquv3qv5h8dnxkvn022fhtlp8x40sdqlf38925jv94mkjargv3exzaeqw3jhxaqcqzpgxqyz5vqsp5w33wl0jwkmrjqjkptz05c3rlwumgzt0gr2z2vg5pg6ctcdj4426q9qyyssqdrsph679ra7vuk5exkemtjhx0f3ee3xk2nf7egj0dapn5erwzjr404x0z6580c4wrgxnnwv8kcgwwc0z396rmnk4u35xms7temlpxvsqstsqn9
+
+    ```
+
+1. **`Payer-Server`: Receive request, verify, pay**
+
+    The payer server decodes the received LN invoice and verifies the amount and validity of the invoice against the original request sent to the user.
+
+    The wallet then responds with an appropriate message once the request is verified and then it attempts to pay the LN invoice.
+
+    ```js
+    // Response sent back user
+    {"status":"OK"}
+    ```
 
 ## LNURL-channel Flow
 
