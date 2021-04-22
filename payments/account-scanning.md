@@ -2,7 +2,9 @@
 
 ## Intro
 
-Imagine a situation where you get a new wallet and you need to recover your previous wallet bitcoin balance? This is where account scanning comes in. ***Account scanning***  refers to the process whereby a wallet scans through a user’s account in search of payment requests with transactions, to sum the user’s bitcoin balance.
+***Account scanning***  refers to the process whereby a wallet scans through a user’s account in search of payment requests with transactions, to sum the user’s bitcoin balance.
+
+This may be used at any point someone is migrating from one software wallet to another.
 
 
 Accounts store the addresses/payment requests. The majority of users have one account but on a rare occasions, a user may have two or more accounts. Regardless of this possibility, the wallet is most likely to scan just the first account by default.
@@ -29,8 +31,6 @@ Here, after the initial scan of 20 addresses and no transaction is found or the 
 - balance and number of transactions found will increase as more transactions are identified in the addresses.
 - if no transactions are found in the first 20 addresses, the user can select "scan again" to begin another scan but this time, the wallet automatically scans more addresses than it did the first time.
 - if transactions are found, the final balance is displayed along with the number of transactions found. The individual transactions will also be displayed. The user can also scan again here if the balance is still less than what they had.
-
-
 
 ### Solution  Two - Manually increasing  the number of addresses scanned 
 
