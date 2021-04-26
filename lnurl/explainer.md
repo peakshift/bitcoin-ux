@@ -2,13 +2,35 @@
 
 LNURL is a standard for streamlining the process of enabling a user to conduct certain Lightning Network based operations with a service or full node server on the network. It is particularly useful because it automates some otherwise manual steps when executing these operations between two or more parties. This allows providers that make use of Lightning Network functionality to deploy automated versions of their offerings that can interact autonomously with users by implementing one or more of the various flows.
 
-_**`TODO`**: include explanation of bech32 usage_
+#### Bech32
+
+LNURL endpoints are encoded as bech32-encoded HTTPS/Onion query strings. This is to allow existing Lightning Network implementations to easily work with these strings either via QR codes or as LN-invoice-like bech32 strings. Encoding endpoints like this allows for easy integration into existing LN services/apps since most of these would already have functionality built in to receive/send and encode/decode bech32 values.
+
+e.g.: the endpoint:
+```
+https://service.com/api?q=3fc3645b439ce8e7f2553a69e5267081d96dcd340693afabe04be7b0ccd178df
+```
+would be encoded to:
+```
+LNURL1DP68GURN8GHJ7UM9WFMXJCM99E3K7MF0V9CXJ0M385EKVCENXC6R2C35XVUKXEFCV5MKVV34X5EKZD3EV56NYD3HXQURZEPEXEJXXEPNXSCRVWFNV9NXZCN9XQ6XYEFHVGCXXCMYXYMNSERXFQ5FNS
+```
+
+When an LNURL-enabled app receives an LNURL-specific bech32 string, it would decode the string and then send the appropriate requests to the decoded endpoint to start the relevant LNURL flow.
+
+#### Flows
 
 There are 4 different LNURL flows that serve to expose different functionality sets to the user:
-- **LNURL-pay**: For paying for a service
-- **LNURL-withdraw**: For withdrawing funds from a service
-- **LNURL-channel**: For requesting incoming channels from a service
-- **LNURL-auth**: For securely logging in to some service
+- **LNURL-pay**
+    For paying for a service
+
+- **LNURL-withdraw**
+    For withdrawing funds from a service
+
+- **LNURL-channel**
+    For requesting incoming channels from a service
+
+- **LNURL-auth**
+    For securely logging in to some service
 
 ---
 
