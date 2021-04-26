@@ -1,6 +1,6 @@
 # LNURL
 
-LNURL is a standard for streamlining the process of enabling a user to conduct certain Lightning Network based operations with a service or full node server on the network. It is particularly useful because it automates some otherwise manual steps when executing these operations between two or more parties. This allows providers that make use of Lightning Network functionality to deploy automated versions of their offerings that can interact autonomously with users by implementing one or more of the various flows.
+LNURL is a standard for streamlining the process of enabling a client/consumer to conduct certain Lightning Network based operations with a web service that is connected to the Lightning Network. The client can be a wallet application, or even another web service. LNURL Flows automate some otherwise manual steps when executing these operations between two or more parties. This allows web service providers that make use of Lightning Network functionality to deploy API endpoints that can be interacted with autonomously by users implementing one or more of the various flows.
 
 #### Bech32
 
