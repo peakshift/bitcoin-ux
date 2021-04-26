@@ -36,13 +36,13 @@ There are 4 different LNURL flows that serve to expose different functionality s
 
 ## LNURL-pay Flow
 
-This flow is used in the case where a payer needs to pay a recipient for some product or service. It is most useful in the cases where the payer needs to initiate the payment request somehow (e.g. an in-app button to pay a certain amount to the payee). It can still be useful however if the payee initiates the payment request, for e.g., in a shopping cart in their website.
+This flow is used in the case where a payer (`LN WALLET`) needs to pay a recipient (`LN SERVICE`) for some product or service. It is most useful in the cases where the `LN WALLET` needs to initiate the payment request somehow (e.g. an in-app button to pay a certain amount to the `LN SERVICE`). It can still be useful however if the `LN SERVICE` initiates the payment request, for e.g., in a shopping cart in their website.
 
-Traditionally, making a payment initiated by the payer via the Lightning Network is a 2-step process that consists of:
-1. Some active out-of-band communication from the payer to the recipient that they would like to pay a certain amount, and the recipient generating/sending an LN invoice back to the payer to be paid
-1. The payer actively paying the LN invoice in-band from an LN-enabled wallet
+Traditionally, making a payment initiated by the `LN WALLET` via the Lightning Network is a 2-step process that consists of:
+1. Some active out-of-band communication from the `LN WALLET` to the `LN SERVICE` that they would like to pay a certain amount, and the `LN SERVICE` generating/sending an LN invoice back to the `LN WALLET` to be paid
+1. The `LN WALLET` actively paying the LN invoice in-band from an LN-enabled wallet
 
-The ***LNURL-pay flow*** automates the first step and combines it with the second step so that to the payer it feels like they are only doing a 1-step process. This can be contrasted with for e.g. a BTCPayServer lightning invoice creation endpoint where the endpoint must first be called with the appropriate parameters, and then a BOLT11 invoice is received back via an http response which the payer must then actively pay somehow.
+The ***LNURL-pay flow*** automates the first step and combines it with the second step so that to the `LN WALLET` user it feels like they are only doing a 1-step process. This can be contrasted with for e.g. a BTCPayServer lightning invoice creation endpoint where the endpoint must first be called with the appropriate parameters, and then a BOLT11 invoice is received back via an http response which the `LN WALLET` must then actively pay somehow.
 
 > _**[Illustrate user flow differences here with an animation maybe]**_
 > _For a static payment:_
@@ -58,17 +58,17 @@ The ***LNURL-pay flow*** automates the first step and combines it with the secon
 
 ### Steps
 _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md) | [Flow docs](https://xn--57h.bigsun.xyz/lnurl-pay-flow.txt)_
-1. Using an LNURL-enabled LN Wallet, **payer** requests an LN invoice with certain parameters (description, amount etc.) from a **recipient** by pinging the recipient's endpoint with the query parameters. This can be currently done by simply scanning a QR code representation of a bech32-encoded endpoint
-1. The **recipient** receives the request and generates an LN invoice against these parameters
-1. The **recipient** sends the LN invoice back to the **payer** via a response of some type (http response? separate endpoint call?)
-1. The **payer** receives the LN Invoice and then pays the invoice
-1. **Recipient** receives payment and sends back a confirmation message _(is the preimage enough for this, or is an explicit message sent?)_
+1. Using an LNURL-enabled LN Wallet, **`LN WALLET`** requests an LN invoice with certain parameters (description, amount etc.) from a **`LN SERVICE`** by pinging the `LN SERVICE`'s endpoint with the query parameters. This can be currently done by simply scanning a QR code representation of a bech32-encoded endpoint
+1. The **`LN SERVICE`** receives the request and generates an LN invoice against these parameters
+1. The **`LN SERVICE`** sends the LN invoice back to the **`LN WALLET`** via a response of some type (http response? separate endpoint call?)
+1. The **`LN WALLET`** receives the LN Invoice and then pays the invoice
+1. **`LN SERVICE`** receives payment and sends back a confirmation message _(is the preimage enough for this, or is an explicit message sent?)_
 
 ### An Example Flow
 
-1. **`Recipient-Server`: Generate a unique LNURL endpoint**
+1. **``LN SERVICE``: Generate a unique LNURL endpoint**
 
-    The first step is for the **recipient** to setup and encode a unique LNURL endpoint
+    The first step is for the **`LN SERVICE`** to setup and encode a unique LNURL endpoint
 
     ```js
     // The params for the endpoint are determined
@@ -90,9 +90,9 @@ _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md) | [F
     "lnurl1dp68gurn8ghj7mrww4exctt5dahkccn00qhxget8wfjk2um0veax2un09e3k7mf0w5lhz0fhve3nsdenxejkzdenxscxxv33x93kxc3evymkycesvymxxdfj8qcrgdfkv93nxvfev9jngcejv9nxxvpevgergepnxa3xgep58qukyakqmda"
     ```
 
-1. **`User`: Scan the LNURL QR Code (or copy-paste the LNURL bech32 string)**
+1. **`LN WALLET`: Scan the LNURL QR Code (or copy-paste the LNURL bech32 string)**
 
-    The user opens an LNURL-enabled wallet and scans or pastes the LNURL invoice. The wallet then calls the endpoint and receives a response with parameters required to be filled into an LN invoice by the **Recipient-Server**.
+    The user opens an LNURL-enabled wallet and scans or pastes the LNURL invoice. The wallet then calls the endpoint and receives a response with parameters required to be filled into an LN invoice by the **`LN SERVICE`**.
 
     ```sh
     # Wallet decodes the LNURL invoice and sends a GET request to decoded url
@@ -110,11 +110,11 @@ _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md) | [F
     }
     ```
 
-1. **`User`: Enter amount and confirm send via in-wallet payment dialog**
+1. **`LN WALLET`: Enter amount and confirm send via in-wallet payment dialog**
 
-    The wallet should present a dialog at this point where the user can enter an amount (constrained to a given valid range) and an optional comment. These will be included in the request being sent to the `Recipient-Server` callback.
+    The wallet should present a dialog at this point where the user can enter an amount (constrained to a given valid range) and an optional comment. These will be included in the request being sent to the ``LN SERVICE`` callback.
 
-1. **`User-Wallet`: Sends invoice details to Recipient-Server**
+1. **`LN WALLET`: Sends invoice details to `LN SERVICE`**
 
     The wallet adds the user-defined parameters and any other parameters (e.g. route hints) to a request object and then calls the callback url with this object.
 
@@ -123,11 +123,11 @@ _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md) | [F
 
     ```
 
-1. **`Recipient-Server`: Receive request and generate LN invoice to send back in response**
+1. **`LN SERVICE`: Receive request and generate LN invoice to send back in response**
 
-    The recipient's LNURL server parses the request and extracts the parameteres relevant for LN invoice creations. It then calls out to its own Lightning Network client service with the appropriate parameters to have an LN invoice generated to be sent back to the user in the http response.
+    The `LN SERVICE`'s LNURL server parses the request and extracts the parameteres relevant for LN invoice creations. It then calls out to its own Lightning Network client service with the appropriate parameters to have an LN invoice generated to be sent back to the user in the http response.
 
-    The response may also include a `"successAction"` parameter with some action for the user to perform on successful payment of the invoice from its LN wallet.
+    The response may also include a `"successAction"` parameter with some action for the user to perform on successful payment of the invoice from `LN WALLET`.
 
     ```js
     {
@@ -137,22 +137,22 @@ _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md) | [F
     }
     ```
 
-1. **`User-wallet`: Receive response, verify, pay**
+1. **`LN WALLET`: Receive response, verify, pay**
 
-    The user's wallet decodes the received LN invoice and verifies the amount and validity of the invoice against the original request sent to the Recipient-Server.
+    The `LN WALLET` decodes the received LN invoice and verifies the amount and validity of the invoice against the original request sent to the `LN SERVICE`.
 
-    The wallet then attempts to pay the LN invoices, and on completion of payment executes the `"successAction"` action if it is not `null`.
+    The `LN WALLET` then attempts to pay the LN invoices, and on completion of payment executes the `"successAction"` action if it is not `null`.
 
 ## LNURL-withdraw Flow
-This flow used in the case where a recipient needs to initiate payment to themselves from some payer. It is useful in cases where for e.g. a user of a service needs to withdraw some balance held by the service to their own wallet.
+This flow used in the case where a recipient (`LN WALLET`) needs to initiate payment to themselves from some payer/service (`LN SERVICE`). It is useful in cases where for e.g. a user of a service needs to withdraw some balance held by the service to their own user wallet.
 
 Traditionally this would be a 2-step process that consists of:
-- The recipient generating an LN-invoice and passing it to the payer out-of-band somehow (likely a copy-paste operation)
-- The payer actively paying the invoice received
+- The `LN WALLET` generating an LN-invoice and passing it to the `LN SERVICE` out-of-band somehow (likely a copy-paste operation)
+- The `LN SERVICE` actively paying the invoice received
 
-This process is particularly tricky for the recipient when they have to figure out how to communicate the generated invoice to the payer if for e.g. the payer is a website or some service on a separate device (e.g. desktop) from where the recipient's wallet is (e.g. mobile).
+This process is particularly tricky for the `LN WALLET` when they have to figure out how to communicate the generated invoice to the `LN SERVICE` if for e.g. the `LN SERVICE` is a website or some service on a separate device (e.g. desktop) from where the `LN WALLET` is (e.g. mobile).
 
-The ***LNURL-withdraw flow*** standardises the communication of this LN invoice and payment of the invoice into a single UX action initiated by the recipient.
+The ***LNURL-withdraw flow*** standardises the communication of this LN invoice and payment of the invoice into a single UX action initiated by the `LN WALLET`.
 
 >_**[Illustrate user flow differences here with an animation maybe]**_
 > - _Visit a website, be presented with input field for LN invoice, switch to mobile device & generate invoice, switch to Telegram and paste invoice, switch to Telegram on desktop and copy invoice, switch to website and paste, **vs.**_
@@ -166,19 +166,19 @@ The ***LNURL-withdraw flow*** standardises the communication of this LN invoice 
 
 ### Steps
 _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-withdraw.md) | [Flow docs](https://xn--57h.bigsun.xyz/lnurl-withdraw-flow.txt)_
-1. Using an LNURL-enabled LN Wallet, **recipient** requests that they would like to intiate a payment from the **payer** by pinging the payer's endpoint. This can be currently done by simply scanning a QR code representation of a bech32-encoded endpoint
-1. The **payer** receives the request and responds with:
+1. Using an LNURL-enabled LN Wallet, **`LN WALLET`** requests that they would like to intiate a payment from the **`LN SERVICE`** by pinging the `LN SERVICE`'s endpoint. This can be currently done by simply scanning a QR code representation of a bech32-encoded endpoint
+1. The **`LN SERVICE`** receives the request and responds with:
     - a callback url that an LN-invoice can be sent to for payment
-    - a value for the min and max requestable amounts from the payer
-    - a secret `kq` to identify the **recipient** when they use the callback url
-1. The **recipient** creates an LN invoice with the amount between min and max and then sends it back to the payer along with the secret `k1`
-1. The **payer** responds to the request and then attempts payment of the LN invoice
+    - a value for the min and max requestable amounts from the `LN SERVICE`
+    - a secret `k1` to identify the **`LN WALLET`** when they use the callback url
+1. The **`LN WALLET`** creates an LN invoice with the amount between min and max and then sends it back to the `LN SERVICE` along with the secret `k1`
+1. The **`LN SERVICE`** responds to the request and then attempts payment of the LN invoice
 
 ### An Example Flow
 
-1. **`Payer-Server`: Generate a unique LNURL endpoint**
+1. **`LN SERVICE`: Generate a unique LNURL endpoint**
 
-    The first step is for the **payer** to setup and encode a unique LNURL endpoint for the user.
+    The first step is for the **`LN SERVICE`** to setup and encode a unique LNURL endpoint for the `LN WALLET` user.
 
     ```js
     // The params for the endpoint are determined
@@ -195,9 +195,9 @@ _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-withdraw.md)
     "lnurl1dp68gurn8ghj7mrww4exctt5dahkccn00qhxget8wfjk2um0veax2un09e3k7mf0w5lhz0tpxajxgvpnx9jnqdfsxejnserpxejxzvmrv4nrjv3exucxvctzx3jrvvtxxqunjvp4x93rgwf5x9jnscfjvdjnjepnxvurjd3nv9skg4e9eg2"
     ```
 
-1. **`User`: Scan the LNURL QR Code (or copy-paste the LNURL bech32 string)**
+1. **`LN WALLET`: Scan the LNURL QR Code (or copy-paste the LNURL bech32 string)**
 
-    The user opens an LNURL-enabled wallet and scans or pastes the LNURL invoice. The wallet then calls the endpoint and receives a response with parameters required to be filled into an LN invoice by the **Payer-Server**. The response also contains a secret `k1` that the **user's wallet** must also send along in the subsequent withdrawal request later on.
+    The user opens an LNURL-enabled wallet and scans or pastes the LNURL invoice. The wallet then calls the endpoint and receives a response with parameters required to be filled into an LN invoice by the **`LN SERVICE`**. The response also contains a secret `k1` that the **`LN WALLET`** must also send along in the subsequent withdrawal request later on.
 
     ```sh
     # Wallet decodes the LNURL invoice and sends a GET request to decoded url
@@ -216,35 +216,35 @@ _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-withdraw.md)
     }
     ```
 
-1. **`User`: Enter amount and confirm withdrawal via in-wallet payment dialog**
+1. **`LN WALLET`: Enter amount and confirm withdrawal via in-wallet payment dialog**
 
-    The wallet should present a dialog at this point where the user can enter an amount (constrained to a given valid range).
+    The `LN WALLET` should present a dialog at this point where the user can enter an amount (constrained to a given valid range).
 
-1. **`User-Wallet`: Generate LN invoice to send in request**
+1. **``LN WALLET``: Generate LN invoice to send in request**
 
-    The user's wallet uses the amount from the user input to generate a valid LN invoice in the traditional way internally.
+    The `LN WALLET` uses the amount from the user input to generate a valid LN invoice in the traditional way internally.
 
     ```
     lnbc150n1ps875y7pp5jv886ulk50nt0dm94sgr6q7zquv3qv5h8dnxkvn022fhtlp8x40sdqlf38925jv94mkjargv3exzaeqw3jhxaqcqzpgxqyz5vqsp5w33wl0jwkmrjqjkptz05c3rlwumgzt0gr2z2vg5pg6ctcdj4426q9qyyssqdrsph679ra7vuk5exkemtjhx0f3ee3xk2nf7egj0dapn5erwzjr404x0z6580c4wrgxnnwv8kcgwwc0z396rmnk4u35xms7temlpxvsqstsqn9
     ```
 
-1. **`User-Wallet`: Sends withdrawal details to Recipient-Server**
+1. **``LN WALLET``: Sends withdrawal details to `LN SERVICE`**
 
-    The wallet adds the generated LN invoice and the original secret `k1` to a request object and then calls the callback url with this object.
+    The `LN WALLET` adds the generated LN invoice and the original secret `k1` to a request object and then calls the callback url with this object.
 
     ```sh
     GET https://lnurl-toolbox.degreesofzero.com/u?k1=a7dd031e0506e8da6da3cef92970fab4d61f099051b4941e8a2ce9d338963aad&pr=lnbc150n1ps875y7pp5jv886ulk50nt0dm94sgr6q7zquv3qv5h8dnxkvn022fhtlp8x40sdqlf38925jv94mkjargv3exzaeqw3jhxaqcqzpgxqyz5vqsp5w33wl0jwkmrjqjkptz05c3rlwumgzt0gr2z2vg5pg6ctcdj4426q9qyyssqdrsph679ra7vuk5exkemtjhx0f3ee3xk2nf7egj0dapn5erwzjr404x0z6580c4wrgxnnwv8kcgwwc0z396rmnk4u35xms7temlpxvsqstsqn9
 
     ```
 
-1. **`Payer-Server`: Receive request, verify, pay**
+1. **`LN SERVICE`: Receive request, verify, pay**
 
-    The payer server decodes the received LN invoice and verifies the amount and validity of the invoice against the original request sent to the user.
+    The `LN SERVICE` decodes the received LN invoice and verifies the amount and validity of the invoice against the original request sent to the `LN WALLET`.
 
-    The wallet then responds with an appropriate message once the request is verified and then it attempts to pay the LN invoice.
+    The `LN SERVICE` then responds with an appropriate message once the request is verified and then it attempts to pay the LN invoice.
 
     ```js
-    // Response sent back user
+    // Response sent back to `LN WALLET`
     {"status":"OK"}
     ```
 
