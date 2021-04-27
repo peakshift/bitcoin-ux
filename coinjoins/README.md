@@ -15,6 +15,7 @@ Use a [hierarchical deterministic wallet](https://en.bitcoin.it/wiki/Determinist
 Practicality
 
 - How do you adverise an address to be paid in a video?
+- Handling gap limit, online and during recovery
 
 ## Wallet Fingerprinting
 
