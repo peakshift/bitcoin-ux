@@ -56,15 +56,8 @@ The ***LNURL-pay flow*** automates the first step and combines it with the secon
 **LN primitives involved:**
 - LN Invoice
 
-### Steps
-_[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md) | [Flow docs](https://xn--57h.bigsun.xyz/lnurl-pay-flow.txt)_
-1. Using an LNURL-enabled LN Wallet, **`LN WALLET`** requests an LN invoice with certain parameters (description, amount etc.) from a **`LN SERVICE`** by pinging the `LN SERVICE`'s endpoint with the query parameters. This can be currently done by simply scanning a QR code representation of a bech32-encoded endpoint
-1. The **`LN SERVICE`** receives the request and generates an LN invoice against these parameters
-1. The **`LN SERVICE`** sends the LN invoice back to the **`LN WALLET`** via a response of some type (http response? separate endpoint call?)
-1. The **`LN WALLET`** receives the LN Invoice and then pays the invoice
-1. **`LN SERVICE`** receives payment and sends back a confirmation message _(is the preimage enough for this, or is an explicit message sent?)_
-
 ### An Example Flow
+_[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md) | [Flow docs](https://xn--57h.bigsun.xyz/lnurl-pay-flow.txt)_
 
 1. **``LN SERVICE``: Generate a unique LNURL endpoint**
 
@@ -164,17 +157,8 @@ The ***LNURL-withdraw flow*** standardises the communication of this LN invoice 
 **LN primitives involved:**
 - LN Invoice
 
-### Steps
-_[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-withdraw.md) | [Flow docs](https://xn--57h.bigsun.xyz/lnurl-withdraw-flow.txt)_
-1. Using an LNURL-enabled LN Wallet, **`LN WALLET`** requests that they would like to intiate a payment from the **`LN SERVICE`** by pinging the `LN SERVICE`'s endpoint. This can be currently done by simply scanning a QR code representation of a bech32-encoded endpoint
-1. The **`LN SERVICE`** receives the request and responds with:
-    - a callback url that an LN-invoice can be sent to for payment
-    - a value for the min and max requestable amounts from the `LN SERVICE`
-    - a secret `k1` to identify the **`LN WALLET`** when they use the callback url
-1. The **`LN WALLET`** creates an LN invoice with the amount between min and max and then sends it back to the `LN SERVICE` along with the secret `k1`
-1. The **`LN SERVICE`** responds to the request and then attempts payment of the LN invoice
-
 ### An Example Flow
+_[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-withdraw.md) | [Flow docs](https://xn--57h.bigsun.xyz/lnurl-withdraw-flow.txt)_
 
 1. **`LN SERVICE`: Generate a unique LNURL endpoint**
 
@@ -271,10 +255,8 @@ The ***LNURL-channel flow*** standardises the communication of these details and
 **LN primitives involved:**
 - LN Channels
 
-### Steps
-_[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-channel.md) | Flow docs_
-
 ### An Example Flow
+_[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-channel.md) | Flow docs_
 
 1. **`LN SERVICE`: Generate a unique LNURL endpoint**
 
@@ -359,8 +341,10 @@ _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-channel.md) 
 **LN primitives involved:**
 - Wallet private keys
 
-### Steps
+### An Example Flow
 _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md) | [Explainer docs](https://xn--57h.bigsun.xyz/lnurl-auth.html)_
+
+_[TODO]_
 
 ---
 
