@@ -77,7 +77,7 @@ A type of coinjoin which involves two parties adding their inputs, and outputs o
 
 - is not obviously visible as an equal-output [CoinJoin](https://en.bitcoin.it/wiki/CoinJoin)
 
-> If PayJoin [transactions](https://en.bitcoin.it/wiki/Transaction) became even moderately used then it would make the [common-input-ownership heuristic](https://en.bitcoin.it/wiki/Common-input-ownership_heuristic) be completely flawed in practice. As they are undetectable we wouldn't even know whether they are being used today. As [Transaction surveillance companies](https://en.bitcoin.it/wiki/Transaction_surveillance_company) mostly depend on that heuristic, as of 2019 there is great excitement about the PayJoin idea.
+> If [PayJoin transactions](https://en.bitcoin.it/wiki/PayJoin) became even moderately used then it would make the [common-input-ownership heuristic](https://en.bitcoin.it/wiki/Common-input-ownership_heuristic) be completely flawed in practice. As they are undetectable we wouldn't even know whether they are being used today. As [Transaction surveillance companies](https://en.bitcoin.it/wiki/Transaction_surveillance_company) mostly depend on that heuristic, as of 2019 there is great excitement about the PayJoin idea.
 
 [1]: https://github.com/nopara73/ZeroLink#i-introduction
 [2]: https://zmnscpxj.github.io/bitcoin/coinjoinxt.html
