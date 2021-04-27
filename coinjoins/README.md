@@ -23,7 +23,8 @@ The way the transaction is constructed can give chain analysts an idea of which 
 
 1. Change is sometimes the last output
    1. Solutions
-      1. Lexicographical Ordering
+      1. [Lexicographical Ordering (BIP 0069)](https://github.com/bitcoin/bips/blob/master/bip-0069.mediawiki) (see also [arguments against, search for bip 69 in transcript](https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-05-05-socratic-seminar-payjoins/))
+      2. Random Ordering - is there a standard? verifiable? deniable?
 2. If the `nLockTime` in the transaction or `nSequence` of the inputs are set
   - locktime type (absolute/`nLockTime`, [relative/`nSequence` (BIP 68)](https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki), and their [interactions](https://b10c.me/mempool-observations/1-locktime-stairs/))
   - locktime value type (blockheight, [MTP (BIP 113)](https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki))
