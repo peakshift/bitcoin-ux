@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: The HODL Invoice
+title: HODL Invoice
 parent: Invoice Variations
 description: Diving into the user experience of moving Bitcoin
 nav_order: 31
@@ -71,4 +71,3 @@ _(All other examples below, trust not to reveal secret preimage to any other rou
 - Limit of 483 in-flight invoices can be routed at any given time by a node ([something about on-chain transaction size limit?](https://bitcoin.stackexchange.com/a/91169))
 
     This is distinct from "open invoices" and only refers to invoices where the payment was started but is still incomplete, as can happen with hodl invoices
-
