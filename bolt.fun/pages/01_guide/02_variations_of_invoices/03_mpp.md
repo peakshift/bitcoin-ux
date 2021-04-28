@@ -3,15 +3,13 @@ layout: guide
 title: Multi-part Payments
 parent: Invoice Variations
 description: Diving into the user experience of moving Bitcoin
-nav_order: 33
+nav_order: 123
 has_children: false
 permalink: /guide/invoices/variations/mpp
 main_classes: -no-top-padding
 ---
 
 ## Multi-part Payments
-_[back to top...](#lightning-invoices)_
-
 Methods for sending multiple LN payments (HTLCs) to make up a single logical payment. The reasoning behind this is to allow for splitting a payment across multiple routes. A person could want to do this for a number of reasons including:
 - to get around channel size & balance limitations
 - to improve routing fee efficiency

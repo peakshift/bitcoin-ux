@@ -3,15 +3,13 @@ layout: guide
 title: Keysend
 parent: Invoice Variations
 description: Diving into the user experience of moving Bitcoin
-nav_order: 32
+nav_order: 122
 has_children: false
 permalink: /guide/invoices/variations/keysend
 main_classes: -no-top-padding
 ---
 
 ## Keysend (no invoice)
-_[back to top...](#lightning-invoices)_
-
 The `keysend` feature is a way for a sender to send a payment to a given recipient over the Lightning Network **without first having an invoice** from the recipient to send against ([docs](https://lightning.readthedocs.io/lightning-keysend.7.html)).
 
 The way this works is the sender first needs the **destination node id (node's public key)** for the recipient's Lightning Network node. The sender then creates a preimage and uses it to construct a keysend payment that it then forwards along an appropriate route to the recipient.
