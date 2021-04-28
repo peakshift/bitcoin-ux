@@ -1,17 +1,15 @@
 ---
 layout: guide
 title: Submarine Swaps
-parent: Invoice Variations
+# parent: Guide
 description: Diving into the user experience of moving Bitcoin
-nav_order: 34
+nav_order: 3
 has_children: false
-permalink: /guide/invoices/variations/submarine-swap
+permalink: /guide/submarine-swaps
 main_classes: -no-top-padding
 ---
 
 ## Submarine Swap
-_[back to top...](#lightning-invoices)_
-
 Funds that are locked into a Lightning channel are usually limited to being transferrable solely across the Lightning Network. They can be sent back and forth on a given channel, but cannot come back on-chain unless the channel is closed.
 
 This presents a few challenging scenarios:

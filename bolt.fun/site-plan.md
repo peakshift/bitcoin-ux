@@ -23,49 +23,56 @@ The following is a high-level structure of how we would like to see this mini-si
 
     - [**Invoices**](/guide/invoices)
 
-      _Introduce basic concept of what a standard invoice is and how it works_
+        - [Introduction & elements of an invoice](/guide/invoices)
 
-        - Invoice elements
+            \> _HTLCs_
 
-            - HTLCs
+            \> _preimage_
 
-            - preimage
+            \> _tlv field_
 
-            - tlv field
+        - [The HODL Invoice](/guide/invoices/variations/hodl-invoice)
 
-        - [Variations of invoices _(to populate...)_](/guide/invoices/variations/)
+        - [Keysend](/guide/invoices/variations/keysend)
 
-            - [The HODL Invoice](/guide/invoices/variations/hodl-invoice)
+        - [Multi-part Payments](/guide/invoices/variations/mpp)
 
-            - [Keysend](/guide/invoices/variations/keysend)
+        - [Lightning Offers](/guide/invoices/variations/lightning-offers)
 
-            - [Multi-part Payments](/guide/invoices/variations/mpp)
 
-            - [Submarine swaps](/guide/invoices/variations/submarine-swap)
+    - [**Submarine swaps**](/guide/submarine-swaps)
 
-            - [Lightning Offers](/guide/invoices/variations/lightning-offers)
+        - [Introduction](/guide/submarine-swaps)
+
+        - Lightning Loop
 
     - **Channel Management**
 
-      ...
+        - Introduction
 
-    - **Infrastructure**
+            \> _Opening and closing channels_
+
+        - Turbo channels
+
+        - Lightning Pool
+
+    - **Architecture**
 
         - Elements of a full node
 
           _Use LDK as guide for breaking down elements_
 
-            - On-device full nodes
+            \> _On-device full nodes_
 
-            - Remote controlled full nodes
+            \> _Remote controlled full nodes_
 
         - Non-custodial partial node architectures
 
           _Introduce concept of mixing and matching arichitectural pieces, and give examples of how this is done now pre-LDK_
 
-            - Outsourced routing
+            \> _Outsourced routing_
 
-            - Outsourced ...
+            \> _Outsourced ..._
 
     - **Privacy**
 
@@ -82,3 +89,9 @@ The following is a high-level structure of how we would like to see this mini-si
         - LNURL (UX improvement)
 
         - sphinx.chat (chat over LN)
+
+        - lnbits (account management)
+
+        - LNHub (account management)
+
+        - LSP (liquidity/access providers)
