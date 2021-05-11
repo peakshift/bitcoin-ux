@@ -26,10 +26,10 @@ Illustration sources
 -->
 
 {% include picture.html	
-   image = "/assets/images/payments/introduction.png"
-   retina = "/assets/images/payments/introduction@2x.png"
-   mobile = "/assets/images/payments/introduction.png"
-   mobileRetina = "/assets/images/payments/introduction@2x.png"
+   image = "/assets/images/introduction.png"
+   retina = "/assets/images/introduction@2x.png"
+   mobile = "/assets/images/introduction.png"
+   mobileRetina = "/assets/images/introduction@2x.png"
    alt-text = ""
    width = 1600
    height = 900
@@ -84,8 +84,8 @@ The Lightning Network is part of the Bitcoin ecosystem that will power this econ
 If two parties want to make payments between themselves often, they can lock up some funds together in an on-chain transaction. Then they are able to bypass recording their subsequent payments with one another on-chain, by instead keeping track of each of their bitcoin balances in Lightning.
 
 {% include picture.html	
-   image = "/assets/images/payments/payment-channels.svg"
-   mobile = "/assets/images/payments/payment-channels-mobile.svg"
+   image = "/assets/images/payment-channels.svg"
+   mobile = "/assets/images/payment-channels-mobile.svg"
    alt-text = "A payment channel is like one row of an abacus"
    width = 1600
    height = 900
