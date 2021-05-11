@@ -6,8 +6,9 @@ main_classes: -no-top-padding
 
 # Lightning Network Fun
 
-This site is meant to be a home for our open research around different aspects of the Lightning Network.
+This site aims to be a fun place for builders to learn about and experiment with Lightning Network technology. We will explore some of the basis of Lightning, like invoices, nodes, and wallet architectures in mobile environments.
 
-- our research can be found under the [Guide](/guide) section
+We will also look at concepts like Lightning Service Providers and methods for web services and publishers to integrate Lightning payments.
 
-- the general structure of what we plan to do can be found at our [Site Plan](/site-plan) page
+- Research is ongoing, and can be found under the [Guide](/guide) section
+- The general structure of what we plan to do can be found at our [Site Plan](/site-plan) page
