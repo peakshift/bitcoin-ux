@@ -28,4 +28,6 @@ Illustration sources
 
 # Guide
 
-Some explanation about this page...
+This section holds all the links to our different areas of research. To explore these areas, use the menu to navigate to the different research sections available.
+
+_For a full overview of what this site will eventually become, feel free to also visit our [Site Plan](/site-plan)._
