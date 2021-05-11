@@ -1,16 +1,37 @@
 <nav class="social-media-list">
+{% if site.slack_invite_url %}
+  <a 
+    rel="me" 
+    href="{{ site.slack_invite_url }}" 
+    title="{{ site.title }}
+    {% include slack.svg %}
+  </a>
+{% endif %}
+{% if site.github_repository_url %}
   <a 
     rel="me" 
     href="{{ site.github_repository_url }}" 
-    title="BOLT.FUN on Github"
+    title="{{ site.title }} on Github"
   >
     {% include github.svg %}
   </a>
+{% endif %}
+{% if site.twitter_url %}
   <a 
     rel="me" 
     href="{{ site.twitter_url }}" 
-    title="BOLT.FUN on Twitter"
+    title="{{ site.title }} on Twitter"
   >
     {% include twitter.svg %}
   </a>
+{% endif %}
+{% if site.youtube_url %}
+  <a 
+    rel="me" 
+    href="{{ site.youtube_url }}" 
+    title="{{ site.title }} on YouTube"
+  >
+    {% include youtube.svg %}
+  </a>
+{% endif %}
 </nav>

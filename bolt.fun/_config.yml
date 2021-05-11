@@ -19,13 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: BOLT.FUN
-email: no-reply@bolt.fun
-description: "BOLT.FUN aims to be a free open-source community resource that will help designers and developers working on bitcoin-products to create better experiences, faster."
+email: lightning@peakshift.com
+description: "BOLT.FUN aims to be a fun place for builders to learn about and experiment with Lightning Network technology"
 # baseurl: "Guide" # Only for gh-pages. Comment this line to run the website on localhost:4000
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
+twitter_username: peakshift
+github_username:  peakshift
 github_repository_url: "https://github.com/peakshift/bitcoin-ux/"
 # slack_invite_url: "http://bitcoindesigners.org"
 # youtube_url: "https://www.youtube.com/channel/UCXKST1b8Wmq8Zt6b6S_-k3Q"

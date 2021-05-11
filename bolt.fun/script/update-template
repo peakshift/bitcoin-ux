@@ -1,0 +1,12 @@
+#!/bin/sh
+
+rm -rf Guide
+git clone https://github.com/BitcoinDesign/Guide.git
+rm -rf _includes
+rm -rf _layouts
+rm -rf _sass
+rm -rf js
+cp -r Guide/_includes .
+cp -r Guide/_layouts .
+cp -r Guide/_sass .
+cp -r Guide/js .
