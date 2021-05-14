@@ -6,13 +6,13 @@ The traditional way to interact with the Lightning Network was to run a Bitcoin 
 
 For the majority of eventual users though, much lighter and user-friendly solutions would be needed if the protocol is to be adopted broadly, and this is where we see the various attempts at implementing Lightning Network functionality on end-user devices.
 
-The aproaches we've seen to date generally fall into one of four categories:
+The approaches we've seen to date generally fall into one of four categories:
 - Full node on-device
 - Partial node on-device
 - Remote controlled node
 - 3rd-party controlled node
 
-The following section goes into detail on each of these four categories and eventually leads to the conclusion that the future of end-user development will likely end up moving towards approaches like what the Square Crypto team has been spearheading with the Lightning Development Kit (LDK)
+The following sections go into detail on each of these four categories and eventually leads to the conclusion that the future of end-user development will likely end up moving towards approaches like what the Square Crypto team has been spearheading with the Lightning Development Kit (LDK)
 
 ### Full node on-device
 
@@ -41,9 +41,9 @@ Wallets use this approach by either building for the purpose of running a partia
 The advent of the LDK greatly improves the ease with which this approach can be taken now given how they've manage to modularise and make importable libraries out of the different components of a full node.
 
 E.g.:
-- Breez
-- Muun
-- Phoenix
+- [Breez](https://breez.technology/)
+- [Muun](https://muun.com/)
+- [Phoenix](https://phoenix.acinq.co/)
 
 ### Remote controlled node
 
@@ -58,9 +58,9 @@ Mobile wallets using this approach would usually connect back to the remote node
 There are also special cases where additional abstraction can be build on top of the node but still live on the remote server. Examples of this are the account models implemented by running instance of LNDHub or lnbits on top of a LN node.
 
 E.g.:
-- Zap wallet
-- Zeus LN wallet
-- *Blue Wallet (pointed at user's own LNDHub instance)
+- [Zap wallet](https://zaphq.io/)
+- [Zeus LN wallet](https://zeusln.app/)
+- *[Blue Wallet](https://bluewallet.io/) (pointed at user's [own LNDHub instance](https://bluewallet.io/lndhub/))
 
 ### 3rd-party controlled node
 
@@ -73,8 +73,8 @@ This setup is considered as **custodial**. In this setup the user loses both pri
 The user simply receives an account with all the UI elements needed to interact with the Lightning Network, but none of the usual privacy/security guarantees. It is usually the easiest way to get a user up and running with the draw being quick interoperability with other Lightning Network solutions.
 
 E.g.:
-- Wallet of Satoshi
-- *Blue Wallet (with default LNDHub settings)
+- [Wallet of Satoshi](https://www.walletofsatoshi.com/)
+- *[Blue Wallet](https://bluewallet.io) (with default LNDHub settings)
 
 ### Infrastructure Approach Conclusion
 
@@ -88,22 +88,52 @@ The rest of this document focuses on explaining the pieces of the LDK and compar
 
 ## Lightning Protocol Layers
 
+The Lightning protocol is made up of a number of interlinking layers, much like say the TCP/IP or OSI Networking protocol models. Components of a Lightning node can span one or many of these layers and they vary in how intensely they draw on the physical resources they require. These components can also be separated into discrete processes or bundles of processes that can then communicate with each other over appropriate interfaces.
+
+This is all to say that given this layered aproach, developers have the flexibility of unbundling the components of a Lightning node and then running them in places that make sense based on resource needs and user experience tradeoffs.
+
+The following diagram [taken from](https://github.com/lnbook/lnbook/issues/342#issuecomment-814106423) the work-in-progress Mastering Lightning book outline the different layers of the Lightning protocol and the components that fit into these layers.
+
 ![ln-protocol-layers](assets/img/ln-protocol-layers.png)
 
 _Diagram above as per [ln-book proposal](https://github.com/lnbook/lnbook/issues/342#issuecomment-814106423)_
 
-**Layers:**
+**The five layers outlined, starting from the lowest layer furthest away from the end-user at the bottom are:**
 1. Network Connection Layer
 2. Messaging Layer
 3. Peer-to-Peer Layer
 4. Routing (Unreliable) Layer
 5. Payment (Reliable) Layer
 
+## The Lightning Development Kit (LDK)
 
-## Makeup of an LDK full node
+The LDK is a project seeking to disaggregate all the components of a Lightning node and make them available as pluggable libraries that can be included in a wide selection of environments. It takes the approach of defining _**core components**_ that are generally standard across all implementations of Lightning nodes, and _**battery components**_ that can be customised and plugged in by the developer to express different conditions and use-cases when building a node setup.
+
+The diagram below taken from the [LDK docs](https://lightningdevkit.org/docs/#ldk-architecture) helps detail the different components made available by the LDK.
 
 ![ldk-architecture](assets/img/ldk-architecture.svg)
-_Diagram from [LDK docs](https://lightningdevkit.org/docs/#ldk-architecture)_
+
+---
+**_(Incomplete)_**
+## Pre-LDK Mobile App Architectures
+
+**Notes to be developed:**
+- [Comprehensive wallet comparison and architecture breakdown](https://veriphi.io/en/blog/lightning-wallet-architecture)
+
+- [Breez](https://github.com/breez/breezmobile#architecture)
+
+- [Phoenix](https://phoenix.acinq.co/faq#is-phoenix-a-real-lightning-node)
+    - [Tradeoffs](https://medium.com/@ACINQ/introducing-phoenix-5c5cc76c7f9e) are interesting
+    - Phoenix may be using in-built Tor for iOS/Android a la [Blockstream Green](https://github.com/Blockstream/gdk/commit/796d75d7f203c0469a5519c6b9001f5d7666656d#diff-f5709bb25351aea0d5275b4dee13700611f0c12357af933cb9d76b040511b847) (find Green launch post and Phoenix [mention post](https://medium.com/@ACINQ/introducing-phoenix-5c5cc76c7f9e))
+
+- Muun
+    - Seems similar to Phoenix; how does it differentiate ([reddit thread](https://www.reddit.com/r/Bitcoin/comments/kv7e11/announcing_muun_20_a_complete_rethinking_of_the/))?
+
+---
+**_(Incomplete)_**
+## Mapping the Lightning Layers Model to LDK Architecture
+
+A mapping of how the distinct libraries in theLDK correspond to the different components in the Lighting protocol layers model.
 
 ### LDK Non-Core Components (all batteries)
 
@@ -174,22 +204,3 @@ These include components from the Lightning Protocol stack that are responsible 
     ***[2. Messaging Layer]***
     ***[5. Payment Layer]***
     for accepting a received invoice,,sending HTLC back along the route, and updating channel states
-
-
----
-
-## _Notes_
-
-- Local node, local control **[non-custodial]**
-    - [Breez](https://github.com/breez/breezmobile#architecture)
-
-    - [Phoenix](https://phoenix.acinq.co/faq#is-phoenix-a-real-lightning-node)
-        - [Tradeoffs](https://medium.com/@ACINQ/introducing-phoenix-5c5cc76c7f9e) are interesting
-        - Phoenix may be using in-built Tor for iOS/Android a la [Blockstream Green](https://github.com/Blockstream/gdk/commit/796d75d7f203c0469a5519c6b9001f5d7666656d#diff-f5709bb25351aea0d5275b4dee13700611f0c12357af933cb9d76b040511b847) (find Green launch post and Phoenix [mention post](https://medium.com/@ACINQ/introducing-phoenix-5c5cc76c7f9e))
-
-    - [Lightning Labs prototype app](https://github.com/lightninglabs/lightning-app)
-
-    - Muun
-        - Seems similar to Phoenix; how does it differentiate ([reddit thread](https://www.reddit.com/r/Bitcoin/comments/kv7e11/announcing_muun_20_a_complete_rethinking_of_the/))?
-
-- Comprehensive wallet comparison and architecture breakdown [here](https://veriphi.io/en/blog/lightning-wallet-architecture)
