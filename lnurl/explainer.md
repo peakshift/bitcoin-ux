@@ -1,8 +1,10 @@
 # LNURL
 
-LNURL is a standard for streamlining the process of enabling a client/consumer to conduct certain Lightning Network based operations with a web service that is connected to the Lightning Network. The client can be a wallet application, or even another web service. LNURL Flows automate some otherwise manual steps when executing these operations between two or more parties. This allows web service providers that make use of Lightning Network functionality to deploy API endpoints that can be interacted with autonomously by users implementing one or more of the various flows.
+LNURL allows web service providers to use Lightning Network functionality in their API endpoints that clients who have implemented one or more of the various flows can interact with autonomously. The client can be a wallet application or even another web service.
 
-#### Bech32
+Several Flows are currently part of the LNURL specifications. They are; Pay, Withdraw, Channel, and Auth. These Flows automate some otherwise manual steps for certain Lightning Network-based operations and standardize the HTTP request and responses.
+
+#### URLs as Lightning invoices (bech32)
 
 LNURL endpoints are encoded as bech32-encoded HTTPS/Onion query strings. This is to allow existing Lightning Network implementations to easily work with these strings either via QR codes or as LN-invoice-like bech32 strings. Encoding endpoints like this allows for easy integration into existing LN services/apps since most of these would already have functionality built in to receive/send and encode/decode bech32 values.
 
