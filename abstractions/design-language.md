@@ -2,9 +2,13 @@
 
 > A **design language** or **design vocabulary** is an overarching scheme or style that guides the design of a complement of products or architectural settings.[^4]
 
-- Why does bitcoin need a design language?
-- Guidelines not strict rules.
-- This collection of abstractions form a language.
+#### Why does bitcoin need a design language?
+The Bitcoin technology has many parts that are inaccessible, or unknown to people who design experiences ontop of it. The language that is currently used is quite technical, and the usefulness of the functionalities often get lost in translation.
+
+#### Guidelines not strict rules.
+The purpose of this project is to help designers build the correct mental models of the lower level components that make up each of the abstractions.
+
+This collection of abstractions form a language, that hopefully enables easier dialog between varyingly skilled teams/departments/contributors.
 
 #### A Pattern Language: Towns, Buildings, Construction
 
@@ -23,6 +27,7 @@
   - Social payments applications may need Contacts, but something like Specter may need "Devices" instead
 
 #### What Is Abstraction?[^2]
+An abstraction is a general representation of something. Bitcoin Design Abstractions are 
 
 - An abstraction is a general representation of something.
 - Abstractions are formed by including only those details needed to make the abstraction useful to us in some way.
