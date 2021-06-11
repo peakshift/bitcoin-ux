@@ -3,12 +3,19 @@
 > A **design language** or **design vocabulary** is an overarching scheme or style that guides the design of a complement of products or architectural settings.[^4]
 
 #### Why does bitcoin need a design language?
-The Bitcoin technology has many parts that are inaccessible, or unknown to people who design experiences ontop of it. The language that is currently used is quite technical, and the usefulness of the functionalities often get lost in translation.
+The product development process, wether open source or in a cooporation requires multiple parties to interact and collaborate. While very open, bitcoin's technology has many parts that are inaccessible, or unknown to people who create experiences ontop of it. The language that is currently used is quite technical, and the usefulness of the functionalities often get lost in translation between the writers of the spec and those with lesser technical knowledge of bitcoin.
 
 #### Guidelines not strict rules.
 The purpose of this project is to help designers build the correct mental models of the lower level components that make up each of the abstractions.
 
-This collection of abstractions form a language, that hopefully enables easier dialog between varyingly skilled teams/departments/contributors.
+This collection of abstractions form a language, that hopefully enables easier dialog between varyingly skilled contributors/teams/departments.
+
+#### Specifications
+##### Contacts
+- [Output Descriptors](https://bitcoin.design/guide/glossary/output-descriptor)
+- [Partially Signed Bitcoin Transactions](https://bitcoin.design/guide/glossary/psbt)
+- [Coin Selection Algorithms](https://bitcoin.design/guide/payments/send/coin-selection)
+- [UTXO](https://bitcoin.design/guide/glossary/utxo)
 
 #### A Pattern Language: Towns, Buildings, Construction
 
@@ -27,8 +34,6 @@ This collection of abstractions form a language, that hopefully enables easier d
   - Social payments applications may need Contacts, but something like Specter may need "Devices" instead
 
 #### What Is Abstraction?[^2]
-An abstraction is a general representation of something. Bitcoin Design Abstractions are 
-
 - An abstraction is a general representation of something.
 - Abstractions are formed by including only those details needed to make the abstraction useful to us in some way.
 - Example: *A map is an abstraction, it contains less information of the world that it represents. We create a map by including only those details that help us acheive the purpose of drawing the map.*
@@ -36,7 +41,7 @@ An abstraction is a general representation of something. Bitcoin Design Abstract
 - Learning that words represent things is fundimental in learning to speak and read.
   - Learning these bitcoin design abstractions help you build the same mental model to speak about and design bitcoin experiences.
     - Giving you the abilitiy to speak is goal of these abstraction because people building software at each level, people have varying degrees of understanding about bitcoin. Every conversation with a designer starts at such a low level, they're often lost. Having a language that can allow you to communicate cross deciplines can help us have more synergy*.
-    - Designers often start by collecting references and inspirations from interfaces that already exist. The design process takes longer when there is no references to pull from. We know the specs are important but many times we are still searching for practical use cases.
+    - Designers often start by collecting references and inspirations from interfaces that already exist. The design process takes longer when there is no references to pull from or requires specialised skills which are currently quite scarce. We know the specs are important but many times we are still searching for practical use cases.
       - As innovation are made, specs get created and the time to reach a use case is a long one. Bitcoin being heavily developer driven, these advancements are usually from developers then itterated on by designers.
       - Why can't you rely on this? Because many things live in specs still and have not seen any practical implementations or those which have the connections have not yet been made by UX professionals.
 - Procedures
@@ -51,19 +56,18 @@ An abstraction is a general representation of something. Bitcoin Design Abstract
 
 ## Case Study
 
-Say you're a designer who wants to design an app that allows friends to save money together?
+Someone wants to design an app that allows friends to save money together.
 
 #### Components
 
-Setup
+###### Multisig Setup
 
 - Participants
-- Multisig
 - One coordinator (the one who initiates the creation of the multisig)
-- New multisig address
 - Output descriptors (which is already an abstraction on the derivation path and xpub)
+- New multisig address
 
-Spending funds
+###### Spending funds
 
 - Partially Signed Bitcoin Transaction
 
@@ -72,7 +76,6 @@ Spending funds
 - Are the funds already available in the wallet?
 
 [1]: https://www.youtube.com/watch?v=YFjLe5mBm_A	"TheUXConf 2020 | Design Language Systems | Hayley Hughes | Shopify"
-
 [2]: https://www.youtube.com/watch?v=XpJdZrviSuw	"What Is Abstraction?"
 [3]: https://uxdesign.cc/ux-ui-analysis-of-currency-design-fce69fc569f8	"UX/UI analysis of currency design"
 [4]: https://en.wikipedia.org/wiki/Design_language	"Wikipedia — Design language"
