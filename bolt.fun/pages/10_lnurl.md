@@ -1,3 +1,14 @@
+---
+layout: guide
+title: LNURL
+# parent: Guide
+description: LNURL is an open standard for communicating with a Lightning node through HTTP.
+nav_order: 20
+has_children: false
+permalink: /guide/lnurl
+main_classes: -no-top-padding
+---
+
 # LNURL
 
 LNURL allows web service providers to use Lightning Network functionality in their API endpoints that clients who have implemented one or more of the various flows can interact with autonomously. The client can be a wallet application or even another web service.
