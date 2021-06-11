@@ -10,7 +10,8 @@ permalink: /guide/web-services/lnurl/channel
 main_classes: -no-top-padding
 ---
 
-# LNURL-channel Flow
+# Opening channels with the web service
+###### LNURL-CHANNEL
 
 This flow used in the case where a recipient (`LN WALLET`) needs to have a channel opened with some payer/service (`LN SERVICE`). It is useful in cases where for e.g. a user of a service needs to withdraw some balance held by the service to their own user wallet via a new channel.
 

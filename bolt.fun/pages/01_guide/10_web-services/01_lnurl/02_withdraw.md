@@ -10,7 +10,8 @@ permalink: /guide/web-services/lnurl/withdraw
 main_classes: -no-top-padding
 ---
 
-# LNURL-withdraw Flow
+# Client sends an invoice for web service to pay
+###### LNURL-WITHDRAW
 
 This flow used in the case where a recipient (`LN WALLET`) needs to initiate payment to themselves from some payer/service (`LN SERVICE`). It is useful in cases where for e.g. a user of a service needs to withdraw some balance held by the service to their own user wallet.
 

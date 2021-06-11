@@ -10,7 +10,8 @@ permalink: /guide/web-services/lnurl/pay
 main_classes: -no-top-padding
 ---
 
-# LNURL-pay Flow
+# Static URL that generates invoices for a client to pay
+###### LNURL-PAY
 
 This flow is used in the case where a payer (`LN WALLET`) needs to pay a recipient (`LN SERVICE`) for some product or service. It is most useful in the cases where the `LN WALLET` needs to initiate the payment request somehow (e.g. an in-app button to pay a certain amount to the `LN SERVICE`). It can still be useful however if the `LN SERVICE` initiates the payment request, for e.g., in a shopping cart in their website.
 
