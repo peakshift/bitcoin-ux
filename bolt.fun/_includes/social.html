@@ -1,37 +1,30 @@
 <nav class="social-media-list">
-{% if site.slack_invite_url %}
   <a 
     rel="me" 
     href="{{ site.slack_invite_url }}" 
-    title="{{ site.title }}
+    title="Bitcoin Design Slack"
+  >
     {% include slack.svg %}
   </a>
-{% endif %}
-{% if site.github_repository_url %}
   <a 
     rel="me" 
-    href="{{ site.github_repository_url }}" 
-    title="{{ site.title }} on Github"
+    href="https://github.com/BitcoinDesign" 
+    title="Bitcoin Design on Github"
   >
     {% include github.svg %}
   </a>
-{% endif %}
-{% if site.twitter_url %}
   <a 
     rel="me" 
     href="{{ site.twitter_url }}" 
-    title="{{ site.title }} on Twitter"
+    title="Bitcoin Design on Twitter"
   >
     {% include twitter.svg %}
   </a>
-{% endif %}
-{% if site.youtube_url %}
   <a 
     rel="me" 
     href="{{ site.youtube_url }}" 
-    title="{{ site.title }} on YouTube"
+    title="Bitcoin Design on YouTube"
   >
     {% include youtube.svg %}
   </a>
-{% endif %}
 </nav>
