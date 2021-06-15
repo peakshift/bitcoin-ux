@@ -7,3 +7,4 @@ assets/favicon-32x32.png: favicon-32x32.png
 assets/images/introduction.png: introduction.png
 assets/images/introduction@2x.png: introduction@2x.png
 assets/mstile-150x150.png: mstile-150x150.png
+assets/images/ln-protocol-layers.png: ln-protocol-layers.png
