@@ -1,8 +1,10 @@
 # Lightning Network App Infrastructure
 
-Over the course of the development of the Lighting Network over the years, there have been a number of different attempts to port LN functionality to mobile devices and end users.
+Over the years as the Lighting Network developed, there have been a number of different attempts to port it's functionality to mobile devices.
 
-The traditional way to interact with the Lightning Network was to run a Bitcoin full node with a Lightning Network node attached to it on a dedicated device and to interact with it either via the command line or a web-based UX that attaches directly on top of the node. This approach is very technical, and was only viable in the early days of development, or now with technical folks who work around the protocol or who don't mind working through the extra steps for thismore robust setup.
+The traditional way to interact with the Lightning Network was to run a Bitcoin full node with a Lightning Network node attached to it on a dedicated device. The command-line or RPC would be used to interact with the node, and sometimes a web-based tool that connects via the available APIs would be used.
+
+This approach is very technical and was only viable in the early days of development, or now with technical folks who work around the protocol or who don't mind working through the extra steps for a more "robust" setup.
 
 For the majority of eventual users though, much lighter and user-friendly solutions would be needed if the protocol is to be adopted broadly, and this is where we see the various attempts at implementing Lightning Network functionality on end-user devices.
 
