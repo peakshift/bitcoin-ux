@@ -17,7 +17,10 @@ A mapping of how the distinct libraries in the LDK correspond to the different c
 
 ## LDK Non-Core Components (all batteries)
 
-These include mostly components for interacting with the Bitcoin network level of the architecture. It mostly has to do with managing and storing UTXOs/keys. The two Lightning Network related components in this category are defining: - Disk I/O: how channels get stored (local storage, cloud etc) - TCP networking: how messages get sent along to LN peers
+These include mostly components for interacting with the Bitcoin network level of the architecture. It mostly has to do with managing and storing UTXOs/keys. The two Lightning Network related components in this category are defining:
+
+- Disk I/O: how channels get stored (local storage, cloud etc)
+- TCP networking: how messages get sent along to LN peers
 
 ### Bitcoin Network based
 
@@ -27,13 +30,13 @@ e.g. from Neutrino
 ###### Wallet
 On-chain UTXO management logic (display balances, create transactions etc.)
 
-###### Tx Broadcast** (Bitcoin Networking)
+###### Tx Broadcast (Bitcoin Networking)
 Broadcasting of signed transactions to the Bitcoin network
 
-###### Private key management**
+###### Private key management
 Signing transactions
 
-###### Fee estimation**
+###### Fee estimation
 
   for monitoring the mempool and suggesting sensible fees
 
