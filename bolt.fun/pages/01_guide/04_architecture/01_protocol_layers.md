@@ -23,7 +23,7 @@ This is all to say that given this layered aproach, developers have the flexibil
 4. Routing (Unreliable) Layer
 5. Payment (Reliable) Layer
 
-The following diagram [taken from](https://github.com/lnbook/lnbook/issues/342#issuecomment-814106423)[1] the work-in-progress Mastering Lightning book outline the different layers of the Lightning protocol and the components that fit into these layers.
+The following diagram [taken from](https://github.com/lnbook/lnbook/issues/342#issuecomment-814106423)[^1] the work-in-progress Mastering Lightning book outline the different layers of the Lightning protocol and the components that fit into these layers.
 
 ![ln-protocol-layers](/assets/images/ln-protocol-layers.png)
 
