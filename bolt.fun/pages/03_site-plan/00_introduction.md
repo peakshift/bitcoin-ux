@@ -1,6 +1,6 @@
 ---
 layout: guide
-nav_order: 2
+nav_order: 3
 title: Site Plan
 secondary_nav_title: Site Plan
 description:
