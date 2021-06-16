@@ -9,7 +9,7 @@ permalink: /guide/architecture/pre-ldk
 main_classes: -no-top-padding
 ---
 
-## Pre-LDK Mobile App Architectures
+# Pre-LDK Mobile App Architectures
 
 **_(Incomplete)_**
 

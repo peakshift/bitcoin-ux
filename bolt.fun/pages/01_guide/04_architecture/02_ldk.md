@@ -9,7 +9,7 @@ permalink: /guide/architecture/ldk
 main_classes: -no-top-padding
 ---
 
-## The Lightning Development Kit (LDK)
+# The Lightning Development Kit (LDK)
 
 The LDK is a project seeking to disaggregate all the components of a Lightning node and make them available as pluggable libraries that can be included in a wide selection of environments. It takes the approach of defining _**core components**_ that are generally standard across all implementations of Lightning nodes, and _**battery components**_ that can be customised and plugged in by the developer to express different conditions and use-cases when building a node setup.
 
