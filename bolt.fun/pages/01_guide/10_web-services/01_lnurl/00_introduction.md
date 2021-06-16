@@ -31,8 +31,8 @@ LNURL1DP68GURN8GHJ7UM9WFMXJCM99E3K7MF0V9CXJ0M385EKVCENXC6R2C35XVUKXEFCV5MKVV34X5
 
 When an LNURL-enabled app receives an LNURL-specific bech32 string, it would decode the string to get the URL and then send the appropriate requests to start the relevant LNURL flow.
 
-<details>
-  <summary>Encoding/Decoding Libraries</summary>
+<details style="margin-top: 1rem;">
+  <summary><strong>Encoding/Decoding Libraries</strong></summary>
   <ul>
     <li><a href="https://github.com/fiatjaf/go-lnurl">go-lnurl</a> &ndash; <strong>lnurl</strong> helper structs, encode/decode, verify signatures, misc helpers.</li>
     <li><a href="https://github.com/chill117/lnurl-platformio">lnurl-platformio</a> &ndash; Implementation of lnurl in C++ for PlatformIO (software tooling for hardware devices).</li>
@@ -46,8 +46,6 @@ When an LNURL-enabled app receives an LNURL-specific bech32 string, it would dec
 </details>
 
 ## Flows
-
-There are 4 different LNURL flows that serve to expose different functionality sets to the user:
 
 ### [LNURL-pay]({{ "/guide/web-services/lnurl/pay" }})
 For paying for a service

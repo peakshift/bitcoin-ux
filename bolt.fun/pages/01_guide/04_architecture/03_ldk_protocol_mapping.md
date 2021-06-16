@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Layers-to-LDK Mapping
-parent: LN Architecture
+parent: Architecture
 description: Mapping protocol layers to their LDK counterparts
 nav_order: 143
 has_children: false

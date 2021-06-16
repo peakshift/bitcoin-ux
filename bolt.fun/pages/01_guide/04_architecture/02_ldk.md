@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Lightning Development Kit (LDK)
-parent: LN Architecture
+parent: Architecture
 description: Laying out the structure of the LDK
 nav_order: 142
 has_children: false

@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: LN Architecture
+title: Architecture
 # parent: Guide
 description: Exploring the architecture of Lightning Network clients and nodes
 nav_order: 14

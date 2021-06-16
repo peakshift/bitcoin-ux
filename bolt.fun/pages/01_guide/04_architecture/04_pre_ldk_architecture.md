@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Pre-LDK Architectures
-parent: LN Architecture
+parent: Architecture
 description: Pre-LDK Lightning App Architectures
 nav_order: 144
 has_children: false
