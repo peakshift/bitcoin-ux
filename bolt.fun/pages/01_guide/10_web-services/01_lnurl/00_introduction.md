@@ -67,5 +67,10 @@ For securely logging in to some service
 
 ---
 
+<!--
+TODO
+
 ### [Playground](https://www.oauth.com/playground/device-code.html)
 Progressively implement flows a la this playground example
+
+-->
