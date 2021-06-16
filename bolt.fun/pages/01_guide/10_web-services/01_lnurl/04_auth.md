@@ -10,12 +10,12 @@ permalink: /guide/web-services/lnurl/auth
 main_classes: -no-top-padding
 ---
 
-# LNURL-auth Flow
+# Authentication to a service using the client's mnemonic
+###### LNURL-PAY
 
 **LN primitives involved:**
-- Wallet private keys
+- Wallet private keys (domain specific)
 
 ## An Example Flow
-_[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md) | [Explainer docs](https://xn--57h.bigsun.xyz/lnurl-auth.html)_
-
-_[TODO]_
+- [Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md)
+- [Explainer docs](https://xn--57h.bigsun.xyz/lnurl-auth.html)

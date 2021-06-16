@@ -10,7 +10,7 @@ permalink: /guide/web-services/lnurl/withdraw
 main_classes: -no-top-padding
 ---
 
-# Client sends an invoice for web service to pay
+# Withdrawl of funds from a service
 ###### LNURL-WITHDRAW
 
 This flow used in the case where a recipient (`LN WALLET`) needs to initiate payment to themselves from some payer/service (`LN SERVICE`). It is useful in cases where for e.g. a user of a service needs to withdraw some balance held by the service to their own user wallet.
@@ -23,9 +23,12 @@ This process is particularly tricky for the `LN WALLET` when they have to figure
 
 The ***LNURL-withdraw flow*** standardises the communication of this LN invoice and payment of the invoice into a single UX action initiated by the `LN WALLET`.
 
+<!--
+TODO:
 >_**[Illustrate user flow differences here with an animation maybe]**_
 > - _Visit a website, be presented with input field for LN invoice, switch to mobile device & generate invoice, switch to Telegram and paste invoice, switch to Telegram on desktop and copy invoice, switch to website and paste, **vs.**_
 > - _Scan a withdraw QR code, enter withdraw amount, click 'withdraw' button_
+-->
 
 **Use-cases:**
 - user withdrawing a balance from some service

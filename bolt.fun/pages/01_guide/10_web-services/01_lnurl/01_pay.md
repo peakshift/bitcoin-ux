@@ -10,7 +10,7 @@ permalink: /guide/web-services/lnurl/pay
 main_classes: -no-top-padding
 ---
 
-# Static URL that generates invoices for a client to pay
+# Generate invoices given some parameters
 ###### LNURL-PAY
 
 This flow is used in the case where a payer (`LN WALLET`) needs to pay a recipient (`LN SERVICE`) for some product or service. It is most useful in the cases where the `LN WALLET` needs to initiate the payment request somehow (e.g. an in-app button to pay a certain amount to the `LN SERVICE`). It can still be useful however if the `LN SERVICE` initiates the payment request, for e.g., in a shopping cart in their website.
@@ -21,10 +21,13 @@ Traditionally, making a payment initiated by the `LN WALLET` via the Lightning N
 
 The ***LNURL-pay flow*** automates the first step and combines it with the second step so that to the `LN WALLET` user it feels like they are only doing a 1-step process. This can be contrasted with for e.g. a BTCPayServer lightning invoice creation endpoint where the endpoint must first be called with the appropriate parameters, and then a BOLT11 invoice is received back via an http response which the `LN WALLET` must then actively pay somehow.
 
+<!--
+TODO:
 > _**[Illustrate user flow differences here with an animation maybe]**_
 > _For a static payment:_
 > - _Visit an endpoint first; scan a LN Invoice after, **vs.**_
 > - _Simply scan a LNURL QR code_
+-->
 
 **Use-cases:**
 - Static LN-compatible payment QR code

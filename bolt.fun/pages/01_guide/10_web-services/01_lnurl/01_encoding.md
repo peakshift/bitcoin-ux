@@ -26,15 +26,17 @@ LNURL1DP68GURN8GHJ7UM9WFMXJCM99E3K7MF0V9CXJ0M385EKVCENXC6R2C35XVUKXEFCV5MKVV34X5
 
 When an LNURL-enabled app receives an LNURL-specific bech32 string, it would decode the string to get the URL and then send the appropriate requests to start the relevant LNURL flow.
 
-## Encoding/Decoding Libraries
+## Libraries
+
+Below are a list of libraries for encoding and decoding LNURLs.
 
 <ul>
-    <li><a href="https://github.com/fiatjaf/go-lnurl">go-lnurl</a> &ndash; <strong>lnurl</strong> helper structs, encode/decode, verify signatures, misc helpers.</li>
-    <li><a href="https://github.com/chill117/lnurl-platformio">lnurl-platformio</a> &ndash; Implementation of lnurl in C++ for PlatformIO (software tooling for hardware devices).</li>
-    <li><a href="https://github.com/fiatjaf/js-lnurl">js-lnurl</a> &ndash; Tools for adding <strong>lnurl</strong> support in a JavaScript wallet.</li>
-    <li><a href="https://github.com/tkijewski/php-lnurl">php-lnurl</a> &ndash; Easy PHP encoding and decoding of bech32 <strong>lnurl</strong>s.</li>
-    <li><a href="https://github.com/python-ln/lnurl">python-lnurl</a> &ndash; Tools for dealing with <strong>lnurl</strong> in Python.</li>
-    <li><a href="https://github.com/bumi/lnurl-ruby">lnurl-ruby</a> &ndash; A gem that provides helpers to work with <strong>lnurl</strong> from Ruby.</li>
-    <li><a href="https://github.com/edouardparis/rust-lnurl">lnurl-rust</a> &ndash; Rust helpers for <strong>lnurl</strong>.</li>
-    <li><a href="https://github.com/bottlepay/dart_lnurl">dart_lnurl</a> &ndash; Library for <strong>lnurl</strong> in Dart.</li>
+    <li><a href="https://github.com/fiatjaf/go-lnurl">go-lnurl</a> &ndash; lnurl helper structs, encode/decode, verify signatures, misc helpers.</li>
+    <li><a href="https://github.com/chill117/lnurl-platformio">lnurl-platformio</a> &ndash; Implementation of lnurl in C++ for PlatformIO.</li>
+    <li><a href="https://github.com/fiatjaf/js-lnurl">js-lnurl</a> &ndash; Tools for adding lnurl support in a JavaScript wallet.</li>
+    <li><a href="https://github.com/tkijewski/php-lnurl">php-lnurl</a> &ndash; Easy PHP encoding and decoding of bech32 lnurls.</li>
+    <li><a href="https://github.com/python-ln/lnurl">python-lnurl</a> &ndash; Tools for dealing with lnurl in Python.</li>
+    <li><a href="https://github.com/bumi/lnurl-ruby">lnurl-ruby</a> &ndash; A gem that provides helpers to work with lnurl from Ruby.</li>
+    <li><a href="https://github.com/edouardparis/rust-lnurl">lnurl-rust</a> &ndash; Rust helpers for lnurl.</li>
+    <li><a href="https://github.com/bottlepay/dart_lnurl">dart_lnurl</a> &ndash; Library for lnurl in Dart.</li>
 </ul>

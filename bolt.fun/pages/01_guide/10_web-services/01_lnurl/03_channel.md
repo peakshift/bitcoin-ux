@@ -10,7 +10,7 @@ permalink: /guide/web-services/lnurl/channel
 main_classes: -no-top-padding
 ---
 
-# Opening channels with the web service
+# Request the creation of incoming channels from a service
 ###### LNURL-CHANNEL
 
 This flow used in the case where a recipient (`LN WALLET`) needs to have a channel opened with some payer/service (`LN SERVICE`). It is useful in cases where for e.g. a user of a service needs to withdraw some balance held by the service to their own user wallet via a new channel.
@@ -22,9 +22,12 @@ Traditionally this would be a 3-step process that consists of:
 
 The ***LNURL-channel flow*** standardises the communication of these details and some of the required intermediate steps into a single UX action initiated by the `LN WALLET`.
 
+<!--
+TODO:
 >_**[Illustrate user flow differences here with an animation maybe]**_
 > - _Visit a website, find the node uri somehow, intiate the connection, get stuck with requesting the withdrawal via new channel (maybe via chat or email?) **vs.**_
 > - _Scan a withdraw-via-channel QR code, enter withdraw amount, click 'withdraw' button_
+-->
 
 **Use-cases:**
 - user requesting inbound liquidity from some service via a channel open

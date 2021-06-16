@@ -33,12 +33,12 @@ API to automate the withdrawl of funds from a service that has been allocated to
 ---
 
 ### [Channel]({{ "/guide/web-services/lnurl/channel" }})
-API to request the creation of incoming channels with the service.
+API to request the creation of incoming channels from a service.
 
 ---
 
 ### [Auth]({{ "/guide/web-services/lnurl/auth" }}) (comming soon)
-For securely logging in to some service
+Client authenticating to a service using their mnemonic
 
 ---
 
