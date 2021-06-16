@@ -14,5 +14,5 @@ Typically you would interact with a Lightning Network and Bitcoin node directly 
 
 ---
 
-### [LNURL - Automate invoice, channel, auth operations]({{ "/guide/web-services/lnurl" | relative_url }})
+### [LNURL - API to automate node operations]({{ "/guide/web-services/lnurl" | relative_url }})
 We dive into the withdraw, pay, auth, and channel flows of this open standard for clients to communicate with a Lightning node through HTTP.

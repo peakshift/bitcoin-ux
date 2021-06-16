@@ -9,7 +9,7 @@ permalink: /guide/web-services/lnurl
 main_classes: -no-top-padding
 ---
 
-# LNURL - Automate invoice, channel, auth operations
+# LNURL - API to automate node operations
 
 LNURL allows web services to use Lightning Network functionality in their API endpoints that clients who have implemented one or more of the various flows can interact with autonomously. The client can be a wallet application or even another web service.
 

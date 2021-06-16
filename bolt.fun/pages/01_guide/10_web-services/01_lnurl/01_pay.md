@@ -3,7 +3,7 @@ layout: guide
 title: Pay
 parent: LNURL
 grand_parent: Web Services
-description: LNURL is an open standard for communicating with a Lightning node through HTTP.
+description: API to generate invoices to be paid.
 nav_order: 20
 has_children: false
 permalink: /guide/web-services/lnurl/pay

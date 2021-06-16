@@ -3,7 +3,7 @@ layout: guide
 title: Channel
 parent: LNURL
 grand_parent: Web Services
-description: LNURL is an open standard for communicating with a Lightning node through HTTP.
+description: API to automate the creation of a channel with the node server.
 nav_order: 40
 has_children: false
 permalink: /guide/web-services/lnurl/channel
