@@ -3,7 +3,7 @@ layout: guide
 title: Pay
 parent: LNURL
 grand_parent: Web Services
-description: API to generate invoices to be paid.
+description: API for a service to generate invoices given some parameters.
 nav_order: 20
 has_children: false
 permalink: /guide/web-services/lnurl/pay

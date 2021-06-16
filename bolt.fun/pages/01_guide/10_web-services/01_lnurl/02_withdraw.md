@@ -3,7 +3,7 @@ layout: guide
 title: Withdraw
 parent: LNURL
 grand_parent: Web Services
-description: API to automate receiving funds that have been allocated to the requester
+description: API to automate the withdrawl of funds that have been allocated to the requesting client.
 nav_order: 30
 has_children: false
 permalink: /guide/web-services/lnurl/withdraw

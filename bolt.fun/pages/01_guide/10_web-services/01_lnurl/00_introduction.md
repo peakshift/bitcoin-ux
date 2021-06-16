@@ -48,18 +48,24 @@ When an LNURL-enabled app receives an LNURL-specific bech32 string, it would dec
 ## Flows
 
 ### [LNURL-pay]({{ "/guide/web-services/lnurl/pay" }})
-For paying for a service
+API for a service to generate invoices given some parameters.
+
+---
 
 ### [LNURL-withdraw]({{ "/guide/web-services/lnurl/withdraw" }})
-For withdrawing funds from a service
+API to automate the withdrawl of funds from a service that has been allocated to the requesting client.
+
+---
 
 ### [LNURL-channel]({{ "/guide/web-services/lnurl/channel" }})
-For requesting incoming channels from a service
+API to request the creation of incoming channels with the service.
+
+---
 
 ### [LNURL-auth]({{ "/guide/web-services/lnurl/auth" }}) (comming soon)
 For securely logging in to some service
 
 ---
 
-**Notes:**
-- _progressively implement flows a la [this playground example](https://www.oauth.com/playground/device-code.html)_
+### [Playground](https://www.oauth.com/playground/device-code.html)
+Progressively implement flows a la this playground example
