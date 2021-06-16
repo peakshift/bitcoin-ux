@@ -9,7 +9,7 @@ permalink: /guide/invoices/variations/hodl-invoice
 main_classes: -no-top-padding
 ---
 
-## The HODL Invoice
+# The HODL Invoice
 
 At a high level, a `hodl invlightning_offeroice` is an invoice that is held by the recipient but not settled right away. A `hodl invoice` can be resolved in two ways:
 1. The payment is **_settled_** when the recipient releases the preimage (to the payment route)
@@ -19,7 +19,7 @@ A `hodl invoice` works in the exact way that a standard invoice does except that
 
 With a `hodl invoice` there is also an addiitonal option where the recipient **_does not_** have to be the same person _creating the payment hash for a given invoice_ they will generate (as is usually the case). They can also receive a payment hash from another party to create an invoice again where that other party would be the one that will hold the secret (preimage) for the hash until some condition is met and the secret is revealed which allows the invoice to be successfully settled.
 
-#### Scenarios ([source](https://wiki.ion.radar.tech/tech/research/hodl-invoice) & [more examples](https://github.com/lightningnetwork/lnd/pull/2022))
+## Scenarios ([source](https://wiki.ion.radar.tech/tech/research/hodl-invoice) & [more examples](https://github.com/lightningnetwork/lnd/pull/2022))
 
 To help expose some of how a hodl invoice works, the following are a set of hypothetical real-world scenarios that are created by using different combinations of the elements of a hodl invoice in different ways.
 
@@ -66,7 +66,7 @@ _(All other examples below, trust not to reveal secret preimage to any other rou
 
     _**Caveat:** if a path participant sits on two routes, there's a risk they can take the revealed preimage from payment of one invoice and collect settlement on the second invoice before the recipient is able to settle their hodl invoice_
 
-#### Limitations
+## Limitations
 
 - Limit of 483 in-flight invoices can be routed at any given time by a node ([something about on-chain transaction size limit?](https://bitcoin.stackexchange.com/a/91169))
 

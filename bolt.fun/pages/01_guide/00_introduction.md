@@ -36,7 +36,7 @@ Illustration sources
    layout = "full-width"
 %}
 
-# Bitcoin payments
+# Introduction to the two networks
 
 {% include tip/open.html color="blue" label="Work in progress" icon="info" %}
 This section holds all the links to our different areas of research. To explore these areas, use the menu to navigate to the different research sections available.
@@ -48,7 +48,7 @@ _For a full overview of what this site will eventually become, feel free to also
 
 There are limitations in the current financial system that make payment services inaccessible to people in many places of the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial services.
 
-We have established that [Bitcoin is money](/guide/getting-started/why-bitcoin-is-unique/#its-money-but-digital) and [Bitcoin is global](/guide/getting-started/why-bitcoin-is-unique/#global-by-default) now we dive into how it can be used to facilitate payments.
+We have established that [Bitcoin is money](https://bitcoin.design/guide/getting-started/why-bitcoin-is-unique/#its-money-but-digital) and [Bitcoin is global](https://bitcoin.design/guide/getting-started/why-bitcoin-is-unique/#global-by-default) now we dive into how it can be used to facilitate payments.
 
 ## Bitcoin is extensible, it's not just a payment network
 

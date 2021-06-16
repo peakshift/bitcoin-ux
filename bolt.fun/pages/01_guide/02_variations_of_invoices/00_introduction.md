@@ -9,7 +9,7 @@ permalink: /guide/invoices/variations
 main_classes: -no-top-padding
 ---
 
-## Invoice Variations
+# Invoice Variations
 
 Aside from the standard lightning invoice, there are a number of different variations of invoices that a user can potentially send to coerce different types of transactions. These work by playing with the different primitives of an invoice to tease out certain unique types of behaviors.
 
