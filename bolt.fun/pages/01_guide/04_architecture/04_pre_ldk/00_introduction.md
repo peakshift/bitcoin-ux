@@ -4,7 +4,7 @@ title: Pre-LDK Architectures
 parent: Architecture
 description: Pre-LDK Lightning App Architectures
 nav_order: 144
-has_children: false
+has_children: true
 permalink: /guide/architecture/pre-ldk
 main_classes: -no-top-padding
 ---
