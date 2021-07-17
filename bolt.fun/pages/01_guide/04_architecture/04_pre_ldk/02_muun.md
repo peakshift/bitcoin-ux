@@ -1,16 +1,16 @@
 ---
 layout: guide
 title: Muun
-parent: Pre-LDK Architectures
+parent: Mobile App Case Studies
 grand_parent: Architecture
 description: Muun
 nav_order: 2
 has_children: false
-permalink: /guide/architecture/pre-ldk/muun
+permalink: /guide/architecture/case-studies/muun
 main_classes: -no-top-padding
 ---
 
-{% include picture.html	
+{% include picture.html
    image = "/assets/images/architecture-muun.jpg"
    retina = "/assets/images/architecture-muun@2x.jpg"
    mobile = "/assets/images/architecture-muun.jpg"

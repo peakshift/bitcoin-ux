@@ -1,16 +1,16 @@
 ---
 layout: guide
 title: Breez
-parent: Pre-LDK Architectures
+parent: Mobile App Case Studies
 grand_parent: Architecture
 description: Breez
 nav_order: 1
 has_children: false
-permalink: /guide/architecture/pre-ldk/breez
+permalink: /guide/architecture/case-studies/breez
 main_classes: -no-top-padding
 ---
 
-{% include picture.html	
+{% include picture.html
    image = "/assets/images/architecture-breez.jpg"
    retina = "/assets/images/architecture-breez@2x.jpg"
    mobile = "/assets/images/architecture-breez.jpg"
