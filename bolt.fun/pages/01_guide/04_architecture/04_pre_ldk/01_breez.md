@@ -1,12 +1,12 @@
 ---
 layout: guide
 title: Breez
-parent: Architecture Examples
+parent: Mobile App Case Studies
 grand_parent: Architecture
 description: Breez
 nav_order: 1
 has_children: false
-permalink: /guide/architecture/examples/breez
+permalink: /guide/architecture/case-studies/breez
 main_classes: -no-top-padding
 ---
 

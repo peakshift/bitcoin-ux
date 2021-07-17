@@ -1,12 +1,12 @@
 ---
 layout: guide
 title: Muun
-parent: Architecture Examples
+parent: Mobile App Case Studies
 grand_parent: Architecture
 description: Muun
 nav_order: 2
 has_children: false
-permalink: /guide/architecture/examples/muun
+permalink: /guide/architecture/case-studies/muun
 main_classes: -no-top-padding
 ---
 

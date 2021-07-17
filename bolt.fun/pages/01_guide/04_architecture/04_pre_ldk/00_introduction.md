@@ -1,15 +1,15 @@
 ---
 layout: guide
-title: Architecture Examples
+title: Mobile App Case Studies
 parent: Architecture
-description: Lightning App Architecture Examples
+description: Lightning App Architecture Case Studies
 nav_order: 144
 has_children: true
-permalink: /guide/architecture/examples
+permalink: /guide/architecture/case-studies
 main_classes: -no-top-padding
 ---
 
-# Mobile App Architecture Examples
+# Mobile App Case Studies
 
 **_(Incomplete)_**
 

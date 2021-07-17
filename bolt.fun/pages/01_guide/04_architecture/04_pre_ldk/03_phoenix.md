@@ -1,12 +1,12 @@
 ---
 layout: guide
 title: Phoenix
-parent: Architecture Examples
+parent: Mobile App Case Studies
 grand_parent: Architecture
 description: Phoenix
 nav_order: 3
 has_children: false
-permalink: /guide/architecture/examples/phoenix
+permalink: /guide/architecture/case-studies/phoenix
 main_classes: -no-top-padding
 ---
 
