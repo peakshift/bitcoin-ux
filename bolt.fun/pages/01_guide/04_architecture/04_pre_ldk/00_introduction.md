@@ -1,15 +1,15 @@
 ---
 layout: guide
-title: Pre-LDK Architectures
+title: Architecture Examples
 parent: Architecture
-description: Pre-LDK Lightning App Architectures
+description: Lightning App Architecture Examples
 nav_order: 144
 has_children: true
-permalink: /guide/architecture/pre-ldk
+permalink: /guide/architecture/examples
 main_classes: -no-top-padding
 ---
 
-# Pre-LDK Mobile App Architectures
+# Mobile App Architecture Examples
 
 **_(Incomplete)_**
 

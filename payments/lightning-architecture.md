@@ -117,7 +117,7 @@ The diagram below taken from the [LDK docs](https://lightningdevkit.org/docs/#ld
 
 ---
 **_(Incomplete)_**
-## Pre-LDK Mobile App Architectures
+## Mobile App Architecture Examples
 
 **Notes to be developed:**
 - [Comprehensive wallet comparison and architecture breakdown](https://veriphi.io/en/blog/lightning-wallet-architecture)

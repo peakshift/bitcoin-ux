@@ -68,7 +68,7 @@ The following is a high-level structure of how we would like to see this mini-si
 
         - Non-custodial partial node architectures
 
-          _Introduce concept of mixing and matching arichitectural pieces, and give examples of how this is done now pre-LDK_
+          _Introduce concept of mixing and matching architectural pieces, and give examples of how this is done has been done so far_
 
             \> _Outsourced routing_
 
