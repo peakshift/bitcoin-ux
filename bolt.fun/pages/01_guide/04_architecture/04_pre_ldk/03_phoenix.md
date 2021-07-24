@@ -6,7 +6,7 @@ grand_parent: Architecture
 description: Phoenix
 nav_order: 3
 has_children: false
-permalink: /guide/architecture/case-studies/phoenix
+permalink: /guide/architecture/mobile-case-studies/phoenix
 main_classes: -no-top-padding
 ---
 

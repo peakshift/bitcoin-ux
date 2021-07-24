@@ -6,7 +6,7 @@ grand_parent: Architecture
 description: Breez
 nav_order: 1
 has_children: false
-permalink: /guide/architecture/case-studies/breez
+permalink: /guide/architecture/mobile-case-studies/breez
 main_classes: -no-top-padding
 ---
 

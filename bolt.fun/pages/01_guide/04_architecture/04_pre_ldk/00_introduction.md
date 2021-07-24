@@ -5,7 +5,7 @@ parent: Architecture
 description: Lightning App Architecture Case Studies
 nav_order: 144
 has_children: true
-permalink: /guide/architecture/case-studies
+permalink: /guide/architecture/mobile-case-studies
 main_classes: -no-top-padding
 ---
 
