@@ -6,7 +6,7 @@ grand_parent: Architecture
 description: Muun
 nav_order: 2
 has_children: false
-permalink: /guide/architecture/case-studies/muun
+permalink: /guide/architecture/mobile-case-studies/muun
 main_classes: -no-top-padding
 ---
 
