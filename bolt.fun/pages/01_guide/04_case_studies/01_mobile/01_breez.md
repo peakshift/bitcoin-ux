@@ -1,12 +1,12 @@
 ---
 layout: guide
 title: Breez
-parent: Mobile App Case Studies
+parent: Mobile
 grand_parent: Case Studies
 description: Breez
 nav_order: 1
 has_children: false
-permalink: /guide/case-studies/breez
+permalink: /guide/case-studies/mobile/breez
 main_classes: -no-top-padding
 ---
 

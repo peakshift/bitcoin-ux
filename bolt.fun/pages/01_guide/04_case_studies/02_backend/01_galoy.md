@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Galoy
-parent: Backend Case Studies
+parent: Backend
 grand_parent: Case Studies
 description: Galoy
 nav_order: 1

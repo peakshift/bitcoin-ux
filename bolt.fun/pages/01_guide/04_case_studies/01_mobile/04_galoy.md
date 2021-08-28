@@ -1,12 +1,12 @@
 ---
 layout: guide
 title: Galoy
-parent: Mobile App Case Studies
+parent: Mobile
 grand_parent: Case Studies
 description: Galoy
 nav_order: 3
 has_children: false
-permalink: /guide/case-studies/galoy
+permalink: /guide/case-studies/mobile/galoy
 main_classes: -no-top-padding
 ---
 
