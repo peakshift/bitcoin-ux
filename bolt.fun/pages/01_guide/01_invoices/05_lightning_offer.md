@@ -1,11 +1,11 @@
 ---
 layout: guide
 title: Lightning Offers
-parent: Invoice Variations
+parent: Invoices
 description: Diving into the user experience of moving Bitcoin
 nav_order: 124
 has_children: false
-permalink: /guide/invoices/variations/lightning-offers
+permalink: /guide/invoices/lightning-offers
 main_classes: -no-top-padding
 ---
 

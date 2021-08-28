@@ -1,11 +1,11 @@
 ---
 layout: guide
 title: Standard Invoice
-# parent: Guide
+parent: Invoices
 description: Diving into the user experience of moving Bitcoin
 nav_order: 11
 has_children: false
-permalink: /guide/invoices
+permalink: /guide/invoices/standard-invoice
 main_classes: -no-top-padding
 ---
 

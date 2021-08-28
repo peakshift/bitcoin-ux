@@ -1,11 +1,11 @@
 ---
 layout: guide
 title: HODL Invoice
-parent: Invoice Variations
+parent: Invoices
 description: Diving into the user experience of moving Bitcoin
 nav_order: 121
 has_children: false
-permalink: /guide/invoices/variations/hodl-invoice
+permalink: /guide/invoices/hodl-invoice
 main_classes: -no-top-padding
 ---
 

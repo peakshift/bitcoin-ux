@@ -1,11 +1,11 @@
 ---
 layout: guide
 title: Multi-part Payments
-parent: Invoice Variations
+parent: Invoices
 description: Diving into the user experience of moving Bitcoin
 nav_order: 123
 has_children: false
-permalink: /guide/invoices/variations/mpp
+permalink: /guide/invoices/mpp
 main_classes: -no-top-padding
 ---
 
