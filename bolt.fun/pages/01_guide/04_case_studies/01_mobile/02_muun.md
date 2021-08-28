@@ -1,12 +1,12 @@
 ---
 layout: guide
 title: Muun
-parent: Mobile App Case Studies
+parent: Mobile
 grand_parent: Case Studies
 description: Muun
 nav_order: 2
 has_children: false
-permalink: /guide/case-studies/muun
+permalink: /guide/case-studies/mobile/muun
 main_classes: -no-top-padding
 ---
 

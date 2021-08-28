@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Mobile App Case Studies
+title: Mobile
 parent: Case Studies
 description: Lightning App Architecture Case Studies
 nav_order: 144
