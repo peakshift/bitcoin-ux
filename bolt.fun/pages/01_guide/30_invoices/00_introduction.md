@@ -3,7 +3,7 @@ layout: guide
 title: Invoices
 # parent: Invoices
 description: Diving into the user experience of moving Bitcoin
-nav_order: 12
+nav_order: 30
 has_children: true
 permalink: /guide/invoices
 main_classes: -no-top-padding

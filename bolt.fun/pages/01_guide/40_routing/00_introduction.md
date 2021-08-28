@@ -3,7 +3,7 @@ layout: guide
 title: Routing
 # parent: Guide
 description: Routing payments through the lightning network.
-nav_order: 11
+nav_order: 40
 has_children: false
 permalink: /guide/routing
 main_classes: -no-top-padding
