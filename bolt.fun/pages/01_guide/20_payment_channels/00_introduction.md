@@ -3,7 +3,7 @@ layout: guide
 title: Submarine Swaps
 # parent: Guide
 description: Diving into the user experience of moving Bitcoin
-nav_order: 13
+nav_order: 20
 has_children: false
 permalink: /guide/submarine-swaps
 main_classes: -no-top-padding

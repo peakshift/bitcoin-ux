@@ -2,7 +2,7 @@
 layout: guide
 title: Web Services
 description: Communicating with a Lightning Node.
-nav_order: 100
+nav_order: 70
 has_children: true
 permalink: /guide/web-services
 main_classes: -no-top-padding
