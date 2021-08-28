@@ -3,7 +3,7 @@ layout: guide
 title: Architecture
 # parent: Guide
 description: Exploring the architecture of Lightning Network clients and nodes
-nav_order: 14
+nav_order: 10
 has_children: true
 permalink: /guide/architecture
 main_classes: -no-top-padding

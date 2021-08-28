@@ -1,11 +1,11 @@
 ---
 layout: guide
 title: Backend Case Studies
-parent: Architecture
+parent: Case Studies
 description: Lightning Backend Architecture Case Studies
 nav_order: 145
 has_children: true
-permalink: /guide/architecture/backend-case-studies
+permalink: /guide/case-studies/backend
 main_classes: -no-top-padding
 ---
 

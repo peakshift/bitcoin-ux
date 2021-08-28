@@ -1,17 +1,30 @@
 ---
 layout: guide
 title: Mobile App Case Studies
-parent: Architecture
+parent: Case Studies
 description: Lightning App Architecture Case Studies
 nav_order: 144
 has_children: true
-permalink: /guide/architecture/mobile-case-studies
+permalink: /guide/case-studies/mobile
 main_classes: -no-top-padding
 ---
 
 # Mobile App Case Studies
 
 **_(Incomplete)_**
+
+### Constraints
+- Capacity
+- Privacy
+- iOS
+- Android
+
+### Tradeoffs
+- How much can you offload while maintaining sovriegnity.
+- What are you willing to give up.
+- What is an acceptable trade-off for the user?
+- Pheonix, for example UX is impacted as channel backups are a trade-off.
+- Channel Backups.
 
 **Notes to be developed:**
 

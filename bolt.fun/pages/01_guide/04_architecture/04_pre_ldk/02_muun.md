@@ -2,11 +2,11 @@
 layout: guide
 title: Muun
 parent: Mobile App Case Studies
-grand_parent: Architecture
+grand_parent: Case Studies
 description: Muun
 nav_order: 2
 has_children: false
-permalink: /guide/architecture/mobile-case-studies/muun
+permalink: /guide/case-studies/muun
 main_classes: -no-top-padding
 ---
 
@@ -22,3 +22,7 @@ main_classes: -no-top-padding
 %}
 
 # Muun
+
+Stack
+- Java
+- Swift

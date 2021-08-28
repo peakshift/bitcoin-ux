@@ -16,8 +16,10 @@ main_classes: -no-top-padding
 This flow is used in the case where a payer (`LN WALLET`) needs to pay a recipient (`LN SERVICE`) for some product or service. It is most useful in the cases where the `LN WALLET` needs to initiate the payment request somehow (e.g. an in-app button to pay a certain amount to the `LN SERVICE`). It can still be useful however if the `LN SERVICE` initiates the payment request, for e.g., in a shopping cart in their website.
 
 Traditionally, making a payment initiated by the `LN WALLET` via the Lightning Network is a 2-step process that consists of:
-1. Some active out-of-band communication from the `LN WALLET` to the `LN SERVICE` that they would like to pay a certain amount, and the `LN SERVICE` generating/sending an LN invoice back to the `LN WALLET` to be paid
-1. The `LN WALLET` actively paying the LN invoice in-band from an LN-enabled wallet
+1. Some active out-of-band communication from the `LN WALLET` to the `LN SERVICE` that they would like to pay a certain amount
+2. The `LN SERVICE` generating an LN invoice
+3. Copying it back to the `LN WALLET` to be paid
+4. The `LN WALLET` actively paying the LN invoice in-band from an LN-enabled wallet
 
 The ***LNURL-pay flow*** automates the first step and combines it with the second step so that to the `LN WALLET` user it feels like they are only doing a 1-step process. This can be contrasted with for e.g. a BTCPayServer lightning invoice creation endpoint where the endpoint must first be called with the appropriate parameters, and then a BOLT11 invoice is received back via an http response which the `LN WALLET` must then actively pay somehow.
 
@@ -34,7 +36,7 @@ TODO:
 - Shopping cart checkout alternative (dynamic payment QR code)
 
 **LN primitives involved:**
-- LN Invoice
+- [Standard Invoice](/guide/invoices)
 
 ## An Example Flow
 _[Spec docs](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md) | [Flow docs](https://xn--57h.bigsun.xyz/lnurl-pay-flow.txt)_

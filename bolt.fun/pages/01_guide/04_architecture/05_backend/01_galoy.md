@@ -2,11 +2,11 @@
 layout: guide
 title: Galoy
 parent: Backend Case Studies
-grand_parent: Architecture
+grand_parent: Case Studies
 description: Galoy
 nav_order: 1
 has_children: false
-permalink: /guide/architecture/backend-case-studies/galoy
+permalink: /guide/case-studies/backend/galoy
 main_classes: -no-top-padding
 ---
 

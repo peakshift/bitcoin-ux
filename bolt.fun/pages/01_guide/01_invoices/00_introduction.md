@@ -44,8 +44,14 @@ This is effectively a time limit past which the invoice becomes invalid.
 
 (Research how this is enforced. So far I'm only finding that the recipient discards the preimage, but this doesn't make sense in cases where the recipient isn't the one generating th preimage as with hodl invoices)
 
+## Amount
+
+**Amountless invoices**
+Invoices without a payment secret, as with amountless invoices can be a security risk as the second to last hop is able to change the amount and steal the funds as it's fee.[^1]
+
 ---
 
 ###### Links
 - [Technical breakdown of a Lightning Invoice](https://medium.com/suredbits/lightning-101-what-is-a-lightning-invoice-d527db1a77e6)
 - [Required fields for a Lightning Invoice](https://btcmanager.com/brief-guide-how-create-lightning-network-invoices/)
+- [SLP142 Pierre-Marie Padiou – ACINQ & Phoenix Wallet: easiest non-custodial lightning wallet yet?](https://stephanlivera.com/episode/142/)
