@@ -1,11 +1,11 @@
 ---
 layout: guide
 title: Keysend
-parent: Invoice Variations
+parent: Invoices
 description: Diving into the user experience of moving Bitcoin
 nav_order: 122
 has_children: false
-permalink: /guide/invoices/variations/keysend
+permalink: /guide/invoices/keysend
 main_classes: -no-top-padding
 ---
 
