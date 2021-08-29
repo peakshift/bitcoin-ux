@@ -1,11 +1,11 @@
 ---
 layout: guide
 title: Submarine Swaps
-# parent: Guide
+parent: Payment Channels
 description: Diving into the user experience of moving Bitcoin
 nav_order: 20
 has_children: false
-permalink: /guide/submarine-swaps
+permalink: /guide/payment-channels/submarine-swaps
 main_classes: -no-top-padding
 ---
 
