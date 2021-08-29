@@ -10,6 +10,7 @@ main_classes: -no-top-padding
 ---
 
 # Submarine Swap
+
 Funds that are locked into a Lightning channel are usually limited to being transferrable solely across the Lightning Network. They can be sent back and forth on a given channel, but cannot come back on-chain unless the channel is closed.
 
 This presents a few challenging scenarios:
