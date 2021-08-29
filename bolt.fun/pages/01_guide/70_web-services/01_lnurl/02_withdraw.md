@@ -3,14 +3,14 @@ layout: guide
 title: Withdraw
 parent: LNURL
 grand_parent: Web Services
-description: API to automate the withdrawl of funds that have been allocated to the requesting client.
+description: API to automate the withdrawal of funds that have been allocated to the requesting client.
 nav_order: 30
 has_children: false
 permalink: /guide/web-services/lnurl/withdraw
 main_classes: -no-top-padding
 ---
 
-# Withdrawl of funds from a service
+# Withdrawal of funds from a service
 ###### LNURL-WITHDRAW
 
 This flow used in the case where a recipient (`LN WALLET`) needs to initiate payment to themselves from some payer/service (`LN SERVICE`). It is useful in cases where for e.g. a user of a service needs to withdraw some balance held by the service to their own user wallet.

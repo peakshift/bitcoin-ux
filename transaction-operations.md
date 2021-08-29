@@ -23,7 +23,7 @@
 - Subscription
 - Rebalance/Top Up Account (?)
 
-#### Incomming
+#### Incoming
 
 - Payment Request
 - Invoice
