@@ -11,6 +11,15 @@ main_classes: -no-top-padding
 
 # Routing
 
+The Lightning Network is a network of nodes which are able to talk to one another and declare their payment channels. To make a Lightning payment you don’t actually need a direct channel to the party you’re sending/receiving from. With an invoice, the sender finds a route to the receiver and the payment hops from channel to channel until it reaches the destination.
+
+It's typical for nodes to have multiple channels to get access to different parts of the network for better routing. With mass adoption, mobile partial nodes may end up with only one well connected payment channel with an LSP.
+
+{% include tip/open.html color="blue" label="Work in progress" icon="info" %}
+This page will cover path finding and the routing table size. The affects these have on low capability devices. We will also go into using intermediary nodes to hold payments if the recipient's node is offline.
+{% include tip/close.html %}
+
+<!--
 ## Route Table
 - Size
 - What its for.
@@ -35,3 +44,4 @@ main_classes: -no-top-padding
 - https://bitcointechweekly.com/front/outsourcing-route-computation-with-trampoline-payments/
 - https://medium.com/breez-technology/lightning-network-routing-privacy-and-efficiency-in-a-positive-sum-game-b8e443f50247
 - https://telaviv2019.scalingbitcoin.org/files/improving-routing-in-the-lightning-network-with-trampoline-payments.pdf
+-->
