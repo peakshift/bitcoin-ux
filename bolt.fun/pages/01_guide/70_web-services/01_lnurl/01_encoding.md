@@ -4,7 +4,7 @@ title: URL Encoding
 parent: LNURL
 grand_parent: Web Services
 description: All URLs following LNURL spec need to be encoded in the same way as BOLT11 invoices are.
-nav_order: 20
+nav_order: 15
 has_children: false
 permalink: /guide/web-services/lnurl/encoding
 main_classes: -no-top-padding
