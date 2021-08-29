@@ -28,7 +28,7 @@ API for a service to generate invoices given some parameters.
 ---
 
 ### [Withdraw]({{ "/guide/web-services/lnurl/withdraw" }})
-API to automate the withdrawl of funds from a service that has been allocated to the requesting client.
+API to automate the withdrawal of funds from a service that has been allocated to the requesting client.
 
 ---
 
@@ -37,7 +37,7 @@ API to request the creation of incoming channels from a service.
 
 ---
 
-### [Auth]({{ "/guide/web-services/lnurl/auth" }}) (comming soon)
+### [Auth]({{ "/guide/web-services/lnurl/auth" }}) (coming soon)
 Client authenticating to a service using their mnemonic
 
 ---
