@@ -4,7 +4,7 @@ title: Lightning Service Providers
 # parent: Guide
 description: A Lightning Service Providers allow nodes to offload some capabilities to a remote service. Often times they are used for graphing and route calculation or liquidity provisioning.
 nav_order: 50
-has_children: true
+has_children: false
 permalink: /guide/lsp
 main_classes: -no-top-padding
 ---
