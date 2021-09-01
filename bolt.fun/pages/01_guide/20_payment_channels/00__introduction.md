@@ -20,4 +20,8 @@ This is known as a payment channel, Lightning is essentially a network of paymen
 ### [Submarine Swap]({{ "/guide/payment-channels/submarine-swaps" }})
 Method to send funds from an on-chain address directly into an open payment channel and vice versa.
 
+
+### Channel factories (WIP)
+A channel factory is a non-custodial, multi participatory system that contains channels. Channel factories allow users to open unlimited channels within their group.
+
 ---
