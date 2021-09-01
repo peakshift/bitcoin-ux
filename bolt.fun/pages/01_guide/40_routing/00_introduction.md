@@ -20,6 +20,8 @@ This page will cover path finding and the routing table size. The affects these 
 {% include tip/close.html %}
 
 <!--
+## Fees
+
 ## Route Table
 - Size
 - What its for.
