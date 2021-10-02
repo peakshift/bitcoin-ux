@@ -80,6 +80,21 @@ const Tab3: React.FC = () => {
 						<IonAvatar slot="start">
 							<img
 								alt=""
+								src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7742?d=identicon&f=y"
+							/>
+						</IonAvatar>
+						<IonLabel>
+							<h2>andrerfneves@lightningaddress.com</h2>
+							<p>Lightning Address</p>
+						</IonLabel>
+						{/*-- <IonButton fill="outline" slot="end">Edit</IonButton> --*/}
+						<IonButton slot="end">Pay</IonButton>
+					</IonItem>
+
+					<IonItem>
+						<IonAvatar slot="start">
+							<img
+								alt=""
 								src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
 							/>
 						</IonAvatar>
