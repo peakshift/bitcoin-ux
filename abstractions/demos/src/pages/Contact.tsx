@@ -142,7 +142,7 @@ const Tab3: React.FC = () => {
 						<IonAvatar slot="start">
 							<img
 								alt=""
-								src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7742?d=identicon&f=y"
+								src="https://gravatar.com/avatar/dba6ba8c566f9d4041fb9cd9ada7742?d=identicon&f=y"
 							/>
 						</IonAvatar>
 						<IonLabel>
