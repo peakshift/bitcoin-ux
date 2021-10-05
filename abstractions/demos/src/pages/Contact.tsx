@@ -147,7 +147,7 @@ const Tab3: React.FC = () => {
 						</IonAvatar>
 						<IonLabel>
 							<h2>LNURL1DP68GURN8GHJ7MRWW4EXCTT5DAHKCCN00QHXGET8WFJK2UM0VEAX2UN09E3K7MF0W5LHZ0FJVFJKXVTRXCCRGE3HXDJRZCMRVG6RYV33VE3NXDE4XFJKXERPVD3XGCMRVDJXXVM9XCCNVCN9X9JNVVEHXCENJVE4VYENYVTPX4SKYUGX7NR</h2>
-							<p>BOLT12</p>
+							<p>lnurl-pay</p>
 						</IonLabel>
 						{/*-- <IonButton fill="outline" slot="end">Edit</IonButton> --*/}
 						<IonButton slot="end">Pay</IonButton>
