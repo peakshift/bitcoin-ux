@@ -175,7 +175,7 @@ const Tab3: React.FC = () => {
 
 				<IonCard>
 					<IonCardHeader>
-						<IonCardSubtitle>Payment Requests (Addresses)</IonCardSubtitle>
+						<IonCardSubtitle>Payment Requests (Addresses/Invoices)</IonCardSubtitle>
 					</IonCardHeader>
 
 					<IonItem>
@@ -193,11 +193,35 @@ const Tab3: React.FC = () => {
 					<IonItem>
 						<IonIcon icon={arrowDownOutline} slot="start" />
 						<IonLabel>
+							<h2>0.00000001 BTC</h2>
+							<p>lnbc100u1ps4wy9zpp5v85cym4yvz9nr5q790nz3fh83cphnz943eueflcrmc476ujt908qdq4f3shqupqw3jhxarfdenjqcqzpgxqrrssrzjqvgptfurj3528snx6e3dtwepafxw5fpzdymw9pj20jj09sunnqmwqz468yqqrrqqqyqqqqlgqqqqqqgqjqsp55k4uehq3swq7rnnvt93rr7c5pasycu75m4pzkl9vdywehttz6shs9qyyssq0zx3khgn2t4envx37677dpzmt29s082n5q44695r7ar92e24z77h42lgmyrpurgayrtwlh54a0fytmun2r2yn4fsw2v50f2yxve3p7cpmslve</p>
+						</IonLabel>
+						<IonBadge slot="end" color="warning">
+							Expired
+						</IonBadge>
+						{/*-- <IonButton fill="outline" slot="end">View</IonButton> --*/}
+					</IonItem>
+
+					<IonItem>
+						<IonIcon icon={arrowDownOutline} slot="start" />
+						<IonLabel>
 							<h2>0.00234 BTC</h2>
 							<p>2Muc52RXvLk4ybgXag7GiPethDB7jUG63KD</p>
 						</IonLabel>
 						<IonBadge slot="end" color="light">
 							Unused
+						</IonBadge>
+						{/*-- <IonButton fill="outline" slot="end">View</IonButton> --*/}
+					</IonItem>
+
+					<IonItem>
+						<IonIcon icon={arrowDownOutline} slot="start" />
+						<IonLabel>
+							<h2>0.00000120 BTC</h2>
+							<p>lnbc100u1ps4dhnmpp52lpp4h97u4qal69vwuejdxsaseyf0gjvz5ju6e5frss0awahhxksdq4f3qhqupqw3jhxarfdenjqcqzpgxqrrssrzjqvgptfurj3528snx6e3dtwepafxw5fpzdymw9pj20jj09sunnqmwqqqqqyqqqqqqqqqqqqlgqqqqqqgqjqnp4qfth37jfa79rxfhk0yy0elpsd6vncewvzp4xexf9jyf78n6uzyuyxsp5eqlks0w2ys9jd2fwzmj2y4xn9yq98hn3hmhvpmh6r46xsqwym5uq9qyyssqaxu6de88sxnvfts8r56339tu6dw3csnc8evpsf5d7meyvrgu0lryqru4rfvpvqww6zl09jcy5dk4fsylxlqvegf93c5s0yt342ldjtqp5vsly</p>
+						</IonLabel>
+						<IonBadge slot="end" color="light">
+							Expires in 59m
 						</IonBadge>
 						{/*-- <IonButton fill="outline" slot="end">View</IonButton> --*/}
 					</IonItem>
