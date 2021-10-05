@@ -73,7 +73,7 @@ const Tab3: React.FC = () => {
 
 				<IonCard>
 					<IonCardHeader>
-						<IonCardSubtitle>Output Descriptors</IonCardSubtitle>
+						<IonCardSubtitle>Identifiers</IonCardSubtitle>
 					</IonCardHeader>
 
 					<IonItem>
@@ -133,6 +133,36 @@ const Tab3: React.FC = () => {
 								pk(xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8)
 							</h2>
 							<p>Output Descriptor</p>
+						</IonLabel>
+						{/*-- <IonButton fill="outline" slot="end">Edit</IonButton> --*/}
+						<IonButton slot="end">Pay</IonButton>
+					</IonItem>
+
+					<IonItem>
+						<IonAvatar slot="start">
+							<img
+								alt=""
+								src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7742?d=identicon&f=y"
+							/>
+						</IonAvatar>
+						<IonLabel>
+							<h2>LNURL1DP68GURN8GHJ7MRWW4EXCTT5DAHKCCN00QHXGET8WFJK2UM0VEAX2UN09E3K7MF0W5LHZ0FJVFJKXVTRXCCRGE3HXDJRZCMRVG6RYV33VE3NXDE4XFJKXERPVD3XGCMRVDJXXVM9XCCNVCN9X9JNVVEHXCENJVE4VYENYVTPX4SKYUGX7NR</h2>
+							<p>BOLT12</p>
+						</IonLabel>
+						{/*-- <IonButton fill="outline" slot="end">Edit</IonButton> --*/}
+						<IonButton slot="end">Pay</IonButton>
+					</IonItem>
+
+					<IonItem>
+						<IonAvatar slot="start">
+							<img
+								alt=""
+								src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7742?d=identicon&f=y"
+							/>
+						</IonAvatar>
+						<IonLabel>
+							<h2>lno1pg257enxv4ezqcneype82um50ynhxgrwdajx283qfwdpl28qqmc78ymlvhmxcsywdk5wrjnj36jryg488qwlrnzyjczs</h2>
+							<p>BOLT12</p>
 						</IonLabel>
 						{/*-- <IonButton fill="outline" slot="end">Edit</IonButton> --*/}
 						<IonButton slot="end">Pay</IonButton>
