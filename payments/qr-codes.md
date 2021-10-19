@@ -18,6 +18,7 @@ Why bitcoin ❤️ QR Codes?
 
 - QR codes can hold up to 7,089 numeric characters and up to 4,296 alphanumeric characters value of data[^1]
 - QR Code has an error correction capability.[^1]
+- QR code data can be uppercased to create more effecient QR codes [^7]
 
 ## URI
 
@@ -61,7 +62,7 @@ User flow visualising a wallet supporting both onchain and lightning payments, w
 
 ### Rationale
 
-- There are more wallets which have BIP21 implemented than lightning network (asumption).
+- There are more wallets which have BIP21 implemented than lightning network (assumption).
 - Payers wallet supports both lightning network and bitcoin on-chain.
 
 — *Assumptions* ☝️
@@ -93,3 +94,4 @@ User flow visualising a wallet supporting both onchain and lightning payments, w
 [^5]: https://github.com/lightningnetwork/lightning-rfc/blob/master/11-payment-encoding.md#encoding-overview
 
 [^6]: https://github.com/lightningnetwork/lnd/commit/af01571fc61dfab2f5813050dc59c40e7c00be20#diff-432eb1b004c63792f9852a3eeb377f2468fac664524de260a0fc0c5c12e6ea32L154-R161
+[^7]: https://bitcoinops.org/en/bech32-sending-support/#creating-more-efficient-qr-codes-with-bech32-addresses
