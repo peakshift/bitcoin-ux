@@ -59,7 +59,7 @@ The goal with this structure is to provide the reader with a unified way of lear
 
 #### [Sending](#)
 
-- [Coin Selection](#)
+- [Coin / Channel Selection](#)
 - [Fees & Estimations](#)
 - [Broadcasting](#)
 - [Speeding Up / Canceling](#)
